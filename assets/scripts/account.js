@@ -6,6 +6,9 @@ $(document).ready(function () {
         shoeSizeEl.html("");
     }
 
+    function underConstructionAlert(){
+        alert("This unit is under construction");
+    }
     function addSize(size) {
         var optEl = $("<option>");
         optEl.html(size);
@@ -24,5 +27,12 @@ $(document).ready(function () {
     }
     initShoeSizeCombo();
 
+
+    $("#btnUpdate").click(function(){
+        underConstructionAlert();
+    });
+    $("#btnCancel").click(function(){
+        underConstructionAlert();
+    });
 });
 
