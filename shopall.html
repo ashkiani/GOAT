@@ -14,28 +14,34 @@
 </head>
 
 <body>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a
-      >
-      <a href="#">Home <i class="fas fa-home"></i></a>
-        <a href="#">Shop <i class="fas fa-align-center"></i></a>
-        <a href="#">Log In <i class="fas fa-sign-in-alt"></i></a>
-        <a href="#">Cart <i class="fas fa-shopping-cart"></i></a>
-    </div>
-
     <!--main content-->
     <div id="main">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a
+        >
+        <a href="#">Home <i class="fas fa-home"></i></a>
+            <a href="#">Shop <i class="fas fa-align-center"></i></a>
+            <a href="#">Log In <i class="fas fa-sign-in-alt"></i></a>
+            <a href="#">Cart <i class="fas fa-shopping-cart"></i></a>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <br />
+
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; GOAT</span
       >
 
-      <div class="row">
+      <!--<div class="row">
         <div class="col-sm-12">
           <h2 class="title">SCORE BOX ESPN-API</h2>
           <hr />
         </div>
-      </div>
+      </div>-->
 
-      <h1>Upcoming Sneakers</h1>
+      <h1 class="upcoming-title">Upcoming Sneakers</h1>
+
       <!--SLIDESHOW FOR UPCOOMING SHOES-->
       <div class="slideshow-container">
         <div class="mySlides fade">
@@ -86,25 +92,51 @@
 
     <hr />
 
-    <!--button dropdown-->
-    <div class="dropdown">
-        <button onclick="myFunction()" class="button" class="dropbtn">
+    <!--button sort by-->
+    <div class="sortBy">
+        <button onclick="mySort()" class="button" class="dropbtn">
           Sort By
         </button>
 
-        <div id="myDropdown" class="dropdown-content">
+        <div id="sort" class="dropdown-content">
             <button class="button" id="all">Shop All</button>
             <button class="button" id="latest">Latest arrivals</button>
             <button class="button" id="popular">Most Popular</button>
+            <button class="button" id="Running">Running</button>
+            <button class="button" id="Basketball">Basketball</button>
+            <button class="button" id="Casual">Casual</button>
         </div>
     </div>
     <!--button dropdown-->
+
+    <!--button filter-->
+    <div class="filterBy">
+        <button onclick="myFilter()" class="button" class="dropbtn">
+          Filter By
+        </button>
+
+        <div id="filter" class="filter-content">
+            <label class="container-filter">Size
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+            <label class="container-filter">Color
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+            <label class="container-filter">Price
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+    </div>
+    <!--button filter-->
 
     <!--Image container-->
     <div class="container">
         <div class="img-grid">
             <!--filter for popular shoes-->
-            <img src="https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg" class="popular" alt="" />
+            <img src="https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg" class="popular" alt="" width="400px" height="300px" />
             <img src="https://static.pexels.com/photos/356056/pexels-photo-356056.jpeg" class="popular" alt="" />
             <img src="https://static.pexels.com/photos/373076/pexels-photo-373076.jpeg" class="popular" alt="" />
             <img src="https://static.pexels.com/photos/158826/structure-light-led-movement-158826.jpeg" class="popular" alt="" />
