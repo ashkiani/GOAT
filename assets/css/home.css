@@ -1,0 +1,10 @@
+#top-section{
+    margin-left: 10px;
+    background-color: #DEDEDE	;
+}
+
+#home-notification{
+    background-color: black;
+    color: white;
+    display: none;
+}

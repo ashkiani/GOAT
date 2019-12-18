@@ -1,100 +1,156 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GOAT - Home</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  </head>
-  <body>
-    <nav class="navbar" role="navigation"  aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
-            <img src="../GOAT/assets/images/goat.PNG" width="112" height="28">
-          </a>
-      
-          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-      
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item">
-              Home
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GOAT - Home</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="assets/css/home.css" />
+</head>
+
+<body>
+  <!-- Nav bar -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="../GOAT/assets/images/goat.PNG" width="112" height="28">
+      </a>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+        data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
+
+        <a class="navbar-item">
+          Shop
+        </a>
+
+        <a class="navbar-item">
+          Sports Channel
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-dark">
+              <strong>Register</strong>
             </a>
-      
-            <a class="navbar-item">
-              Shop
+            <a class="button is-light">
+              Log in
             </a>
-      
-            <a class="navbar-item">
-                Sports Channel
-              </a>
-          </div>
-      
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-dark">
-                  <strong>Register</strong>
-                </a>
-                <a class="button is-light">
-                  Log in
-                </a>
-              </div>
-            </div>
           </div>
         </div>
-      </nav>
-      <div class="tile is-ancestor">
-        <div class="tile is-vertical is-8">
-          <div class="tile">
-            <div class="tile is-parent is-vertical">
-              <article class="tile is-child notification is-primary">
-                <p class="title">New Releases <i class="fa fa-grin-tongue-squint"></i></p>
-                <p class="subtitle">Top tile</p>
-              </article>
-              <article class="tile is-child notification is-warning">
-                <p class="title">Hot Items <i class="fa fa-fire"></i></p>
-                <p class="subtitle">Bottom tile</p>
-              </article>
-            </div>
-            <div class="tile is-parent">
-              <article class="tile is-child notification is-info">
-                <p class="title">Sneakers of the Day</p>
-                <p class="subtitle">Travis Scott 6s</p>
-                <figure class="image is-4by3">
-                  <img src="../GOAT/assets/images/travisScott6.jpg">
-                </figure>
-              </article>
-            </div>
-          </div>
-          <div class="tile is-parent">
-            <article class="tile is-child notification is-danger">
-              <p class="title">Price Drop <i class="fa fa-bomb"></i></p>
-              <p class="subtitle">Aligned with the right tile</p>
-              <div class="content">
-                <!-- Content -->
-              </div>
-            </article>
-          </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End Nav Bar -->
+
+  <div class="notification has-text-centered" id="home-notification">
+    <button class="delete"></button>
+    <i class="fa fa-shipping-fast"></i> Fast, Free, Reliable Shipping! Place an order worth $300 or more to receive our
+    exclusive offer.
+  </div>
+  <div class="tile is-ancestor" id="top-section">
+    <div class="tile is-vertical is-8">
+      <div class="tile">
+        <div class="tile is-parent is-vertical">
+          <article class="tile is-child notification is-primary">
+            <p class="title">New Releases <i class="fa fa-grin-tongue-squint"></i></p>
+            <p class="subtitle">Top tile</p>
+          </article>
+          <article class="tile is-child notification is-warning">
+            <p class="title">Hot Items <i class="fa fa-fire"></i></p>
+            <p class="subtitle">Bottom tile</p>
+          </article>
         </div>
         <div class="tile is-parent">
-          <article class="tile is-child notification is-success">
-            <div class="content">
-              <p class="title">Trending News <i class="fa fa-rss-square"></i></p>
-              <p class="subtitle">With even more content</p>
-              <div class="content">
-                <!-- Content -->
-              </div>
-            </div>
+          <article class="tile is-child notification is-info">
+            <p class="title">Sneakers of the Day</p>
+            <p class="subtitle">Travis Scott 6s</p>
+            <figure class="image is-4by3">
+              <img src="../GOAT/assets/images/travisScott6.jpg">
+            </figure>
           </article>
         </div>
       </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-danger">
+          <p class="title">Price Drop <i class="fa fa-bomb"></i></p>
+          <p class="subtitle">Aligned with the right tile</p>
+          <div class="content">
+            <!-- Content -->
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-success">
+        <div class="content">
+          <p class="title">Trending News <i class="fa fa-rss-square"></i></p>
+          <p class="subtitle">Follow us on Twitter @GOAT_DEV</p>
+          <div class="content">
+            <nav class="level">
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Tweets</p>
+                  <p class="title">3,456</p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Following</p>
+                  <p class="title">123</p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Followers</p>
+                  <p class="title">456K</p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Likes</p>
+                  <p class="title">789</p>
+                </div>
+              </div>
+            </nav>
+            <article class="message is-dark">
+              <div class="message-header">
+                <p>Breaking News: GOAT reaches agreement with Nike</p>
 
-  </body>
+              </div>
+              <div class="message-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus
+                quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus
+                diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus.
+                Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque.
+                Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+  <script src="assets/scripts/home.js"></script>
+</body>
+
 </html>
