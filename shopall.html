@@ -4,170 +4,228 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Shop page</title>
-    <!--BULMA CDN-->
+    <title>Shop - page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
-    <!--FONT AWESOME-->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <!--CSS-->
     <link rel="stylesheet" href="./assets/css/shopall.css" />
 </head>
 
 <body>
-    <!--main content-->
+    <!--MAIN CONTAINER, KEEP EVERYTHING INSIDE FOR NAVBAR TO OPEN-->
     <div id="main">
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a
-        >
-        <a href="#">Home <i class="fas fa-home"></i></a>
-            <a href="#">Shop <i class="fas fa-align-center"></i></a>
-            <a href="#">Log In <i class="fas fa-sign-in-alt"></i></a>
-            <a href="#">Cart <i class="fas fa-shopping-cart"></i></a>
-        </div>
+        <!--NAVBAR STARTS-->
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container">
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a
+              >
+              <a href="#">Home <i class="fas fa-home"></i></a>
+                        <a href="#">Shop <i class="fas fa-align-center"></i></a>
+                        <a href="#">Log In <i class="far fa-user"></i></a>
+                        <a href="#">Register <i class="fas fa-sign-in-alt"></i></a>
+                        <a href="#">Cart <i class="fas fa-shopping-cart"></i></a>
+                    </div>
 
-        <br />
-        <br />
-        <br />
-        <br />
-
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; GOAT</span
-      >
-
-      <!--<div class="row">
-        <div class="col-sm-12">
-          <h2 class="title">SCORE BOX ESPN-API</h2>
-          <hr />
-        </div>
-      </div>-->
-
-      <h1 class="upcoming-title">Upcoming Sneakers</h1>
-
-      <!--SLIDESHOW FOR UPCOOMING SHOES-->
-      <div class="slideshow-container">
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <img
-            src="https://image.goat.com/crop/500/attachments/product_template_additional_pictures/images/028/710/758/original/478948_01.jpg.jpeg?1574367037"
-          />
-          <div class="text">
-            Jordan 11
-            <figcaption>Coming soon</figcaption>
+                    <span id="goat" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; GOAT</span
+            >
           </div>
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img
-            src="https://image.goat.com/crop/500/attachments/product_template_additional_pictures/images/023/573/818/original/515390_01.jpg.jpeg?1563242459"
-          />
-          <div class="text">
-            Yeezy Boost
-            <figcaption>Release date 2020</figcaption>
+          <!--
+LOG IN AND REGISTER
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary">
+                  <strong>Sign up</strong>
+                </a>
+                <a class="button is-light">
+                  Log in
+                </a>
+              </div>
+            </div>
           </div>
+        -->
+          <!--END OF LOGIN AND REGISTER-->
         </div>
+      </section>
 
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img
-            src="https://image.goat.com/crop/500/attachments/product_template_additional_pictures/images/028/286/211/original/503839_01.jpg.jpeg?1573502565"
-          />
-          <div class="text">
-            Jordan 4
-            <figcaption>Release date 2020</figcaption>
-          </div>
+      <!--END OF NAVBAR-->
+
+      <!--COMING SOON-->
+      <div class="container" id="coming">
+        <div class="notification">
+          <h1 class="subtitle is-1">Coming soon</h1>
+          <button class="button is-white">Stay Tuned</button>
         </div>
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
-      <!--END OF SLIDE SHOW CONTAINER-->
+      <!--END OF COMING SOON-->
 
-      <br />
+      <!--COMING SOON SLIDESHOW-->
+      <div id="css3dimageslider">
+        <ul>
+          <li>
+            <img
+              src="https://c.static-nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bjo2uyepsquodbpajaru/lebron-16-low-basketball-shoe-DjPW2B.jpg"
+              class="coming"
+            />
+          </li>
+          <li>
+            <img
+              src="https://c.static-nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3d8a6abb-cdc3-4465-9944-03b8f3abeec4/air-zoom-unvrs-flyease-basketball-shoe-29tFGs.jpg"
+              class="coming"
+            />
+          </li>
+          <li>
+            <img
+              src="https://c.static-nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/saebmoqfqgwbw25qmlya/air-jordan-xxxiv-basketball-shoe-RG4jCV.jpg"
+              class="coming"
+            />
+          </li>
+          <li>
+            <img
+              src="https://c.static-nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/zaiywkaxptzxmajetrd7/pg-3-basketball-shoe-nzrq5r.jpg"
+              class="coming"
+            />
+          </li>
+        </ul>
+      </div>
+      <ul id="css3dimagePager">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+      <hr />
+      <!--END OF COMING SOON SLIDESHOW-->
 
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-
-    <hr />
-
-    <!--button sort by-->
-    <div class="sortBy">
-        <button onclick="mySort()" class="button" class="dropbtn">
-          Sort By
-        </button>
-
-        <div id="sort" class="dropdown-content">
-            <button class="button" id="all">Shop All</button>
-            <button class="button" id="latest">Latest arrivals</button>
-            <button class="button" id="popular">Most Popular</button>
-            <button class="button" id="Running">Running</button>
-            <button class="button" id="Basketball">Basketball</button>
-            <button class="button" id="Casual">Casual</button>
+      <!--ON SALE-->
+      <div class="container" id="sale">
+        <div class="notification">
+          <h1 class="subtitle is-1">On Sale</h1>
         </div>
-    </div>
-    <!--button dropdown-->
+      </div>
+      <!--END OF ON SALE-->
 
-    <!--button filter-->
-    <div class="filterBy">
-        <button onclick="myFilter()" class="button" class="dropbtn">
-          Filter By
-        </button>
-
-        <div id="filter" class="filter-content">
-            <label class="container-filter">Size
-            <input type="checkbox" />
-            <span class="checkmark"></span>
-          </label>
-            <label class="container-filter">Color
-            <input type="checkbox" />
-            <span class="checkmark"></span>
-          </label>
-            <label class="container-filter">Price
-            <input type="checkbox" />
-            <span class="checkmark"></span>
-          </label>
+      <!--ON SALE SLIDESHOW-->
+      <div class="container" id="onsale">
+        <div class="mySlides">
+          <img
+            src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
+            class="sale"
+          />
         </div>
-    </div>
-    <!--button filter-->
 
-    <!--Image container-->
-    <div class="container">
-        <div class="img-grid">
-            <!--filter for popular shoes-->
-            <img src="https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg" class="popular" alt="" width="400px" height="300px" />
-            <img src="https://static.pexels.com/photos/356056/pexels-photo-356056.jpeg" class="popular" alt="" />
-            <img src="https://static.pexels.com/photos/373076/pexels-photo-373076.jpeg" class="popular" alt="" />
-            <img src="https://static.pexels.com/photos/158826/structure-light-led-movement-158826.jpeg" class="popular" alt="" />
-            <img src="https://static.pexels.com/photos/50711/board-electronics-computer-data-processing-50711.jpeg" class="popular" alt="" />
-            <img src="https://static.pexels.com/photos/247932/pexels-photo-247932.jpeg" class="popular" alt="" />
-            <img src="https://static.pexels.com/photos/96381/pexels-photo-96381.jpeg" class="popular" alt="" />
-            <img src="https://static.pexels.com/photos/450035/pexels-photo-450035.jpeg" class="popular" alt="" />
-
-            <!--filter for latest shoes-->
-            <img src="https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg" class="latest" alt="" />
-            <img src="https://static.pexels.com/photos/356056/pexels-photo-356056.jpeg" class="latest" alt="" />
-            <img src="https://static.pexels.com/photos/373076/pexels-photo-373076.jpeg" class="latest" alt="" />
-            <img src="https://static.pexels.com/photos/158826/structure-light-led-movement-158826.jpeg" class="latest" alt="" />
-            <img src="https://static.pexels.com/photos/50711/board-electronics-computer-data-processing-50711.jpeg" class="latest" alt="" />
-            <img src="https://static.pexels.com/photos/247932/pexels-photo-247932.jpeg" class="latest" alt="" />
-            <img src="https://static.pexels.com/photos/96381/pexels-photo-96381.jpeg" class="latest" alt="" />
-            <img src="https://static.pexels.com/photos/450035/pexels-photo-450035.jpeg" class="latest" alt="" />
+        <div class="mySlides">
+          <img
+            src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
+            class="sale"
+          />
         </div>
+
+        <div class="mySlides">
+          <img
+            src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
+            class="sale"
+          />
+        </div>
+
+        <div class="mySlides">
+          <img
+            src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
+            class="sale"
+          />
+        </div>
+
+        <div class="mySlides">
+          <img
+            src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
+            class="sale"
+          />
+        </div>
+
+        <div class="mySlides">
+          <img
+            src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
+            class="sale"
+          />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <div class="row">
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
+              style="width:100%"
+              onclick="currentSlide(1)"
+              alt="img1"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
+              style="width:100%"
+              onclick="currentSlide(2)"
+              alt="img2"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
+              style="width:100%"
+              onclick="currentSlide(3)"
+              alt="img3"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
+              style="width:100%"
+              onclick="currentSlide(4)"
+              alt="img4"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
+              style="width:100%"
+              onclick="currentSlide(5)"
+              alt="img5"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
+              style="width:100%"
+              onclick="currentSlide(6)"
+              alt="img6"
+            />
+          </div>
+        </div>
+      </div>
+      <hr />
+      <!--END OF ON SALE SLIDESHOW-->
     </div>
-    <!--Image container-->
+    <!--END OF MAIN CONTAINER, KEEP EVERYTHING INSIDE FOR NAVBAR TO CLOSE-->
 
-    <!--div to store images-->
-    <div class="all"></div>
-    <!--end of div to store images-->
-    </div>
-    <!--end of main content-->
-
-    <!--jQuery-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js " integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=" anonymous "></script>
-    <!--JS-->
-    <script src="./assets/scripts/shopall.js "></script>
-</body>
-
+    <!--jQuery CDN-->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <!--JS LINK-->
+    <script src="./assets/scripts/shopall.js"></script>
+  </body>
 </html>

@@ -24,21 +24,9 @@ function myFilter() {
     document.getElementById("filter").classList.toggle("show");
 }
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-    if (!event.target.matches(".button")) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains("show")) {
-                openDropdown.classList.remove("show");
-            }
-        }
-    }
-};
+// END OF NAV BAR
 
-//  SLIDESHOW FOR UPCOOMING SHOES
+// ON SALE SLIDESHOW
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -54,7 +42,8 @@ function currentSlide(n) {
 function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
     if (n > slides.length) {
         slideIndex = 1;
     }
@@ -69,25 +58,23 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
+    captionText.innerHTML = dots[slideIndex - 1].alt;
 }
 
-// jQuery
+// END OF ON SALE SLIDESHOW
 
 $(document).ready(function() {
-    $("#latest").click(function() {
-        $(".latest").show(1000);
-        $(".popular").hide();
-        $(".all").hide();
+    // COMING SOON SLIDESHOW
+    $("#css3dimagePager li").click(function() {
+        var rotateY = $(this).index() * -90;
+        $("#css3dimageslider ul").css({
+            "-webkit-transform": "rotateY(" + rotateY + "deg)",
+            "-moz-transform": "rotateY(" + rotateY + "deg)",
+            "-ms-transform": "rotateY(" + rotateY + "deg)",
+            transform: "rotateY(" + rotateY + "deg)"
+        });
+        $("#css3dimagePager li").removeClass("active");
+        $(this).addClass("active");
     });
-
-    $("#popular").click(function() {
-        $(".popular").show(1000);
-        $(".latest").hide();
-        $(".all").hide();
-    });
-
-    $("#all").click(function() {
-        $(".popular").show(1000);
-        $(".latest").show(1000);
-    });
+    // END OF ON COMING SOON SLIDESHOW
 });
