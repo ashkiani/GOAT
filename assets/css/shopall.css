@@ -2,19 +2,12 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Lato", sans-serif;
-    transition: background-color 0.5s;
+
+/* NAV BAR */
+
+.hero {
+    border-bottom: 1px solid black;
 }
-
-#text {
-    position: relative;
-    bottom: 80px;
-    left: 170px;
-}
-
-
-/* NAVBAR */
 
 .sidenav {
     height: 100%;
@@ -26,7 +19,7 @@ body {
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 50px;
 }
 
 .sidenav a {
@@ -55,140 +48,173 @@ body {
 #main {
     transition: 0.5s;
     padding: 16px;
-    margin-top: -100px;
 }
 
 
-/* drop down button for filter and sort */
+/* END OF NAV BAR */
 
-.dropbtn {}
 
-.dropbtn:hover,
-.dropbtn:focus {}
+/* COMING SOON */
 
-.filterBy {
-    position: absolute;
-    left: 52%;
-    display: inline-block;
-    margin-top: 50px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-}
-
-.sortBy {
-    position: absolute;
-    left: 38%;
-    display: inline-block;
-    margin-top: 50px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-}
-
-.filter-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    overflow: hidden;
-    padding: 10px;
-    z-index: 1;
-}
-
-.container-filter {}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.checkmark {
-    float: left;
-}
-
-.show {
-    display: block;
-}
-
-.button {
-    margin: 5px;
-    width: 140px;
-    border: 1px solid black;
-    transition: transform 0.2s;
-    color: black;
-}
-
-.button:hover {
-    transform: scale(1.1);
-}
-
-.title {
+.notification {
     text-align: center;
-    margin-top: 100px;
+    background-color: #ffff;
 }
 
-h1 {
+
+/* SLIDE SHOW-COMIGN SOON*/
+
+#css3dimagePager {
     text-align: center;
-    font-size: 50px;
-}
-
-
-/* slide show for upcoming shoes */
-
-.mySlides {
-    display: none;
-    margin-left: 150px;
-    margin-top: -50px;
-}
-
-img {
-    vertical-align: middle;
-    margin-left: 100px;
-    transition: transform 0.2s;
-    background-color: #999999;
-}
-
-
-/* Slideshow container */
-
-.upcoming-title {
-    margin-top: 200px;
-}
-
-.slideshow-container {
-    max-width: 1000px;
     position: relative;
-    margin: auto;
-    margin-top: 200px;
+    z-index: 11;
+    padding: 0 0 10px;
+    margin-top: 240px;
+    right: 10px;
+}
+
+#css3dimagePager li:hover {
+    transform: scale(1.2);
+}
+
+#css3dimagePager li {
+    padding-right: 15px;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 15px;
+    transition: transform .2s;
+}
+
+#css3dimagePager li.active {
+    font-weight: bold;
+}
+
+#css3dimageslider {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000px;
+    -ms-perspective: 1000;
+    perspective: 1000;
+    -webkit-perspective-origin: 50% 100px;
+    -moz-perspective-origin: 50% 100px;
+    -ms-perspective-origin: 50% 100px;
+    perspective-origin: 50% 100px;
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 100%;
+    height: 200px;
+}
+
+#css3dimageslider ul {
+    position: relative;
+    margin: 0 auto;
+    height: 281px;
+    width: 450px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 100px 0;
+    -moz-transform-origin: 50% 100px 0;
+    -ms-transform-origin: 50% 100px 0;
+    transform-origin: 50% 100px 0;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+#css3dimageslider ul li {
+    position: absolute;
+    height: 281px;
+    width: 450px;
+    padding: 0px;
+}
+
+#css3dimageslider ul li:nth-child(1) {
+    -webkit-transform: translateZ(225px);
+    -moz-transform: translateZ(225px);
+    -ms-transform: translateZ(225px);
+    transform: translateZ(225px);
+}
+
+#css3dimageslider ul li:nth-child(2) {
+    -webkit-transform: rotateY(90deg) translateZ(225px);
+    -moz-transform: rotateY(90deg) translateZ(225px);
+    -ms-transform: rotateY(90deg) translateZ(225px);
+    transform: rotateY(90deg) translateZ(225px);
+}
+
+#css3dimageslider ul li:nth-child(3) {
+    -webkit-transform: rotateY(180deg) translateZ(225px);
+    -moz-transform: rotateY(180deg) translateZ(225px);
+    -ms-transform: rotateY(180deg) translateZ(225px);
+    transform: rotateY(180deg) translateZ(225px);
+}
+
+#css3dimageslider ul li:nth-child(4) {
+    -webkit-transform: rotateY(-90deg) translateZ(225px);
+    -moz-transform: rotateY(-90deg) translateZ(225px);
+    -ms-transform: rotateY(-90deg) translateZ(225px);
+    transform: rotateY(-90deg) translateZ(225px);
+}
+
+
+/* END OF COMING SOON-SLIDESHOW */
+
+
+/* img for coming soon */
+
+.coming {
+    width: 350px;
+    height: 350px;
+}
+
+
+/* stay tune button */
+
+.button.is-white {
+    font-size: 25px;
+}
+
+
+/* END OF COMING SOON CONTAINER  */
+
+
+/* ON SALE CONTAINER */
+
+#sale {
+    margin-top: 50px;
+}
+
+.sale {
+    width: 350px;
+    height: 350px;
+}
+
+#onsale {
+    margin-top: 50px;
+    width: 70%;
+    ;
 }
 
 .container {
-    margin: 10px;
-    margin-top: 200px;
-    border: #fff solid 5px;
-    background: #fff;
+    position: relative;
 }
 
 
-/* mak images fill their container*/
+/* Hide the images by default */
 
-img:hover {
-    opacity: 0.5;
+.mySlides {
+    display: none;
+    position: relative;
+    left: 35%;
+}
+
+
+/* Add a pointer when hovering over the thumbnail images */
+
+.cursor {
     cursor: pointer;
-    transform: scale(1.1);
-}
-
-
-/* CSS Grid*/
-
-.img-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 80px;
-    margin-right: 40px;
 }
 
 
@@ -198,16 +224,19 @@ img:hover {
 .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 55%;
     width: auto;
     padding: 16px;
-    margin-top: -22px;
-    color: black;
+    margin-top: -150px;
+    color: white;
     font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
+    font-size: 20px;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    -webkit-user-select: none;
+    border: 1px solid black;
+    background-color: black;
+    transition: transform .2s;
 }
 
 
@@ -224,26 +253,15 @@ img:hover {
 .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-/* Caption text */
-
-.text {
-    color: #111;
-    font-size: 20px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 5%;
-    left: 70%;
-    text-align: center;
+    color: #FFFF;
+    transform: scale(1.1)
 }
 
 
 /* Number text (1/3 etc) */
 
 .numbertext {
-    color: #111;
+    color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
@@ -251,103 +269,40 @@ img:hover {
 }
 
 
-/* The dots/bullets/indicators */
+/* Container for image text */
 
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Six columns side by side */
+
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+
+/* Add a transparency effect for thumnbail images */
+
+.demo {
+    opacity: 0.6;
 }
 
 .active,
-.dot:hover {
-    background-color: #717171;
-}
-
-.image-wrapper {
-    margin-top: 150px;
-    padding-left: 50px;
+.demo:hover {
+    opacity: 1;
 }
 
 
-/* Fading animation */
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
-/* upcoming shoes */
-
-@media only screen and (max-width: 300px) {
-    .prev,
-    .next,
-    .text {
-        font-size: 11px;
-    }
-}
-
-
-/* MEDIA QUERIE*/
-
-
-/* nav bar */
-
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav a {
-        font-size: 18px;
-    }
-}
-
-
-/* Media Query for changing grid on bigger screens*/
-
-
-/* grid img */
-
-
-/* Bigger than Phones(tablet) */
-
-@media only screen and (min-width: 750px) {
-    .img-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-/* Bigger than Phones(laptop / desktop) */
-
-@media only screen and (min-width: 970px) {
-    .img-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
+/* END OF ON SALE CONTAINER
