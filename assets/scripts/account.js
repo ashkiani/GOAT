@@ -6,6 +6,19 @@ $(document).ready(function () {
         shoeSizeEl.html("");
     }
 
+    function initShoeSizeCombo() {
+        clearShoeSizeCombo();
+        for (var i = 4; i < 13; i = i + 0.5) {
+            console.log(i);
+            addSize(i);
+        }
+        addSize(13);
+        addSize(14);
+        shoeSizeEl.val(defaultShoeSize);
+    }
+    initShoeSizeCombo();
+
+
     clearUserData();
 
     function loadLocalStorage() {
@@ -45,6 +58,7 @@ $(document).ready(function () {
     function setUserData(userDataObject) {
         var goatUsers = [userData];
         goatUsers = loadLocalStorage();
+        console.log("users:" + goatUsers);
         if (goatUsers !== null) {
             var userExists = false;
             goatUsers.forEach(user => {
@@ -77,7 +91,68 @@ $(document).ready(function () {
         localStorage.setItem("goatUsers", JSON.stringify(goatUsers));
     }
 
-    // userData.email = "ashkiani@yahoo.com";
+    var nameEl = $("#nameText");
+    var emailEl = $("#emailText");
+    var passwordEl = $("#passwordText");
+    //shoeSizeEl
+    var addressEl = $("#addressText");
+    var ccNumberEl = $("#ccNumberText");
+    var ccNameEl = $("#ccNameText");
+    var ccExpEl = $("#ccExpText");
+
+
+
+    function updateUserDataObjectFromPage() {
+        userData.name = nameEl.val();
+        userData.email = emailEl.val();
+        userData.password = passwordEl.val();
+        userData.shoeSize = shoeSizeEl.val();
+        userData.address = addressEl.html();
+        userData.creditCard.number = ccNumberEl.val();
+        userData.creditCard.name = ccNameEl.val();
+        userData.creditCard.expiration = ccExpEl.val();
+    }
+    function loadPageFromUserDataObject() {
+        nameEl.val(userData.name);
+        emailEl.val(userData.email);
+        passwordEl.val(userData.password);
+        shoeSizeEl.val(userData.shoeSize);
+        addressEl.html(userData.address);
+        ccNumberEl.val(userData.creditCard.number);
+        ccNameEl.val(userData.creditCard.name);
+        ccExpEl.val(userData.creditCard.expiration);
+    }
+
+    //ccExpDiv
+    //ccNameDiv
+    //ccNumberDiv
+    //addressDiv
+    //passwordDiv
+    //emailDiv
+    //nameDiv
+    //id="nameText"
+    //id="emailText"
+    //id="passwordText"
+    //shoeSize
+    //id="addressText" html
+    //id="ccNumberText"
+    //id="ccNameText"
+    //id="ccExpText"
+
+
+    //test data
+    // userData.email = "abcd@yahoo.com";
+    // userData.name = "Siavash";
+
+    // userData.password = "SomePassword";
+    // userData.shoeSize = 10.5;
+    // userData.address = "some text for address";
+    // userData.creditCard.number = "123456"
+    // userData.creditCard.name = "someone elses cc"
+    // userData.creditCard.expiration = "1111"
+    // loadPageFromUserDataObject();
+
+
     // setUserData(userData);
     // getUserData("ashkiani@yahoo.com");
     // $("#emailText").val(userData.email);
@@ -93,20 +168,11 @@ $(document).ready(function () {
         optEl.appendTo(shoeSizeEl);
     }
 
-    function initShoeSizeCombo() {
-        clearShoeSizeCombo();
-        for (var i = 4; i < 13; i = i + 0.5) {
-            console.log(i);
-            addSize(i);
-        }
-        addSize(13);
-        addSize(14);
-        shoeSizeEl.val(defaultShoeSize);
-    }
-    initShoeSizeCombo();
 
 
     $("#btnUpdate").click(function () {
+        // updateUserDataObjectFromPage();
+        // setUserData(userData);
         underConstructionAlert();
     });
     $("#btnCancel").click(function () {
