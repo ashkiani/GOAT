@@ -5,8 +5,9 @@
 
 /* NAV BAR */
 
-.hero {
+#goat {
     border-bottom: 1px solid black;
+    margin-bottom: 20px;
 }
 
 .sidenav {
@@ -54,15 +55,115 @@
 /* END OF NAV BAR */
 
 
-/* COMING SOON */
+/* SHIPPING */
+
+#home-notification {
+    background-color: black;
+    color: #FFFF;
+    margin-top: 40px;
+}
+
+
+/*END OF SHIPPING */
+
+
+/* SHOP TITLE */
+
+#pageTitle {
+    text-align: center;
+}
+
+
+/* END OF SHOP TITLE */
+
+
+/* IMG SHOWCASE */
+
+.j11 {
+    width: 100%;
+    height: 100%;
+}
+
+.j11-text {
+    position: absolute;
+    bottom: 12%;
+    left: 5%;
+}
+
+#imgShowcase {
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 110%;
+}
+
+
+/* END OF IMG SHOWCASE */
+
+
+/* IMG SHOWCASE 2 */
+
+#imgShowcase2 {
+    width: 45%;
+    position: absolute;
+    top: 240%
+}
+
+.airmax-text {
+    position: absolute;
+    bottom: 12%;
+    left: 5%;
+    color: black;
+}
+
+
+/* END OF IMG SHOWCASE 2 */
+
+
+/* IMG SHOWCASE 3 */
+
+#imgShowcase3 {
+    width: 45%;
+    position: absolute;
+    top: 320%
+}
+
+.kyrie-text {
+    position: absolute;
+    bottom: 12%;
+    left: 5%;
+    color: white;
+}
+
+.kyrie {
+    width: 550px;
+    height: 450px;
+}
+
+
+/* END OF IMG SHOWCASE 3 */
+
+
+/* LATEST FASHION */
+
+#latestTitle {
+    width: 50%;
+    border: 1px solid black;
+    margin-left: -10px;
+    margin-top: 50px;
+}
 
 .notification {
     text-align: center;
     background-color: #ffff;
 }
 
-
-/* SLIDE SHOW-COMIGN SOON*/
+#latestFashion {
+    width: 50%;
+    margin-left: -15px;
+    border: 1px solid black;
+    margin-top: 50px;
+}
 
 #css3dimagePager {
     text-align: center;
@@ -98,7 +199,6 @@
     -moz-perspective-origin: 50% 100px;
     -ms-perspective-origin: 50% 100px;
     perspective-origin: 50% 100px;
-    margin-left: 50px;
     margin-top: 50px;
     width: 100%;
     height: 200px;
@@ -159,10 +259,7 @@
 }
 
 
-/* END OF COMING SOON-SLIDESHOW */
-
-
-/* img for coming soon */
+/* img for latest fashion */
 
 .coming {
     width: 350px;
@@ -170,139 +267,187 @@
 }
 
 
-/* stay tune button */
-
-.button.is-white {
-    font-size: 25px;
-}
+/* END OF COMING LATEST FASHION */
 
 
-/* END OF COMING SOON CONTAINER  */
+/* CELEBS GALLERY */
 
-
-/* ON SALE CONTAINER */
-
-#sale {
-    margin-top: 50px;
-}
-
-.sale {
-    width: 350px;
-    height: 350px;
-}
-
-#onsale {
-    margin-top: 50px;
-    width: 70%;
-    ;
-}
-
-.container {
-    position: relative;
-}
-
-
-/* Hide the images by default */
-
-.mySlides {
-    display: none;
-    position: relative;
-    left: 35%;
-}
-
-
-/* Add a pointer when hovering over the thumbnail images */
-
-.cursor {
-    cursor: pointer;
-}
-
-
-/* Next & previous buttons */
-
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 55%;
-    width: auto;
-    padding: 16px;
-    margin-top: -150px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
+#celebsTitle {
     border: 1px solid black;
-    background-color: black;
-    transition: transform .2s;
+    width: 50%;
+    position: relative;
+    left: 25.5%;
+    margin-top: 70px;
 }
 
-
-/* Position the "next button" to the right */
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-
-/* On hover, add a black background color with a little bit see-through */
-
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #FFFF;
-    transform: scale(1.1)
-}
-
-
-/* Number text (1/3 etc) */
-
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
+#celebsGallery {
+    width: 50%;
     position: absolute;
+    left: 50%;
+}
+
+.hello {
+    opacity: 1 !important;
+}
+
+.full {
+    position: fixed;
+    left: 0;
     top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.full .content {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+    height: 100%;
+    width: 100%;
+    display: grid;
+}
+
+.full .content img {
+    left: 50%;
+    transform: translate3d(0, 0, 0);
+    animation: zoomin 1s ease;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+.byebye {
+    opacity: 0;
+}
+
+.byebye:hover {
+    transform: scale(0.2) !important;
+}
+
+.gallery {
+    display: grid;
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 8px;
+}
+
+.gallery img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 16px #333;
+    transition: all 1.5s ease;
+}
+
+.gallery img:hover {
+    box-shadow: 0 0 32px #333;
+}
+
+.gallery .content {
+    padding: 4px;
+}
+
+.gallery .gallery-item {
+    transition: grid-row-start 300ms linear;
+    transition: transform 300ms ease;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.gallery .gallery-item:hover {
+    transform: scale(1.025);
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    }
+}
+
+@-moz-keyframes zoomin {
+    0% {
+        max-width: 50%;
+        transform: rotate(-30deg);
+        filter: blur(4px);
+    }
+    30% {
+        filter: blur(4px);
+        transform: rotate(-80deg);
+    }
+    70% {
+        max-width: 50%;
+        transform: rotate(45deg);
+    }
+    100% {
+        max-width: 100%;
+        transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes zoomin {
+    0% {
+        max-width: 50%;
+        transform: rotate(-30deg);
+        filter: blur(4px);
+    }
+    30% {
+        filter: blur(4px);
+        transform: rotate(-80deg);
+    }
+    70% {
+        max-width: 50%;
+        transform: rotate(45deg);
+    }
+    100% {
+        max-width: 100%;
+        transform: rotate(0deg);
+    }
+}
+
+@-o-keyframes zoomin {
+    0% {
+        max-width: 50%;
+        transform: rotate(-30deg);
+        filter: blur(4px);
+    }
+    30% {
+        filter: blur(4px);
+        transform: rotate(-80deg);
+    }
+    70% {
+        max-width: 50%;
+        transform: rotate(45deg);
+    }
+    100% {
+        max-width: 100%;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes zoomin {
+    0% {
+        max-width: 50%;
+        transform: rotate(-30deg);
+        filter: blur(4px);
+    }
+    30% {
+        filter: blur(4px);
+        transform: rotate(-80deg);
+    }
+    70% {
+        max-width: 50%;
+        transform: rotate(45deg);
+    }
+    100% {
+        max-width: 100%;
+        transform: rotate(0deg);
+    }
 }
 
 
-/* Container for image text */
-
-.caption-container {
-    text-align: center;
-    background-color: #222;
-    padding: 2px 16px;
-    color: white;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-/* Six columns side by side */
-
-.column {
-    float: left;
-    width: 16.66%;
-}
-
-
-/* Add a transparency effect for thumnbail images */
-
-.demo {
-    opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-    opacity: 1;
-}
-
-
-/* END OF ON SALE CONTAINER
+/* END OF CELEBS GALLERY */
