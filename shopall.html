@@ -14,7 +14,7 @@
     <!--MAIN CONTAINER, KEEP EVERYTHING INSIDE FOR NAVBAR TO OPEN-->
     <div id="main">
         <!--NAVBAR STARTS-->
-        <section class="hero">
+        <section class="hero" id="goat">
             <div class="hero-body">
                 <div class="container">
                     <div id="mySidenav" class="sidenav">
@@ -27,7 +27,7 @@
                         <a href="#">Cart <i class="fas fa-shopping-cart"></i></a>
                     </div>
 
-                    <span id="goat" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; GOAT</span
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; GOAT</span
             >
           </div>
           <!--
@@ -51,181 +51,167 @@ LOG IN AND REGISTER
 
       <!--END OF NAVBAR-->
 
-      <!--COMING SOON-->
-      <div class="container" id="coming">
-        <div class="notification">
-          <h1 class="subtitle is-1">Coming soon</h1>
-          <button class="button is-white">Stay Tuned</button>
-        </div>
+      <!--SHIPPING-->
+  <div class="container" >
+    <div class="notification" id="home-notification">
+      <button class="delete"></button>
+      <i class="fa fa-shipping-fast"></i> Fast, Free, Reliable Shipping! Place an order worth $300 or more to receive our
+      exclusive offer.
+    
+    </div>
+  </div>
+      <!--END OF SHIPPING-->
+
+      <!--TITLE PAGE SHOP-->
+  <section class="hero" id="pageTitle">
+  <div class="hero-body">
+    <div class="container">
+  
+    </div>
+    </div>
+    </section>
+    <!--END OF TITLE PAGE SHOP-->
+
+   
+    <!--IMG SHOWACES-->
+      <article class="tile is-child notification is-primary" id="imgShowcase">
+        <p class="j11-text">AIR JORDAN 11 RETRO "BRED" 2019</p>
+       <img src="./assets/images/b57e6dfba414-b809-ae11-f7c1-08b5342c.jpeg" class="j11" alt="">
+     
+      </article>
+    <!--END OF IMG SHOWCASE-->
+
+    <!-- LATEST STYLE TITLE-->
+    <div class="container is-fluid" id="latestTitle">
+      <div class="notification">
+        <h2 class="title is-2">Latest Fashion</h2>
       </div>
-      <!--END OF COMING SOON-->
+    </div>
+    <!--END LATEST STYLE TITLE-->
 
-      <!--COMING SOON SLIDESHOW-->
-      <div id="css3dimageslider">
-        <ul>
-          <li>
-            <img
-              src="https://c.static-nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bjo2uyepsquodbpajaru/lebron-16-low-basketball-shoe-DjPW2B.jpg"
-              class="coming"
-            />
-          </li>
-          <li>
-            <img
-              src="https://c.static-nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3d8a6abb-cdc3-4465-9944-03b8f3abeec4/air-zoom-unvrs-flyease-basketball-shoe-29tFGs.jpg"
-              class="coming"
-            />
-          </li>
-          <li>
-            <img
-              src="https://c.static-nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/saebmoqfqgwbw25qmlya/air-jordan-xxxiv-basketball-shoe-RG4jCV.jpg"
-              class="coming"
-            />
-          </li>
-          <li>
-            <img
-              src="https://c.static-nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/zaiywkaxptzxmajetrd7/pg-3-basketball-shoe-nzrq5r.jpg"
-              class="coming"
-            />
-          </li>
-        </ul>
-      </div>
-      <ul id="css3dimagePager">
-        <li class="active">1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-      </ul>
-      <hr />
-      <!--END OF COMING SOON SLIDESHOW-->
+    <!--lATEST STYLES IMG SLIDER-->
+    <div class="tile is-parent" id="latestFashion">
+        <article class="tile is-child notification is-danger">
+            <div class="content">
 
-      <!--ON SALE-->
-      <div class="container" id="sale">
-        <div class="notification">
-          <h1 class="subtitle is-1">On Sale</h1>
-        </div>
-      </div>
-      <!--END OF ON SALE-->
+                <div id="css3dimageslider">
+                    <ul>
+                        <li>
+                            <img src="https://source.unsplash.com/random/300x300" class="style" />
+                        </li>
+                        <li>
+                            <img src="https://source.unsplash.com/random/300x300" class="style" />
+                        </li>
+                        <li>
+                            <img src="https://source.unsplash.com/random/300x300" class="style" />
+                        </li>
+                        <li>
+                            <img src="https://source.unsplash.com/random/300x300" class="style" />
+                        </li>
 
-      <!--ON SALE SLIDESHOW-->
-      <div class="container" id="onsale">
-        <div class="mySlides">
-          <img
-            src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
-            class="sale"
-          />
+                        <li>
+                            <img src="https://source.unsplash.com/random/300x300" class="style" />
+                        </li>
+                        <li>
+                            <img src="https://source.unsplash.com/random/300x300" class="style" />
+                        </li>
+                    </ul>
+                </div>
+                <ul id="css3dimagePager">
+                    <li class="active">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul </div>
+        </article>
         </div>
 
-        <div class="mySlides">
-          <img
-            src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
-            class="sale"
-          />
-        </div>
+        <!--END OF LATEST STYLE IMG SLIDER-->
+        <hr>
 
-        <div class="mySlides">
-          <img
-            src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
-            class="sale"
-          />
-        </div>
 
-        <div class="mySlides">
-          <img
-            src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
-            class="sale"
-          />
+        <!-- CELEBS TITLE-->
+        <div class="container is-fluid" id="celebsTitle">
+            <div class="notification">
+                <h2 class="title is-2">Celebs Rock Our Kicks</h2>
+            </div>
         </div>
+        <!--END CELEBS TITLE-->
 
-        <div class="mySlides">
-          <img
-            src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
-            class="sale"
-          />
+        <!--IMG SHOWACES 2-->
+        <article class="tile is-child notification is-primary" id="imgShowcase2">
+          <p class="airmax-text">Air Max 90 "Viotech" 2019
+          </p>
+         
+          <img src="./assets/images/airmax.jpeg" class="airmax" alt="">
+        
+        </article>
+        <!--END OF IMG SHOWCASE 2-->
+
+
+          <!--IMG SHOWACES 3-->
+          <article class="tile is-child notification is-primary" id="imgShowcase3">
+            <p class="kyrie-text">Kyrie 6 Pre-Heat 'Heal The World'
+            </p>
+          
+            <img src="./assets/images/kyrie.jpg" class="kyrie" alt="">
+          
+          </article>
+          <!--END OF IMG SHOWCASE 3-->
+
+        <!--CELEBS GALLERY-->
+        <div class="tile is-parent" id="celebsGallery">
+            <article class="tile is-child notification is-danger">
+                <div class="content">
+                    <div class="gallery" id="gallery">
+                          <div class="gallery-item">
+                            <div class="content"><img src="https://source.unsplash.com/random/?tech,choose" alt=""></div>
+                          </div>
+
+                        <div class="gallery-item">
+                            <div class="content"><img src="https://source.unsplash.com/random/?tech,choose" alt=""></div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="content"><img src="https://source.unsplash.com/random/?tech,past" alt=""></div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="content"><img src="https://source.unsplash.com/random/?tech,lamp" alt=""></div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="content"><img src="https://source.unsplash.com/random/?tech,yet" alt=""></div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="content"><img src="https://source.unsplash.com/random/?tech,eight" alt=""></div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="content"><img src="https://source.unsplash.com/random/?tech,crew" alt=""></div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="content"><img src="https://source.unsplash.com/random/?tech,event" alt=""></div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="content"><img src="https://source.unsplash.com/random/?tech,instrument" alt=""></div>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
         </div>
+        <!--END OF CELEBS GALLERY-->
 
-        <div class="mySlides">
-          <img
-            src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
-            class="sale"
-          />
-        </div>
 
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
 
-        <div class="caption-container">
-          <p id="caption"></p>
-        </div>
 
-        <div class="row">
-          <div class="column">
-            <img
-              class="demo cursor"
-              src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
-              style="width:100%"
-              onclick="currentSlide(1)"
-              alt="img1"
-            />
-          </div>
-          <div class="column">
-            <img
-              class="demo cursor"
-              src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
-              style="width:100%"
-              onclick="currentSlide(2)"
-              alt="img2"
-            />
-          </div>
-          <div class="column">
-            <img
-              class="demo cursor"
-              src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
-              style="width:100%"
-              onclick="currentSlide(3)"
-              alt="img3"
-            />
-          </div>
-          <div class="column">
-            <img
-              class="demo cursor"
-              src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
-              style="width:100%"
-              onclick="currentSlide(4)"
-              alt="img4"
-            />
-          </div>
-          <div class="column">
-            <img
-              class="demo cursor"
-              src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
-              style="width:100%"
-              onclick="currentSlide(5)"
-              alt="img5"
-            />
-          </div>
-          <div class="column">
-            <img
-              class="demo cursor"
-              src="https://images.footlocker.com/is/image/EBFL2/30690160_a1?wid=640&hei=640&fmt=png-alpha"
-              style="width:100%"
-              onclick="currentSlide(6)"
-              alt="img6"
-            />
-          </div>
-        </div>
-      </div>
-      <hr />
-      <!--END OF ON SALE SLIDESHOW-->
     </div>
     <!--END OF MAIN CONTAINER, KEEP EVERYTHING INSIDE FOR NAVBAR TO CLOSE-->
 
     <!--jQuery CDN-->
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!--JS LINK-->
     <script src="./assets/scripts/shopall.js"></script>
-  </body>
+</body>
+
 </html>
