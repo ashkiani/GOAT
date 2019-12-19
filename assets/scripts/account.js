@@ -42,36 +42,45 @@ $(document).ready(function () {
         }
     }
 
-    // function setUserData(user) {
-    //     var goatUsers = [userData];
-    //     goatUsers = loadLocalStorage();
-    //     if (goatUsers !== null) {
+    function setUserData(userDataObject) {
+        var goatUsers = [userData];
+        goatUsers = loadLocalStorage();
+        if (goatUsers !== null) {
+            var userExists = false;
+            goatUsers.forEach(user => {
+                if (user !== null) {
+                    console.log("checking user:" & user.email);
+                    if (user.email == userDataObject.email) {
+                        //copy the input into the exiting record
+                        user.email = userDataObject.email;
+                        user.name = userDataObject.name;
+                        user.password = userDataObject.password;
+                        user.shoeSize = userDataObject.shoeSize;
+                        user.creditCard = userDataObject.creditCard;
+                        user.cart = userDataObject.cart;
+                        userExists = true;
+                        return;
+                    }
+                }
+            });
+            if (userExists) {
 
+            } else {
+                goatUsers.push(userDataObject);
+            }
 
-    //     }
-    //     else {
-    //         goatUsers = [];
+        }
+        else {
+            goatUsers = [];
+            goatUsers.push(userDataObject);
+        }
+        localStorage.setItem("goatUsers", JSON.stringify(goatUsers));
+    }
 
-    //     }
-    //     var userExists = false;
-    //     goatUsers.forEach(user => {
-    //         if (user !== null) {
-    //             console.log("checking user:" & user.email);
-    //             if (user.email == userName) {
-    //                 //copy the input into the exiting record
-    //                 userData.email=user.email;
-    //                 userData.name=user.name;
-    //                 userData.password=user.password;
-    //                 userData.shoeSize=user.shoeSize;
-
-    //                 return;
-    //             }
-    //         }
-    //     });
-    // }
-
+    // userData.email = "ashkiani@yahoo.com";
+    // setUserData(userData);
     // getUserData("ashkiani@yahoo.com");
-
+    // $("#emailText").val(userData.email);
 
 
 
