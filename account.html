@@ -11,6 +11,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/account.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/scripts/userData.js"></script>
     <script src="./assets/scripts/account.js"></script>
 </head>
 
@@ -49,8 +50,8 @@
                 <div class="column is-half">
                     <div class="field">
                         <label class="label">Name</label>
-                        <div class="control has-icons-left has-icons-right">
-                            <input class="input is-success" type="text" placeholder="Enter Name" value="">
+                        <div class="control has-icons-left has-icons-right" id="nameDiv">
+                            <input class="input is-success" id="nameText" type="text" placeholder="Enter Name" value="">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-user"></i>
                             </span>
@@ -61,8 +62,9 @@
                     </div>
                     <div class="field">
                         <label class="label">Email</label>
-                        <div class="control has-icons-left has-icons-right">
-                            <input class="input is-danger" type="email" placeholder="Enter Email" value="">
+                        <div class="control has-icons-left has-icons-right" id="emailDiv">
+                            <input class="input is-danger" id="emailText" type="email" placeholder="Enter Email"
+                                value="">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-envelope"></i>
                             </span>
@@ -74,8 +76,9 @@
                     </div>
                     <div class="field">
                         <label class="label">Password</label>
-                        <div class="control has-icons-left has-icons-right">
-                            <input class="input is-danger" type="text" placeholder="Enter Password" value="">
+                        <div class="control has-icons-left has-icons-right" id="passwordDiv">
+                            <input class="input is-danger" id="passwordText" type="text" placeholder="Enter Password"
+                                value="">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-unlock-alt"></i>
                             </span>
@@ -97,8 +100,8 @@
                 <div class="column is-half">
                     <div class="field">
                         <label class="label">Address</label>
-                        <div class="control">
-                            <textarea class="textarea" placeholder="Enter Address"></textarea>
+                        <div class="control" id="addressDiv">
+                            <textarea class="textarea" id="addressText" placeholder="Enter Address"></textarea>
                         </div>
                     </div>
 
@@ -106,9 +109,9 @@
                     <div class="control" id="ccGroup">
                         <div class="field">
                             <label class="label">Credit Card Number</label>
-                            <div class="control has-icons-left has-icons-right">
-                                <input class="input is-success" type="text" placeholder="Enter Credit Card Number"
-                                    value="">
+                            <div class="control has-icons-left has-icons-right" id="ccNumberDiv">
+                                <input class="input is-success" id="ccNumberText" type="text"
+                                    placeholder="Enter Credit Card Number" value="">
                                 <span class="icon is-small is-left">
                                     <i class="far fa-credit-card"></i>
                                 </span>
@@ -116,9 +119,9 @@
                         </div>
                         <div class="field">
                             <label class="label">Name On The Card</label>
-                            <div class="control has-icons-left has-icons-right">
-                                <input class="input is-danger" type="email" placeholder="Enter Name On The Card"
-                                    value="">
+                            <div class="control has-icons-left has-icons-right" id="ccNameDiv">
+                                <input class="input is-danger" id="ccNameText" type="email"
+                                    placeholder="Enter Name On The Card" value="">
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-file-signature"></i>
                                 </span>
@@ -126,8 +129,9 @@
                         </div>
                         <div class="field column is-6">
                             <label class="label">Expiration Date (MMYY)</label>
-                            <div class="control has-icons-left has-icons-right">
-                                <input class="input is-danger" type="text" placeholder="Enter Expiration Date" value="">
+                            <div class="control has-icons-left has-icons-right" id="ccExpDiv">
+                                <input class="input is-danger" id="ccExpText" type="text"
+                                    placeholder="Enter Expiration Date" value="">
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-table"></i>
                                 </span>
