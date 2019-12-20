@@ -2,12 +2,21 @@
     box-sizing: border-box;
 }
 
+#main {
+    transition: 0.5s;
+    padding: 16px;
+}
+
 
 /* NAV BAR */
 
 #goat {
     border-bottom: 1px solid black;
     margin-bottom: 20px;
+    color: black;
+    font-family: "Luckiest Guy";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .sidenav {
@@ -46,11 +55,6 @@
     margin-left: 50px;
 }
 
-#main {
-    transition: 0.5s;
-    padding: 16px;
-}
-
 
 /* END OF NAV BAR */
 
@@ -59,7 +63,7 @@
 
 #home-notification {
     background-color: black;
-    color: #FFFF;
+    color: #ffff;
     margin-top: 40px;
 }
 
@@ -70,7 +74,22 @@
 /* SHOP TITLE */
 
 #pageTitle {
+    margin-top: 20px;
     text-align: center;
+}
+
+.page-title a {
+    transition: transform 0.2s;
+    font-size: 70pt;
+    font-family: "Luckiest Guy";
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 0px -6px 0 #212121, 0px -6px 0 #212121, 0px 6px 0 #212121, 0px 6px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px -6px 0 #212121, 6px -6px 0 #212121, -6px 6px 0 #212121, 6px 6px 0 #212121, -6px 18px 0 #212121, 0px 18px 0 #212121, 6px 18px 0 #212121, 0 19px 1px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.1), 0 6px 3px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2), 0 18px 18px rgba(0, 0, 0, 0.25), 0 24px 24px rgba(0, 0, 0, 0.2), 0 36px 36px rgba(0, 0, 0, 0.15);
+}
+
+.page-title:hover {
+    transform: scale(1.1);
 }
 
 
@@ -82,19 +101,34 @@
 .j11 {
     width: 100%;
     height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 16px #333;
+    transition: transform 0.1s;
 }
 
 .j11-text {
     position: absolute;
     bottom: 12%;
-    left: 5%;
+    left: 8%;
+    color: white;
+    z-index: 1;
+}
+
+.j11:hover {
+    box-shadow: 0 0 32px #333;
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 #imgShowcase {
     width: 50%;
     position: absolute;
     left: 50%;
-    top: 110%;
+    top: 143%;
+}
+
+.tile .is-child {
+    background-color: #fff;
 }
 
 
@@ -104,16 +138,30 @@
 /* IMG SHOWCASE 2 */
 
 #imgShowcase2 {
-    width: 45%;
+    width: 50%;
     position: absolute;
-    top: 240%
+    top: 250%;
+    left: 50%;
 }
 
 .airmax-text {
     position: absolute;
     bottom: 12%;
-    left: 5%;
+    left: 10%;
     color: black;
+    z-index: 1;
+}
+
+.airmax {
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 16px #333;
+    transition: transform 0.1s;
+}
+
+.airmax:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 
@@ -123,21 +171,31 @@
 /* IMG SHOWCASE 3 */
 
 #imgShowcase3 {
-    width: 45%;
+    width: 50%;
     position: absolute;
-    top: 320%
+    top: 320%;
+    left: 50%;
 }
 
 .kyrie-text {
     position: absolute;
     bottom: 12%;
-    left: 5%;
+    left: 10%;
     color: white;
+    z-index: 1;
 }
 
 .kyrie {
     width: 550px;
     height: 450px;
+    border-radius: 8px;
+    box-shadow: 0 0 16px #333;
+    transition: transform 0.1s;
+}
+
+.kyrie:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 
@@ -147,7 +205,7 @@
 /* LATEST FASHION */
 
 #latestTitle {
-    width: 50%;
+    width: 45%;
     border: 1px solid black;
     margin-left: -10px;
     margin-top: 50px;
@@ -159,10 +217,8 @@
 }
 
 #latestFashion {
-    width: 50%;
-    margin-left: -15px;
-    border: 1px solid black;
-    margin-top: 50px;
+    width: 45%;
+    margin-left: -10px;
 }
 
 #css3dimagePager {
@@ -170,8 +226,9 @@
     position: relative;
     z-index: 11;
     padding: 0 0 10px;
-    margin-top: 240px;
+    margin-top: 180px;
     right: 10px;
+    color: black;
 }
 
 #css3dimagePager li:hover {
@@ -183,7 +240,7 @@
     display: inline-block;
     cursor: pointer;
     padding-left: 15px;
-    transition: transform .2s;
+    transition: transform 0.2s;
 }
 
 #css3dimagePager li.active {
@@ -274,16 +331,14 @@
 
 #celebsTitle {
     border: 1px solid black;
-    width: 50%;
-    position: relative;
-    left: 25.5%;
-    margin-top: 70px;
+    width: 45%;
+    margin-top: 120px;
+    right: 25.5%;
 }
 
 #celebsGallery {
     width: 50%;
-    position: absolute;
-    left: 50%;
+    left: 52%;
 }
 
 .hello {
@@ -451,3 +506,223 @@
 
 
 /* END OF CELEBS GALLERY */
+
+
+/* SHOW FILTER */
+
+
+/* button filter */
+
+.button1 {
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 8px;
+    outline: none;
+    padding: 10px;
+    padding: 10px;
+}
+
+.button1 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button1 span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button1:hover span {
+    padding-right: 25px;
+}
+
+.button1:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+#filterDIV {
+    padding: 10px;
+}
+
+
+/*END OF SHOW FILTER */
+
+
+/* SORT BY */
+
+
+/* button sort */
+
+.button2 {
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 8px;
+    outline: none;
+    padding: 10px;
+    width: 150px;
+}
+
+.button2 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button2 span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button2:hover span {
+    padding-right: 25px;
+}
+
+.button2:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/* sortDIV */
+
+.tile .is-parent {
+    text-align: center;
+}
+
+#sortDIV {
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* END OF SORT BY */
+
+
+/* BUTTONS FOR MANS,WOMENS,SPORT,CASUAL */
+
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#man {
+    background-color: #fff;
+    color: black;
+    margin: 5px;
+    border: 1px solid black;
+    outline: none;
+    box-shadow: 0 0 16px #333;
+    transition: transform 0.1s;
+}
+
+#women {
+    background-color: #fff;
+    color: black;
+    margin: 5px;
+    border: 1px solid black;
+    outline: none;
+    box-shadow: 0 0 16px #333;
+    transition: transform 0.1s;
+}
+
+#sport {
+    background-color: #fff;
+    color: black;
+    margin: 5px;
+    border: 1px solid black;
+    outline: none;
+    box-shadow: 0 0 16px #333;
+    transition: transform 0.1s;
+}
+
+#casual {
+    background-color: #fff;
+    color: black;
+    margin: 5px;
+    border: 1px solid black;
+    outline: none;
+    box-shadow: 0 0 16px #333;
+    transition: transform 0.1s;
+}
+
+
+/* END OF BUTTONS FOR MANS,WOMENS,SPORT,CASUAL */
+
+
+/* BUTTONS FOR POPULAR, UPCOMING, NEW, SHOP ALL */
+
+#popular {
+    background-color: #fff;
+    color: black;
+    margin: 5px;
+    border: 1px solid black;
+    outline: none;
+    box-shadow: 0 0 16px #333;
+    transition: transform 0.1s;
+}
+
+#upcoming {
+    background-color: #fff;
+    color: black;
+    margin: 5px;
+    border: 1px solid black;
+    outline: none;
+    box-shadow: 0 0 16px #333;
+    transition: transform 0.1s;
+}
+
+#new {
+    background-color: #fff;
+    color: black;
+    margin: 5px;
+    border: 1px solid black;
+    outline: none;
+    box-shadow: 0 0 16px #333;
+    transition: transform 0.1s;
+}
+
+#shop-all {
+    background-color: #fff;
+    color: black;
+    margin: 5px;
+    border: 1px solid black;
+    outline: none;
+    box-shadow: 0 0 16px #333;
+    transition: transform 0.1s;
+}
+
+
+/* END BUTTONS FOR POPULAR, UPCOMING, NEW, SHOP ALL */
+
+
+/* IMAGE DISPLAY */
+
+#image-display {
+    border: 1px solid black;
+}
+
+
+/*END OF IMAGE DISPLAY */

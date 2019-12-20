@@ -26,11 +26,39 @@ function myFilter() {
 
 // END OF NAV BAR
 
-// ON SALE SLIDESHOW
+//Delete home page notification
+document.addEventListener("DOMContentLoaded", () => {
+    (document.querySelectorAll(".notification .delete") || []).forEach(
+        $delete => {
+            $notification = $delete.parentNode;
+            $delete.addEventListener("click", () => {
+                $notification.parentNode.removeChild($($notification).fadeOut(500));
+            });
+        }
+    );
+});
 
+// SHOW FILTER
 
+function filter() {
+    var div = document.getElementById("filterDIV");
+    if (div.style.display === "none") {
+        div.style.display = "block";
+    } else {
+        div.style.display = "none";
+    }
+}
 
-// END OF ON SALE SLIDESHOW
+// SORT BY
+
+function sort() {
+    var y = document.getElementById("sortDIV");
+    if (y.style.display === "none") {
+        y.style.display = "block";
+    } else {
+        y.style.display = "none";
+    }
+}
 
 $(document).ready(function() {
     // COMING SOON SLIDESHOW
@@ -47,29 +75,38 @@ $(document).ready(function() {
     });
     // END OF ON COMING SOON SLIDESHOW
 
-
     // CELEBS GALLERY
 
     $(".img-wrapper").hover(
         function() {
-            $(this).find(".img-overlay").animate({ opacity: 1 }, 600);
+            $(this)
+                .find(".img-overlay")
+                .animate({ opacity: 1 }, 600);
         },
         function() {
-            $(this).find(".img-overlay").animate({ opacity: 0 }, 600);
+            $(this)
+                .find(".img-overlay")
+                .animate({ opacity: 0 }, 600);
         }
     );
 
     var $overlay = $('<div id="overlay"></div>');
     var $image = $("<img>");
-    var $prevButton = $('<div id="prevButton"><i class="fa fa-chevron-left"></i></div>');
-    var $nextButton = $('<div id="nextButton"><i class="fa fa-chevron-right"></i></div>');
+    var $prevButton = $(
+        '<div id="prevButton"><i class="fa fa-chevron-left"></i></div>'
+    );
+    var $nextButton = $(
+        '<div id="nextButton"><i class="fa fa-chevron-right"></i></div>'
+    );
     var $exitButton = $('<div id="exitButton"><i class="fa fa-times"></i></div>');
 
     $overlay.hide();
 
     $(".img-overlay").click(function(event) {
         event.preventDefault();
-        var imageLocation = $(this).prev().attr("href");
+        var imageLocation = $(this)
+            .prev()
+            .attr("href");
         $image.attr("src", imageLocation);
         $overlay.fadeIn("slow");
     });
@@ -78,42 +115,54 @@ $(document).ready(function() {
         $(this).fadeOut("slow");
     });
 
-
-
-    var gallery = document.querySelector('#gallery');
-    var getVal = function(elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
-    var getHeight = function(item) { return item.querySelector('.content').getBoundingClientRect().height; };
+    var gallery = document.querySelector("#gallery");
+    var getVal = function(elem, style) {
+        return parseInt(window.getComputedStyle(elem).getPropertyValue(style));
+    };
+    var getHeight = function(item) {
+        return item.querySelector(".content").getBoundingClientRect().height;
+    };
     var resizeAll = function() {
-        var altura = getVal(gallery, 'grid-auto-rows');
-        var gap = getVal(gallery, 'grid-row-gap');
-        gallery.querySelectorAll('.gallery-item').forEach(function(item) {
+        var altura = getVal(gallery, "grid-auto-rows");
+        var gap = getVal(gallery, "grid-row-gap");
+        gallery.querySelectorAll(".gallery-item").forEach(function(item) {
             var el = item;
-            el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+            el.style.gridRowEnd =
+                "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
         });
     };
-    gallery.querySelectorAll('img').forEach(function(item) {
-        item.classList.add('byebye');
+    gallery.querySelectorAll("img").forEach(function(item) {
+        item.classList.add("byebye");
         if (item.complete) {
             console.log(item.src);
         } else {
-            item.addEventListener('load', function() {
-                var altura = getVal(gallery, 'grid-auto-rows');
-                var gap = getVal(gallery, 'grid-row-gap');
+            item.addEventListener("load", function() {
+                var altura = getVal(gallery, "grid-auto-rows");
+                var gap = getVal(gallery, "grid-row-gap");
                 var gitem = item.parentElement.parentElement;
-                gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
-                item.classList.remove('byebye');
+                gitem.style.gridRowEnd =
+                    "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+                item.classList.remove("byebye");
             });
         }
     });
-    window.addEventListener('resize', resizeAll);
-    gallery.querySelectorAll('.gallery-item').forEach(function(item) {
-        item.addEventListener('click', function() {
-            item.classList.toggle('full');
+    window.addEventListener("resize", resizeAll);
+    gallery.querySelectorAll(".gallery-item").forEach(function(item) {
+        item.addEventListener("click", function() {
+            item.classList.toggle("full");
         });
     });
 
     // END OF CELEBS GALLERY
 
+    // MODAL
 
+    //Modal for clicking sneaker of the day
+    $("#sneaker-of-day").click(function() {
+        $(".sneakerOfDayModal").addClass("is-active");
+    });
 
+    $(".modal-close").click(function() {
+        $(".sneakerOfDayModal").removeClass("is-active");
+    });
 });
