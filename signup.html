@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="./assets/images/goat.PNG" type="GOAT Logo" />
-    <title>Log In</title>
+    <title>Sign Up</title>
     <script src="./assets/scripts/particles.js"></script>
-    <script src="./assets/scripts/main.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/scripts/userData.js"></script>
+    <script src="./assets/scripts/main.js"></script>
   </head>
 
   <div class="columns is-vcentered">
@@ -21,19 +23,9 @@
         </div>
 
         <div class="field">
-          <label class="label">Username</label>
+          <label class="label">User Name/Email</label>
           <div class="control has-icons-right">
-            <input class="input" type="text">
-            <span class="icon is-small is-right">
-              <i class="fa fa-user"></i>
-            </span>
-          </div>
-        </div>
-
-        <div class="field">
-          <label class="label">Email</label>
-          <div class="control has-icons-right">
-            <input class="input" type="text">
+            <input class="input" type="text" id="userName" >
             <span class="icon is-small is-right">
               <i class="fa fa-envelope"></i>
             </span>
@@ -43,14 +35,14 @@
         <div class="field">
           <label class="label">Password</label>
           <div class="control has-icons-right">
-            <input class="input" type="password">
+            <input class="input" id="password" type="password">
             <span class="icon is-small is-right">
               <i class="fa fa-key"></i>
             </span>
           </div>
         </div>
         <div class="has-text-centered">
-          <a class="button is-vcentered is-primary is-outlined">Sign Up!</a>
+          <a class="button is-vcentered is-primary is-outlined" id="btnSignUp">Sign Up!</a>
         </div>
         <div class="has-text-centered">
           <a href="login.html"> Already have an account? Log in now !</a>

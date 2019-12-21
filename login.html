@@ -7,11 +7,13 @@
     <link rel="icon" href="./assets/images/goat.PNG" type="GOAT Logo" />
     <title>Log In</title>
     <script src="./assets/scripts/particles.js"></script>
-    <script src="./assets/scripts/main.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/scripts/userData.js"></script>
+    <script src="./assets/scripts/main.js"></script>
 </head>
 
 <body>
@@ -19,13 +21,13 @@
         <div class="login column is-4">
             <section class="section">
                 <div class="has-text-centered">
-                    <img class="login-logo" src="/assets/images/goat.PNG">
+                    <!-- <img class="login-logo" src="/assets/images/goat.PNG"> -->
                 </div>
 
                 <div class="field">
                     <label class="label">Username</label>
                     <div class="control has-icons-right">
-                        <input class="input" type="text">
+                        <input class="input" type="text" id="username">
                         <span class="icon is-small is right">
                             <i class="fa fa-user"></i>
                         </span>
@@ -42,7 +44,7 @@
                     </div>
                 </div>
                 <div class="has-text-centered">
-                    <a class="button is-vcentered is-primary is-outlined">Login</a>
+                    <a class="button is-vcentered is-primary is-outlined" id="btnLogin">Login</a>
                 </div>
                 <div class="has-text-centered">
                     <a href="./signup.html">Don't have an account? Sign up now!</a>

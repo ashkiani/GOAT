@@ -113,4 +113,31 @@ var partJson = {
   particlesJS.load('particles-js', jsonUri, function() {
     console.log('callback - particles.js config loaded');
   });
+  $(document).ready(function () {
+    
+    
+    $("#btnLogin").click(function () {
+      var userName = $("#username").val();
+      getUserData(userName);
+      if(userData.email ==""){
+        alert("loginFailed");
+      }
+      else{
+        alert("welcome " + userName.email);
+      }
+    });
+    
+    $("#btnSignUp").click(function () {
+     
+        var userName = $("#userName").val();
+        var password = $("#password").val();
+        // add validation here
+console.log(userName);
+
+        userData.email=userName;
+        userData.password=password;
+        setUserData(userData);
+      });
+  
+  });
   
