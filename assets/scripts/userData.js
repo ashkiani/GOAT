@@ -6,7 +6,7 @@ var creditCardData = {
 
 // Siavash - 12/21/2019
 // This array houses the item IDs in the cart.
-var cartData = [];
+var cartData = [test];
 
 // Siavash - 12/21/2019
 // This object represents the current logged-in user
