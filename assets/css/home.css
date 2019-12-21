@@ -9,3 +9,22 @@
     display: none;
 }
 
+#feature-display{
+background-color: #858585;
+height: 500px;
+}
+
+#feature-display h4{
+    color: white;
+    padding-top: 1%;
+}
+
+#feature-display h2{
+    color: white;
+}
+
+#img-div1{
+position: absolute;
+left: 400px;
+display: none;
+}

@@ -36,6 +36,9 @@ function change() {
   counter++;
 }
 
+//When user hovers over the featured release section, the shoe is revealed
+$("#feature-display").hover(function(){
+  $("#feature-name").text("OFF-WHITE X JORDAN 1");
+  $("#img-div1").fadeIn(5000);
   
-
-  
+})
