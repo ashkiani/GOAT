@@ -2,22 +2,59 @@
     box-sizing: border-box;
 }
 
+body {
+    width: 100%;
+    width: 100%;
+    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 27px 23px 50px 20px #000000;
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 27px 23px 50px 20px #000000;
+}
+
+
+/* END OF BACKGROUND */
+
 #main {
     transition: 0.5s;
     padding: 16px;
 }
 
+#font {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+
+/* PAGE LOGO */
+
+#pageLogo {
+    position: absolute;
+    left: 70%;
+    top: 70%;
+}
+
+.logo {
+    -ms-transform: rotate(10deg);
+    /* IE 9 */
+    -webkit-transform: rotate(10deg);
+    /* Safari 3-8 */
+    transform: rotate(10deg);
+}
+
+
+/* END OF PAGE LOGO */
+
 
 /* NAV BAR */
 
+
+/*
 #goat {
-    border-bottom: 1px solid black;
     margin-bottom: 20px;
     color: black;
     font-family: "Luckiest Guy";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+*/
 
 .sidenav {
     height: 100%;
@@ -30,6 +67,8 @@
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 50px;
+    font-family: "Kalam", cursive;
+    font-family: "Bangers", cursive;
 }
 
 .sidenav a {
@@ -64,7 +103,9 @@
 #home-notification {
     background-color: black;
     color: #ffff;
-    margin-top: 40px;
+    font-family: "Kalam", cursive;
+    font-family: "Bangers", cursive;
+    font-size: 20px;
 }
 
 
@@ -74,13 +115,12 @@
 /* SHOP TITLE */
 
 #pageTitle {
-    margin-top: 20px;
     text-align: center;
 }
 
 .page-title a {
     transition: transform 0.2s;
-    font-size: 70pt;
+    font-size: 55pt;
     font-family: "Luckiest Guy";
     color: #fff;
     -webkit-font-smoothing: antialiased;
@@ -99,32 +139,40 @@
 /* IMG SHOWCASE */
 
 .j11 {
-    width: 100%;
-    height: 100%;
+    width: 550px;
+    height: 350px;
     border-radius: 8px;
     box-shadow: 0 0 16px #333;
-    transition: transform 0.1s;
+    transition: transform 0.2s;
 }
 
 .j11-text {
     position: absolute;
-    bottom: 12%;
-    left: 8%;
+    bottom: 10%;
+    left: 3%;
     color: white;
     z-index: 1;
+    font-family: "Kalam", cursive;
+    font-family: "Bangers", cursive;
+    font-size: 20px;
 }
 
 .j11:hover {
     box-shadow: 0 0 32px #333;
-    transform: scale(1.1);
+    transform: scale();
     cursor: pointer;
 }
 
 #imgShowcase {
     width: 50%;
     position: absolute;
-    left: 50%;
-    top: 143%;
+    left: 56%;
+    top: 140%;
+    -ms-transform: rotate(-5deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-5deg);
+    /* Safari 3-8 */
+    transform: rotate(-5deg);
 }
 
 .tile .is-child {
@@ -140,27 +188,35 @@
 #imgShowcase2 {
     width: 50%;
     position: absolute;
-    top: 250%;
-    left: 50%;
+    top: 230%;
+    left: 55%;
+    -ms-transform: rotate(5deg);
+    /* IE 9 */
+    -webkit-transform: rotate(5deg);
+    /* Safari 3-8 */
+    transform: rotate(5deg);
 }
 
 .airmax-text {
     position: absolute;
     bottom: 12%;
-    left: 10%;
+    left: 13%;
     color: black;
     z-index: 1;
+    font-family: "Kalam", cursive;
+    font-family: "Bangers", cursive;
+    font-size: 20px;
 }
 
 .airmax {
-    width: 90%;
+    width: 84%;
     border-radius: 8px;
     box-shadow: 0 0 16px #333;
     transition: transform 0.1s;
 }
 
 .airmax:hover {
-    transform: scale(1.1);
+    transform: scale();
     cursor: pointer;
 }
 
@@ -174,27 +230,36 @@
     width: 50%;
     position: absolute;
     top: 320%;
-    left: 50%;
+    left: 57%;
+    -ms-transform: rotate(-5deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-5deg);
+    /* Safari 3-8 */
+    transform: rotate(-5deg);
 }
 
-.kyrie-text {
+.kobe-text {
     position: absolute;
-    bottom: 12%;
-    left: 10%;
-    color: white;
+    bottom: 4%;
+    left: 3%;
+    color: black;
     z-index: 1;
+    background-color: #e7e7e7;
+    font-family: "Kalam", cursive;
+    font-family: "Bangers", cursive;
+    font-size: 20px;
 }
 
-.kyrie {
+.kobe {
     width: 550px;
-    height: 450px;
+    height: 375px;
     border-radius: 8px;
     box-shadow: 0 0 16px #333;
     transition: transform 0.1s;
 }
 
-.kyrie:hover {
-    transform: scale(1.1);
+.kobe:hover {
+    transform: scale();
     cursor: pointer;
 }
 
@@ -206,19 +271,32 @@
 
 #latestTitle {
     width: 45%;
-    border: 1px solid black;
-    margin-left: -10px;
+    right: 27%;
+    top: 50%;
+    margin-bottom: 50px;
     margin-top: 50px;
+    font-family: "Luckiest Guy";
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 0px -6px 0 #212121, 0px -6px 0 #212121, 0px 6px 0 #212121, 0px 6px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px -6px 0 #212121, 6px -6px 0 #212121, -6px 6px 0 #212121, 6px 6px 0 #212121, -6px 18px 0 #212121, 0px 18px 0 #212121, 6px 18px 0 #212121, 0 19px 1px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.1), 0 6px 3px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2), 0 18px 18px rgba(0, 0, 0, 0.25), 0 24px 24px rgba(0, 0, 0, 0.2), 0 36px 36px rgba(0, 0, 0, 0.15);
 }
 
 .notification {
     text-align: center;
-    background-color: #ffff;
+    -webkit-box-shadow: 2px 5px 16px 0px #0b325e, 20px 5px 32px 2px rgba(0, 0, 0, 0.52);
+    box-shadow: 2px 5px 16px 0px #0b325e, 20px 5px 32px 2px rgba(0, 0, 0, 0.52);
+}
+
+.style {
+    width: 300px;
+    height: 370px;
 }
 
 #latestFashion {
     width: 45%;
-    margin-left: -10px;
+    margin-left: 10px;
+    margin-top: -20px;
 }
 
 #css3dimagePager {
@@ -226,9 +304,8 @@
     position: relative;
     z-index: 11;
     padding: 0 0 10px;
-    margin-top: 180px;
+    margin-top: 260px;
     right: 10px;
-    color: black;
 }
 
 #css3dimagePager li:hover {
@@ -241,6 +318,9 @@
     cursor: pointer;
     padding-left: 15px;
     transition: transform 0.2s;
+    color: #fff;
+    background-color: black;
+    border-radius: 50%;
 }
 
 #css3dimagePager li.active {
@@ -330,399 +410,211 @@
 /* CELEBS GALLERY */
 
 #celebsTitle {
-    border: 1px solid black;
     width: 45%;
-    margin-top: 120px;
-    right: 25.5%;
+    right: 27%;
+    top: 50%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-family: "Luckiest Guy";
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 0px -6px 0 #212121, 0px -6px 0 #212121, 0px 6px 0 #212121, 0px 6px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px -6px 0 #212121, 6px -6px 0 #212121, -6px 6px 0 #212121, 6px 6px 0 #212121, -6px 18px 0 #212121, 0px 18px 0 #212121, 6px 18px 0 #212121, 0 19px 1px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.1), 0 6px 3px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2), 0 18px 18px rgba(0, 0, 0, 0.25), 0 24px 24px rgba(0, 0, 0, 0.2), 0 36px 36px rgba(0, 0, 0, 0.15);
 }
 
 #celebsGallery {
     width: 50%;
-    left: 52%;
 }
 
-.hello {
-    opacity: 1 !important;
-}
-
-.full {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.full .content {
-    background-color: rgba(0, 0, 0, 0.75) !important;
-    height: 100%;
-    width: 100%;
-    display: grid;
-}
-
-.full .content img {
-    left: 50%;
-    transform: translate3d(0, 0, 0);
-    animation: zoomin 1s ease;
-    max-width: 100%;
-    max-height: 100%;
-    margin: auto;
-}
-
-.byebye {
-    opacity: 0;
-}
-
-.byebye:hover {
-    transform: scale(0.2) !important;
-}
-
-.gallery {
-    display: grid;
-    grid-column-gap: 8px;
-    grid-row-gap: 8px;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-auto-rows: 8px;
-}
-
-.gallery img {
-    max-width: 100%;
+.celebs {
     border-radius: 8px;
     box-shadow: 0 0 16px #333;
-    transition: all 1.5s ease;
-}
-
-.gallery img:hover {
-    box-shadow: 0 0 32px #333;
-}
-
-.gallery .content {
-    padding: 4px;
-}
-
-.gallery .gallery-item {
-    transition: grid-row-start 300ms linear;
+    transition: transform 0.1s;
     transition: transform 300ms ease;
-    transition: all 0.5s ease;
-    cursor: pointer;
+    margin-left: 30px;
 }
 
-.gallery .gallery-item:hover {
-    transform: scale(1.025);
-}
-
-@media (max-width: 600px) {
-    .gallery {
-        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-    }
-}
-
-@media (max-width: 400px) {
-    .gallery {
-        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-    }
-}
-
-@-moz-keyframes zoomin {
-    0% {
-        max-width: 50%;
-        transform: rotate(-30deg);
-        filter: blur(4px);
-    }
-    30% {
-        filter: blur(4px);
-        transform: rotate(-80deg);
-    }
-    70% {
-        max-width: 50%;
-        transform: rotate(45deg);
-    }
-    100% {
-        max-width: 100%;
-        transform: rotate(0deg);
-    }
-}
-
-@-webkit-keyframes zoomin {
-    0% {
-        max-width: 50%;
-        transform: rotate(-30deg);
-        filter: blur(4px);
-    }
-    30% {
-        filter: blur(4px);
-        transform: rotate(-80deg);
-    }
-    70% {
-        max-width: 50%;
-        transform: rotate(45deg);
-    }
-    100% {
-        max-width: 100%;
-        transform: rotate(0deg);
-    }
-}
-
-@-o-keyframes zoomin {
-    0% {
-        max-width: 50%;
-        transform: rotate(-30deg);
-        filter: blur(4px);
-    }
-    30% {
-        filter: blur(4px);
-        transform: rotate(-80deg);
-    }
-    70% {
-        max-width: 50%;
-        transform: rotate(45deg);
-    }
-    100% {
-        max-width: 100%;
-        transform: rotate(0deg);
-    }
-}
-
-@keyframes zoomin {
-    0% {
-        max-width: 50%;
-        transform: rotate(-30deg);
-        filter: blur(4px);
-    }
-    30% {
-        filter: blur(4px);
-        transform: rotate(-80deg);
-    }
-    70% {
-        max-width: 50%;
-        transform: rotate(45deg);
-    }
-    100% {
-        max-width: 100%;
-        transform: rotate(0deg);
-    }
+.column-celebs {
+    padding: 10px;
 }
 
 
 /* END OF CELEBS GALLERY */
 
 
-/* SHOW FILTER */
+/* IMAGE FILTERS */
 
-
-/* button filter */
-
-.button1 {
-    border: none;
-    color: black;
-    text-align: center;
-    font-size: 25px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
+.column {
     border: 1px solid black;
+    margin: 30px;
+    margin-left: 35px;
+    padding: 30px;
+    text-align: center;
     border-radius: 8px;
-    outline: none;
-    padding: 10px;
-    padding: 10px;
+    box-shadow: 0 0 16px #333;
+    transition: transform 0.1s;
+    transition: transform 300ms ease;
+    font-family: "Kalam", cursive;
+    font-family: "Bangers", cursive;
+    font-size: 20px;
 }
 
-.button1 span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-}
-
-.button1 span:after {
-    content: "\00bb";
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-}
-
-.button1:hover span {
-    padding-right: 25px;
-}
-
-.button1:hover span:after {
-    opacity: 1;
-    right: 0;
-}
-
-#filterDIV {
-    padding: 10px;
-}
-
-
-/*END OF SHOW FILTER */
-
-
-/* SORT BY */
-
-
-/* button sort */
-
-.button2 {
-    color: black;
-    text-align: center;
-    font-size: 25px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-    border: 1px solid black;
-    border-radius: 8px;
-    outline: none;
-    padding: 10px;
-    width: 150px;
-}
-
-.button2 span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-}
-
-.button2 span:after {
-    content: "\00bb";
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-}
-
-.button2:hover span {
-    padding-right: 25px;
-}
-
-.button2:hover span:after {
-    opacity: 1;
-    right: 0;
-}
-
-
-/* sortDIV */
-
-.tile .is-parent {
-    text-align: center;
-}
-
-#sortDIV {
-    padding: 10px;
-    text-align: center;
-}
-
-
-/* END OF SORT BY */
-
-
-/* BUTTONS FOR MANS,WOMENS,SPORT,CASUAL */
-
-.button:hover {
-    cursor: pointer;
+.column:hover {
     transform: scale(1.1);
+    cursor: pointer;
 }
 
-#man {
+p {
+    margin-top: -30px;
+    color: black;
+}
+
+
+/* END OF IMAGE FILTERS */
+
+
+/* MODAL */
+
+
+/* Style the Image Used to Trigger the Modal */
+
+#myImg {
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 250px;
+    height: 150px;
+    padding: 20px;
+    margin-left: 30px;
+    font-size: 25px;
+    border-radius: 8px;
+}
+
+#myImg:hover {
+    opacity: 0.7;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+    color: white;
+    font-family: "Kalam", cursive;
+}
+
+
+/* Modal Content (Image) */
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 50%;
+    max-width: 500px;
+    position: absolute;
+    left: 10%;
+    bottom: 18%;
+    border: 2px solid black;
+}
+
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 50%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px 0;
+    height: 60%;
+    border: 2px solid black;
     background-color: #fff;
     color: black;
-    margin: 5px;
-    border: 1px solid black;
-    outline: none;
-    box-shadow: 0 0 16px #333;
-    transition: transform 0.1s;
+    position: relative;
+    top: 19%;
+    left: 20%;
+    font-size: 20px;
+    border-radius: 8px;
 }
 
-#women {
-    background-color: #fff;
-    color: black;
-    margin: 5px;
-    border: 1px solid black;
-    outline: none;
-    box-shadow: 0 0 16px #333;
-    transition: transform 0.1s;
+.description {
+    position: absolute;
+    left: 9.5%;
+    top: 25%;
+    font-size: 30px;
+    color: #fff;
 }
 
-#sport {
-    background-color: #fff;
-    color: black;
-    margin: 5px;
-    border: 1px solid black;
-    outline: none;
-    box-shadow: 0 0 16px #333;
-    transition: transform 0.1s;
-}
-
-#casual {
-    background-color: #fff;
-    color: black;
-    margin: 5px;
-    border: 1px solid black;
-    outline: none;
-    box-shadow: 0 0 16px #333;
-    transition: transform 0.1s;
+#cart {
+    position: absolute;
+    left: 35%;
+    font-size: 25px;
 }
 
 
-/* END OF BUTTONS FOR MANS,WOMENS,SPORT,CASUAL */
+/* Add Animation - Zoom in the Modal */
 
-
-/* BUTTONS FOR POPULAR, UPCOMING, NEW, SHOP ALL */
-
-#popular {
-    background-color: #fff;
-    color: black;
-    margin: 5px;
-    border: 1px solid black;
-    outline: none;
-    box-shadow: 0 0 16px #333;
-    transition: transform 0.1s;
+.modal-content,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
 }
 
-#upcoming {
-    background-color: #fff;
-    color: black;
-    margin: 5px;
-    border: 1px solid black;
-    outline: none;
-    box-shadow: 0 0 16px #333;
-    transition: transform 0.1s;
-}
-
-#new {
-    background-color: #fff;
-    color: black;
-    margin: 5px;
-    border: 1px solid black;
-    outline: none;
-    box-shadow: 0 0 16px #333;
-    transition: transform 0.1s;
-}
-
-#shop-all {
-    background-color: #fff;
-    color: black;
-    margin: 5px;
-    border: 1px solid black;
-    outline: none;
-    box-shadow: 0 0 16px #333;
-    transition: transform 0.1s;
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
 
-/* END BUTTONS FOR POPULAR, UPCOMING, NEW, SHOP ALL */
+/* The Close Button */
 
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-/* IMAGE DISPLAY */
-
-#image-display {
-    border: 1px solid black;
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 
-/*END OF IMAGE DISPLAY */
+/* 100% Image Width on Smaller Screens */
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+
+/* END OF MODAL */
