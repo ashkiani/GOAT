@@ -61,7 +61,7 @@ function sort() {
 }
 
 $(document).ready(function() {
-    // COMING SOON SLIDESHOW
+    // LATEST FASHION
     $("#css3dimagePager li").click(function() {
         var rotateY = $(this).index() * -90;
         $("#css3dimageslider ul").css({
@@ -73,96 +73,29 @@ $(document).ready(function() {
         $("#css3dimagePager li").removeClass("active");
         $(this).addClass("active");
     });
-    // END OF ON COMING SOON SLIDESHOW
-
-    // CELEBS GALLERY
-
-    $(".img-wrapper").hover(
-        function() {
-            $(this)
-                .find(".img-overlay")
-                .animate({ opacity: 1 }, 600);
-        },
-        function() {
-            $(this)
-                .find(".img-overlay")
-                .animate({ opacity: 0 }, 600);
-        }
-    );
-
-    var $overlay = $('<div id="overlay"></div>');
-    var $image = $("<img>");
-    var $prevButton = $(
-        '<div id="prevButton"><i class="fa fa-chevron-left"></i></div>'
-    );
-    var $nextButton = $(
-        '<div id="nextButton"><i class="fa fa-chevron-right"></i></div>'
-    );
-    var $exitButton = $('<div id="exitButton"><i class="fa fa-times"></i></div>');
-
-    $overlay.hide();
-
-    $(".img-overlay").click(function(event) {
-        event.preventDefault();
-        var imageLocation = $(this)
-            .prev()
-            .attr("href");
-        $image.attr("src", imageLocation);
-        $overlay.fadeIn("slow");
-    });
-
-    $overlay.click(function() {
-        $(this).fadeOut("slow");
-    });
-
-    var gallery = document.querySelector("#gallery");
-    var getVal = function(elem, style) {
-        return parseInt(window.getComputedStyle(elem).getPropertyValue(style));
-    };
-    var getHeight = function(item) {
-        return item.querySelector(".content").getBoundingClientRect().height;
-    };
-    var resizeAll = function() {
-        var altura = getVal(gallery, "grid-auto-rows");
-        var gap = getVal(gallery, "grid-row-gap");
-        gallery.querySelectorAll(".gallery-item").forEach(function(item) {
-            var el = item;
-            el.style.gridRowEnd =
-                "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
-        });
-    };
-    gallery.querySelectorAll("img").forEach(function(item) {
-        item.classList.add("byebye");
-        if (item.complete) {
-            console.log(item.src);
-        } else {
-            item.addEventListener("load", function() {
-                var altura = getVal(gallery, "grid-auto-rows");
-                var gap = getVal(gallery, "grid-row-gap");
-                var gitem = item.parentElement.parentElement;
-                gitem.style.gridRowEnd =
-                    "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
-                item.classList.remove("byebye");
-            });
-        }
-    });
-    window.addEventListener("resize", resizeAll);
-    gallery.querySelectorAll(".gallery-item").forEach(function(item) {
-        item.addEventListener("click", function() {
-            item.classList.toggle("full");
-        });
-    });
-
-    // END OF CELEBS GALLERY
+    // END OF LATEST FASHION
 
     // MODAL
 
-    //Modal for clicking sneaker of the day
-    $("#sneaker-of-day").click(function() {
-        $(".sneakerOfDayModal").addClass("is-active");
-    });
+    var modal = document.getElementById("myModal");
 
-    $(".modal-close").click(function() {
-        $(".sneakerOfDayModal").removeClass("is-active");
-    });
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    };
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    };
+
+    // END OF MODAL
 });
