@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link rel="stylesheet" href="assets/css/cart.css" />
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/scripts/userData.js"></script>
+  </head>
 
 <body>
     <!-- Start : NavBar -->
@@ -52,19 +54,20 @@
     <!-- Start : My Cart and Total Price Display -->
     <div class="my-cart-price">  
     <h1 class= "my-cart">My Cart</h1>
-    <h5 class="price">$150(total of all merchandise) </h5>
+    <p> Your Cart is Empty </p>
+    <h5 class="price" style="display: none">$150(total of all merchandise) </h5>
     </div>
     <!-- End : My Cart and Total Price Display-->
     <!-- Start : Main Content: Shoe and Price Display -->
     <div class="columns">
         <!-- Shoe Display Div -->
-        <div class="column notification is-info">
-            <div class="columns">
-                <div class=" column notification is-dark is-one-third">
+        <div class="column notification is-info" >
+            <div class="columns ">
+                <div class=" column notification is-dark is-one-third shoe-pic-div" style="display: none">
                     (Shoe Picture)
                     <img src="assets/images/travisScott6.jpg" width="300">  
                 </div>
-                <div class=" column notification is-dark">
+                <div class = " column notification is-dark shoe-desc-div "style="display: none">
                     (Shoe Description)
                     <p class="shoe-name"> NAME OF SHOE</p>
                     <p class="shoe-color">SHOE COLOR</p>
@@ -79,7 +82,7 @@
         <!-- End : Shoe Display Div -->
         <!-- Start : Price Display Div -->
         <div class="column notification is-info is-one-third"> 
-            <div class="notification is-dark">
+            <div class="notification is-dark price-display" style="display: none">
                 (Price display)
                 <h1 class="order-summary-title">Order Summary</h1>
                 <p class="price-subtotal">SUBTOTAL: $150</p>
@@ -104,9 +107,6 @@
             </p>
         </div>
     </footer>
-
-
-
-
 </body>
+<script src="./assets/scripts/cart.js"></script>
 </html>
