@@ -28,7 +28,7 @@ body {
 #pageLogo {
     position: absolute;
     left: 70%;
-    top: 70%;
+    top: 50%;
 }
 
 .logo {
@@ -160,14 +160,13 @@ body {
 .j11:hover {
     box-shadow: 0 0 32px #333;
     transform: scale();
-    cursor: pointer;
 }
 
 #imgShowcase {
     width: 50%;
     position: absolute;
-    left: 56%;
-    top: 140%;
+    left: 53.5%;
+    top: 125%;
     -ms-transform: rotate(-5deg);
     /* IE 9 */
     -webkit-transform: rotate(-5deg);
@@ -217,7 +216,7 @@ body {
 
 .airmax:hover {
     transform: scale();
-    cursor: pointer;
+    box-shadow: 0 0 32px #333;
 }
 
 
@@ -260,7 +259,7 @@ body {
 
 .kobe:hover {
     transform: scale();
-    cursor: pointer;
+    box-shadow: 0 0 32px #333;
 }
 
 
@@ -411,9 +410,8 @@ body {
 
 #celebsTitle {
     width: 45%;
-    right: 27%;
-    top: 50%;
-    margin-bottom: 50px;
+    right: 26%;
+    margin-bottom: 30px;
     margin-top: 50px;
     font-family: "Luckiest Guy";
     color: #fff;
@@ -432,6 +430,7 @@ body {
     transition: transform 0.1s;
     transition: transform 300ms ease;
     margin-left: 30px;
+    margin-top: 30px;
 }
 
 .column-celebs {
@@ -475,146 +474,117 @@ p {
 
 /* MODAL */
 
-
-/* Style the Image Used to Trigger the Modal */
-
-#myImg {
-    border: 1px solid black;
+#img {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
-    width: 250px;
+    width: 240px;
     height: 150px;
     padding: 20px;
-    margin-left: 30px;
+    margin-left: 18px;
     font-size: 25px;
     border-radius: 8px;
-}
-
-#myImg:hover {
-    opacity: 0.7;
-}
-
-
-/* The Modal (background) */
-
-.modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    padding-top: 100px;
-    /* Location of the box */
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
+    margin-bottom: 18px;
     /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.9);
-    /* Black w/ opacity */
-    color: white;
-    font-family: "Kalam", cursive;
 }
 
-
-/* Modal Content (Image) */
-
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 50%;
-    max-width: 500px;
-    position: absolute;
-    left: 10%;
-    bottom: 18%;
-    border: 2px solid black;
+#img:hover {
+    opacity: 0.7;
+    cursor: pointer;
 }
 
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
 
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-
-#caption {
-    margin: auto;
-    display: block;
-    width: 50%;
-    max-width: 500px;
-    text-align: center;
-    padding: 10px 0;
-    height: 60%;
-    border: 2px solid black;
-    background-color: #fff;
-    color: black;
+.target {
+    width: 800px;
     position: relative;
-    top: 19%;
-    left: 20%;
-    font-size: 20px;
-    border-radius: 8px;
+    bottom: 10%;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
 }
 
-.description {
+.modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.close {
+    background: #606061;
+    color: #ffffff;
+    line-height: 25px;
     position: absolute;
-    left: 9.5%;
-    top: 25%;
-    font-size: 30px;
-    color: #fff;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+    background: #00d9ff;
+}
+
+.sport-title {
+    font-size: 25px;
+    color: black;
+    font-family: "Kalam", cursive;
+    font-family: "Bangers", cursive;
 }
 
 #cart {
     position: absolute;
-    left: 35%;
+    right: 10%;
     font-size: 25px;
+    font-family: "Kalam", cursive;
+    font-family: "Bangers", cursive;
+    color: black;
 }
 
-
-/* Add Animation - Zoom in the Modal */
-
-.modal-content,
-#caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
+#cart:hover {
+    color: red;
 }
 
-@keyframes zoom {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(1);
-    }
-}
-
-
-/* The Close Button */
-
-.close {
+.price {
     position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
+    right: 50%;
+    top: 1%;
+    font-size: 25px;
+    font-family: "Kalam", cursive;
+    font-family: "Bangers", cursive;
+    color: black;
 }
 
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+.sportText {
+    font-family: "Josefin Sans", sans-serif;
+    font-family: "Kalam", cursive;
+    color: black;
+    font-size: 18px;
 }
-
-
-/* 100% Image Width on Smaller Screens */
-
-@media only screen and (max-width: 700px) {
-    .modal-content {
-        width: 100%;
-    }
-}
-
-
-/* END OF MODAL */
