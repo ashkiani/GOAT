@@ -74,4 +74,133 @@ $(document).ready(function() {
         $(this).addClass("active");
     });
     // END OF LATEST FASHION
+
+    // MODAL FOR SHOP ALL
+
+    $(".page-title").click(function() {
+        $("#allKicks").show(1000);
+    });
+
+    // FILTER TROUGH MEN,WOMEN,CASUAL,SPORT
+
+    // MENS FILTER
+
+    $("#men").click(function() {
+        $("#manKicks").show(1000);
+        $("#sportKicks").hide();
+        $("#casualKicks").hide();
+        $("#womenKicks").hide();
+        $("#upcomingKicks").hide();
+        $("#popularKicks").hide();
+        $("#arrivalsKicks").hide();
+        // targe link
+        $("#link").remove();
+        $("#sportKicksHR").remove();
+        $("#casualKicksHR").remove();
+        $("#womenKicksHR").remove();
+    });
+
+    // WOMENS FILTER
+
+    $("#women").click(function() {
+        $("#womenKicks").show(1000);
+        $("#sportKicks").hide();
+        $("#casualKicks").hide();
+        $("#manKicks").hide();
+        $("#upcomingKicks").hide();
+        $("#popularKicks").hide();
+        $("#arrivalsKicks").hide();
+        // target link
+        $("#link").remove();
+        $("#sportKicksHR").remove();
+        $("#casualKicksHR").remove();
+        $("#manKicksHR").remove();
+    });
+
+    // SPORT KICKS FILTER
+
+    $("#sportKick").click(function() {
+        $("#sportKicks").show(1000);
+        $("#manKicks").hide();
+        $("#casualKicks").hide();
+        $("#womenKicks").hide();
+        $("#upcomingKicks").hide();
+        $("#popularKicks").hide();
+        $("#arrivalsKicks").hide();
+        // target link
+        $("#link").remove();
+        $("#manKicksHR").remove();
+        $("#casualKicksHR").remove();
+        $("#womenKicksHR").remove();
+    });
+
+    // CASUAL FILTER
+
+    $("#casual").click(function() {
+        $("#casualKicks").show(1000);
+        $("#manKicks").hide();
+        $("#sportKicks").hide();
+        $("#womenKicks").hide();
+        $("#upcomingKicks").hide();
+        $("#popularKicks").hide();
+        $("#arrivalsKicks").hide();
+        // target link
+        $("#link").remove();
+        $("#sportKicksHR").remove();
+        $("#menKicksHR").remove();
+        $("#womenKicksHR").remove();
+    });
+
+    //  FILTER TROUGH UPCOMING,POPULAR,ARRIVALS
+
+    // UPCOMING FILTER
+    $("#upcoming").click(function() {
+        $("#upcomingKicks").show(1000);
+        $("#manKicks").hide();
+        $("#sportKicks").hide();
+        $("#womenKicks").hide();
+        $("#casualKicks").hide();
+        $("#popularKicks").hide();
+        $("#arrivalsKicks").hide();
+        // target link
+        $("#link").remove();
+        $("#sportKicksHR").remove();
+        $("#menKicksHR").remove();
+        $("#womenKicksHR").remove();
+    });
+
+    // POPULAR FILTER
+
+    $("#popular").click(function() {
+        $("#popularKicks").show(1000);
+        $("#manKicks").hide();
+        $("#sportKicks").hide();
+        $("#womenKicks").hide();
+        $("#casualKicks").hide();
+        $("#upcomingKicks").hide();
+        $("#arrivalsKicks").hide();
+        // target link
+        $("#link").remove();
+        $("#sportKicksHR").remove();
+        $("#menKicksHR").remove();
+        $("#womenKicksHR").remove();
+    });
+
+    // ARRIVALS FILTER
+    $("#arrivals").click(function() {
+        $("#arrivalsKicks").show(1000);
+        $("#manKicks").hide();
+        $("#sportKicks").hide();
+        $("#womenKicks").hide();
+        $("#casualKicks").hide();
+        $("#popularKicks").hide();
+        $("#upcomingKicks").hide();
+        // target link
+        $("#link").remove();
+        $("#sportKicksHR").remove();
+        $("#menKicksHR").remove();
+        $("#womenKicksHR").remove();
+    });
+
+    // END OF DOCUMENT READY
 });
