@@ -28,3 +28,21 @@ position: absolute;
 left: 400px;
 display: none;
 }
+
+#itunes-div{
+    background-color: black;
+    min-height: 500px;
+}
+
+#itunes-div h1{
+    color: white;
+    padding-top: 1%;
+}
+
+#itunes-div h3{
+    color: white;
+}
+
+#card-space{
+    margin-bottom: 5px;
+}
