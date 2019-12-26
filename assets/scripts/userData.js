@@ -67,6 +67,7 @@ function getUserData(userName) {
                     console.log("checking user:" & user.email);
                     if (user.email == userName) {
                         userData = user;
+                        currentUser = userName;
                         return;
                     }
                 }
