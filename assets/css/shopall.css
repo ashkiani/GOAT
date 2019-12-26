@@ -165,7 +165,7 @@ body {
 #imgShowcase {
     width: 50%;
     position: absolute;
-    left: 53.5%;
+    left: 54%;
     top: 125%;
     -ms-transform: rotate(-5deg);
     /* IE 9 */
@@ -228,7 +228,7 @@ body {
 #imgShowcase3 {
     width: 50%;
     position: absolute;
-    top: 320%;
+    top: 332%;
     left: 57%;
     -ms-transform: rotate(-5deg);
     /* IE 9 */
@@ -403,7 +403,7 @@ body {
 }
 
 
-/* END OF COMING LATEST FASHION */
+/* END OF LATEST FASHION */
 
 
 /* CELEBS GALLERY */
@@ -574,7 +574,7 @@ p {
 
 .price {
     position: absolute;
-    right: 50%;
+    right: 45%;
     top: 1%;
     font-size: 25px;
     font-family: "Kalam", cursive;
@@ -587,4 +587,23 @@ p {
     font-family: "Kalam", cursive;
     color: black;
     font-size: 18px;
+}
+
+
+/* PRICE DISCOUNT */
+
+strike {
+    color: red;
+}
+
+
+/* TO HIDE ALL THE DISPLEYED KICKS */
+
+#allKicks {}
+
+
+/* HIDE ALL HR LINES FOR BETTER VISABILITY */
+
+hr {
+    background-color: #ffffff;
 }
