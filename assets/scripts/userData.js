@@ -22,14 +22,13 @@ var userData = {
 
 // Siavash - 12/26/2019
 // returns True if any user is currently logged in, False otherwise.
-function isLoggedIn(){
+function isLoggedIn() {
     var result = false;
-    if (currentUser!=""){
-        result=true;
+    if (currentUser != "") {
+        result = true;
     }
     return result;
 }
-
 
 // Siavash - 12/21/2019
 // use this variable to store the username of the current user.
@@ -89,39 +88,124 @@ function getUserData(userName) {
     }
 }
 
+// Siavash - 12/26/2019 
+// returns True if the input is anystring@anystring.anystring, False otherwise
+// Got the code from: https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
+// Siavash - 12/26/2019 
+// returns True if the input name is unique, False otherwise.
+function isUserNameUnique(userName) {
+    result = false;
+    if (userName == currentUser) {
+        result = true;
+    }
+    else {
+        result = true;
+        var goatUsers = [userData];
+        goatUsers = loadLocalStorage();
+        if (goatUsers !== null) {
+            goatUsers.forEach(user => {
+                if (user !== null) {
+                    if (result) {
+                        if (user.email == userName) {
+                            //user already exists!
+                            result = false;
+                            return result;
+                        }
+                    }
+
+                }
+            });
+
+        }
+    }
+    return result;
+}
+
+// Siavash - 12/26/2019 
+// returns an array that lists the errors for the input object. if the array length is 0 then that means the input object is valid.
+function getUserDataObjectErrors(userDataObject) {
+    errors = [];
+    if (validateEmail(userDataObject.email)) {
+        //no error so far... next, check if the userName is duplicate
+        if (isUserNameUnique(userDataObject.email)) {
+            // email address is valid
+        }
+        else {
+            //duplicate email
+            errors.push("The email address already exists!");
+        }
+    } else {
+        //invalid email format
+        errors.push("Invalid email address. The email format should be string@string.string");
+    }
+
+    // no more validation checks at this time, but this is the place to add additional validation rules if needed...
+
+    return errors;
+}
+
+// Siavash - 12/26/2019 
+// returns an array that lists the errors for the shared userData object. if the array length is 0 then that means the input object is valid.
+function getUserDataErrors() {
+    return getUserDataObjectErrors(userData);
+}
+
+// Siavash - 12/26/2019 
+// returns True if the input object is valid, False otherwise.
+function isUserDataObjectValid(userDataObject) {
+    var errors = getUserDataObjectErrors(userDataObject);
+    return (errors.length == 0);
+}
+
+// Siavash - 12/26/2019 
+// returns True if the shared userData object is valid, False otherwise.
+function isUserDataValid() {
+    var errors = getUserDataErrors();
+    return (errors.length == 0);
+}
 
 // Siavash - 12/21/2019
 // This function saves the input userDataObject into the local storage.
 // It will create a new entry in the local storage if the username doesn't exist, otherwise it will update the existing object/user
 function setUserData(userDataObject) {
-    var goatUsers = [userData];
-    goatUsers = loadLocalStorage();
-    console.log("users:" + goatUsers);
-    if (goatUsers !== null) {
-        var userExists = false;
-        goatUsers.forEach(user => {
-            if (user !== null) {
-                console.log("checking user:" & user.email);
-                if (user.email == userDataObject.email) {
-                    //copy the input into the exiting record
-                    user.email = userDataObject.email;
-                    user.name = userDataObject.name;
-                    user.password = userDataObject.password;
-                    user.shoeSize = userDataObject.shoeSize;
-                    user.creditCard = userDataObject.creditCard;
-                    user.cart = userDataObject.cart;
-                    userExists = true;
-                    return;
+    if (isUserDataObjectValid(userDataObject)) {
+        var goatUsers = [userData];
+        goatUsers = loadLocalStorage();
+        console.log("users:" + goatUsers);
+        if (goatUsers !== null) {
+            var userExists = false;
+            goatUsers.forEach(user => {
+                if (user !== null) {
+                    console.log("checking user:" & user.email);
+                    if (user.email == userDataObject.email) {
+                        //copy the input into the exiting record
+                        user.email = userDataObject.email;
+                        user.name = userDataObject.name;
+                        user.password = userDataObject.password;
+                        user.shoeSize = userDataObject.shoeSize;
+                        user.creditCard = userDataObject.creditCard;
+                        user.cart = userDataObject.cart;
+                        userExists = true;
+                        return;
+                    }
                 }
+            });
+            if (!userExists) {
+                goatUsers.push(userDataObject);
             }
-        });
-        if (!userExists) {
+        }
+        else {
+            goatUsers = [];
             goatUsers.push(userDataObject);
         }
+        localStorage.setItem("goatUsers", JSON.stringify(goatUsers));
     }
     else {
-        goatUsers = [];
-        goatUsers.push(userDataObject);
+        console.log("Invalid User data");
     }
-    localStorage.setItem("goatUsers", JSON.stringify(goatUsers));
 }
