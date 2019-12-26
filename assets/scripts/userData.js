@@ -20,6 +20,17 @@ var userData = {
     "cart": cartData
 };
 
+// Siavash - 12/26/2019
+// returns True if any user is currently logged in, False otherwise.
+function isLoggedIn(){
+    var result = false;
+    if (currentUser!=""){
+        result=true;
+    }
+    return result;
+}
+
+
 // Siavash - 12/21/2019
 // use this variable to store the username of the current user.
 var currentUser = "";
