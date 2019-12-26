@@ -42,7 +42,7 @@ function clearUserData() {
     userData.creditCard.number = "";
     userData.creditCard.name = "";
     userData.creditCard.expiration = "";
-    cart = [];
+    userData.cart = [];
     currentUser = "";
     console.log("Cleared current user");
 }
@@ -209,3 +209,4 @@ function setUserData(userDataObject) {
         console.log("Invalid User data");
     }
 }
+
