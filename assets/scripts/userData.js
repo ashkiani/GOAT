@@ -33,6 +33,7 @@ function clearUserData() {
     userData.creditCard.name = "";
     userData.creditCard.expiration = "";
     cart = [];
+    currentUser = "";
     console.log("Cleared current user");
 }
 
