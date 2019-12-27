@@ -133,6 +133,15 @@ function isUserNameUnique(userName) {
     return result;
 }
 
+function isPasswordValid(password) {
+    var result = false;
+    password = password.trim();
+    if (password.length > 3) {
+        result = true;
+    }
+    return result;
+}
+
 // Siavash - 12/26/2019 
 // returns an array that lists the errors for the input object. if the array length is 0 then that means the input object is valid.
 function getUserDataObjectErrors(userDataObject) {
@@ -151,6 +160,9 @@ function getUserDataObjectErrors(userDataObject) {
         errors.push("Invalid email address. The email format should be string@string.string");
     }
 
+    if (! isPasswordValid(userDataObject.password)){
+        errors.push("Invalid Password. Password length should be at least 4 characters.");
+    }
     // no more validation checks at this time, but this is the place to add additional validation rules if needed...
 
     return errors;
