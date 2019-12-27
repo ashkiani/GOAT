@@ -1,24 +1,31 @@
-// Siavash - 12/21/2019
-// This object stores the CC information.
-var creditCardData = {
-    "creditCard": { "number": "", "name": "", "expiration": "" }
-};
+// Siavash - 12/26/2019
+// Refactored the existing code to generate userDataObject by a function
+function generateBlankUserDataObject() {
+    // Siavash - 12/21/2019
+    // This object stores the CC information.
+    var creditCardData = {
+        "creditCard": { "number": "", "name": "", "expiration": "" }
+    };
 
-// Siavash - 12/21/2019
-// This array houses the item IDs in the cart.
-var cartData = [];
+    // Siavash - 12/21/2019
+    // This array houses the item IDs in the cart.
+    var cartData = [];
+
+    var userDataObject = {
+        "email": "",
+        "name": "",
+        "password": "",
+        "shoeSize": "",
+        "address": "",
+        "creditCard": creditCardData,
+        "cart": cartData
+    };
+    return userDataObject;
+}
 
 // Siavash - 12/21/2019
 // This object represents the current logged-in user
-var userData = {
-    "email": "",
-    "name": "",
-    "password": "",
-    "shoeSize": "",
-    "address": "",
-    "creditCard": creditCardData,
-    "cart": cartData
-};
+var userData = generateBlankUserDataObject()
 
 // Siavash - 12/26/2019
 // returns True if any user is currently logged in, False otherwise.
