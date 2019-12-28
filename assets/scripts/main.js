@@ -115,15 +115,31 @@ particlesJS.load('particles-js', jsonUri, function () {
 });
 $(document).ready(function () {
 
+  //Siavash 12/28/2019
+  //Added this function to handle the Login Failed condition
+  function loginFailed() {
+    //Add your code here to inform user about the Login Failure.
+    console.log("loginFailed");
+  }
 
   $("#btnLogin").click(function () {
     var userName = $("#username").val();
-    getUserData(userName);
+    var userData = getUserData(userName);
+    console.log(userData);
     if (userData.email == "") {
-      alert("loginFailed");
+      loginFailed();
     }
     else {
-      alert("welcome " + userName.email);
+      //Siavash 12/28/2019
+      //now check the password
+      var psw = $("#password").val();
+      if (psw == userData.password) {
+        setLoggedInUserName(userData.email);
+        // window.location = "account.html";
+      }
+      else {
+        loginFailed();
+      }
     }
   });
 
