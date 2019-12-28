@@ -19,7 +19,7 @@ $(document).ready(function () {
     initShoeSizeCombo();
 
 
-    clearUserData();
+    // clearUserData();
 
     var nameEl = $("#nameText");
     var emailEl = $("#emailText");
@@ -29,7 +29,7 @@ $(document).ready(function () {
     var ccNumberEl = $("#ccNumberText");
     var ccNameEl = $("#ccNameText");
     var ccExpEl = $("#ccExpText");
-
+    var userData = generateBlankUserDataObject();
 
 
     function updateUserDataObjectFromPage() {
@@ -86,7 +86,15 @@ $(document).ready(function () {
     // setUserData(userData);
     // getUserData("ashkiani@yahoo.com");
     // $("#emailText").val(userData.email);
-    //loadPageFromUserDataObject();
+    var currentUser = getLoggedInUserName();
+    if (currentUser != "") {
+        userData = getUserData(currentUser);
+        console.log(userData);
+        loadPageFromUserDataObject();
+    }
+
+
+
 
 
     function underConstructionAlert() {
