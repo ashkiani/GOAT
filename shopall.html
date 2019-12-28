@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Bangers|Kalam&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Kalam&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Courier+Prime&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -37,24 +39,26 @@
               ></a>
                     </div>
 
-                    <span id="font" onclick="openNav()">&#9776; </span>
+                    <span id="font" onclick="openNav()">&#9776; G.O.A.T </span>
                 </div>
-                <!--
-LOG IN AND REGISTER
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-primary">
-                  <strong>Sign up</strong>
-                </a>
-                <a class="button is-light">
-                  Log in
-                </a>
-              </div>
-            </div>
-          </div>
-        -->
-                <!--END OF LOGIN AND REGISTER-->
+                <!--TIMER FOR SALE-->
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div id="timer">
+                            <h4 class="sale">Extra 20% Off - With Coupon <span id="offer">GoAt2019NiKe</span>
+                            </h4>
+                            <h5 class="exp">Offer expires:</h5>
+                            <div id="hours"></div>
+                            <div id="minutes"></div>
+                            <div id="seconds"></div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--END OF TIMER ON SALE-->
+
+
+
             </div>
         </section>
 
@@ -64,7 +68,7 @@ LOG IN AND REGISTER
         <div class="container" class="shipping">
             <div class="notification" id="home-notification">
                 <button class="delete"></button>
-                <i class="fa fa-shipping-fast"></i> Fast, Free, Reliable Shipping! Place an order worth $300 or more to receive our exclusive offer.
+                <i class="fa fa-shipping-fast"></i> Fast, Free, Reliable Shipping! Place an order worth $300 or more to receive free shipping.
             </div>
         </div>
         <!--END OF SHIPPING-->
@@ -1155,13 +1159,23 @@ LOG IN AND REGISTER
                 </div>
                 <!--end of modal 5-->
                 <hr id="arrivalsKicksHR">
+                <a href="#font"><button class="button is-rounded" id="top">Back to Top</button></a>
             </div>
 
             <!--END MODAL FOR ARRIVALS-->
 
         </div>
+        <!--END FOR ALL KICKS DISPLAY-->
+
+        <!--SOCIAL MEDIA-->
+        <a class="social" href="https://www.facebook.com/goatapp/" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a>
+        <a class="social" href="https://twitter.com/goatapp?lang=en" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
+        <a class="social" href="https://www.instagram.com/goat/?hl=en"><i class="fab fa-instagram fa-3x"></i></a>
+
+        <!--END OF SOCIAL MEDIA-->
 
 
+        <p class="copy">&copy;Nikola Jovanovic Project-1 Team-GOAT Shop page</p>
     </div>
     <!--END OF MAIN CONTAINER, KEEP EVERYTHING INSIDE FOR NAVBAR TO CLOSE-->
 
@@ -1169,6 +1183,8 @@ LOG IN AND REGISTER
     <script src="https://code.jquery.com/jquery-3.4.1.min.js " integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=" anonymous "></script>
     <!--JS LINK-->
     <script src="./assets/scripts/shopall.js "></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
 </body>
 
 </html>
