@@ -1,32 +1,45 @@
-// nav-bar open/close
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+// TIMER FOR COUPON
+
+function makeTimer() {
+    //		var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");
+    var endTime = new Date("29 April 2020 9:56:00 GMT+01:00");
+    endTime = Date.parse(endTime) / 1000;
+
+    var now = new Date();
+    now = Date.parse(now) / 1000;
+
+    var timeLeft = endTime - now;
+
+    var days = Math.floor(timeLeft / 86400);
+    var hours = Math.floor((timeLeft - days * 86400) / 3600);
+    var minutes = Math.floor((timeLeft - days * 86400 - hours * 3600) / 60);
+    var seconds = Math.floor(
+        timeLeft - days * 86400 - hours * 3600 - minutes * 60
+    );
+
+    if (hours < "10") {
+        hours = "0" + hours;
+    }
+    if (minutes < "10") {
+        minutes = "0" + minutes;
+    }
+    if (seconds < "10") {
+        seconds = "0" + seconds;
+    }
+
+    $("#days").html(days + "<span>Days</span>");
+    $("#hours").html(hours + "<span>Hours</span>");
+    $("#minutes").html(minutes + "<span>Minutes</span>");
+    $("#seconds").html(seconds + "<span>Seconds</span>");
 }
 
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    document.body.style.backgroundColor = "white";
-}
+setInterval(function() {
+    makeTimer();
+}, 1000);
 
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function mySort() {
-    document.getElementById("sort").classList.toggle("show");
-}
+// END OF TIMER FOR COUPON
 
-function myFilter() {
-    document.getElementById("filter").classList.toggle("show");
-}
-
-// END OF NAV BAR
-
-//Delete home page notification
+//DELETE HOME PAGE NOTIFICATION
 document.addEventListener("DOMContentLoaded", () => {
     (document.querySelectorAll(".notification .delete") || []).forEach(
         $delete => {
@@ -78,7 +91,18 @@ $(document).ready(function() {
     // MODAL FOR SHOP ALL
 
     $(".page-title").click(function() {
-        $("#allKicks").show(1000);
+        $("#arrivalsKicks").show(1000);
+        $("#manKicks").show(1000);
+        $("#sportKicks").show(1000);
+        $("#womenKicks").show(1000);
+        $("#casualKicks").show(1000);
+        $("#popularKicks").show(1000);
+        $("#upcomingKicks").show(1000);
+        // target link
+        $("#link").remove();
+        $("#sportKicksHR").remove();
+        $("#menKicksHR").remove();
+        $("#womenKicksHR").remove();
     });
 
     // FILTER TROUGH MEN,WOMEN,CASUAL,SPORT

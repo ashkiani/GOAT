@@ -1,609 +1,681 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-    width: 100%;
-    width: 100%;
-    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 27px 23px 50px 20px #000000;
-    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 27px 23px 50px 20px #000000;
-}
-
-
-/* END OF BACKGROUND */
-
-#main {
-    transition: 0.5s;
-    padding: 16px;
-}
-
-#font {
-    font-size: 40px;
-    cursor: pointer;
-}
-
-
-/* PAGE LOGO */
-
-#pageLogo {
-    position: absolute;
-    left: 70%;
-    top: 50%;
-}
-
-.logo {
-    -ms-transform: rotate(10deg);
-    /* IE 9 */
-    -webkit-transform: rotate(10deg);
-    /* Safari 3-8 */
-    transform: rotate(10deg);
-}
-
-
-/* END OF PAGE LOGO */
-
-
-/* NAV BAR */
-
-
-/*
-#goat {
-    margin-bottom: 20px;
-    color: black;
-    font-family: "Luckiest Guy";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-*/
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 50px;
-    font-family: "Kalam", cursive;
-    font-family: "Bangers", cursive;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-    transition: transform 0.2s;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-    transform: scale(1.1);
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-
-/* END OF NAV BAR */
-
-
-/* SHIPPING */
-
-#home-notification {
-    background-color: black;
-    color: #ffff;
-    font-family: "Kalam", cursive;
-    font-family: "Bangers", cursive;
-    font-size: 20px;
-}
-
-
-/*END OF SHIPPING */
-
-
-/* SHOP TITLE */
-
-#pageTitle {
-    text-align: center;
-}
-
-.page-title a {
-    transition: transform 0.2s;
-    font-size: 55pt;
-    font-family: "Luckiest Guy";
-    color: #fff;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-shadow: 0px -6px 0 #212121, 0px -6px 0 #212121, 0px 6px 0 #212121, 0px 6px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px -6px 0 #212121, 6px -6px 0 #212121, -6px 6px 0 #212121, 6px 6px 0 #212121, -6px 18px 0 #212121, 0px 18px 0 #212121, 6px 18px 0 #212121, 0 19px 1px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.1), 0 6px 3px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2), 0 18px 18px rgba(0, 0, 0, 0.25), 0 24px 24px rgba(0, 0, 0, 0.2), 0 36px 36px rgba(0, 0, 0, 0.15);
-}
-
-.page-title:hover {
-    transform: scale(1.1);
-}
-
-
-/* END OF SHOP TITLE */
-
-
-/* IMG SHOWCASE */
-
-.j11 {
-    width: 550px;
-    height: 350px;
-    border-radius: 8px;
-    box-shadow: 0 0 16px #333;
-    transition: transform 0.2s;
-}
-
-.j11-text {
-    position: absolute;
-    bottom: 10%;
-    left: 3%;
-    color: white;
-    z-index: 1;
-    font-family: "Kalam", cursive;
-    font-family: "Bangers", cursive;
-    font-size: 20px;
-}
-
-.j11:hover {
-    box-shadow: 0 0 32px #333;
-    transform: scale();
-}
-
-#imgShowcase {
-    width: 50%;
-    position: absolute;
-    left: 54%;
-    top: 125%;
-    -ms-transform: rotate(-5deg);
-    /* IE 9 */
-    -webkit-transform: rotate(-5deg);
-    /* Safari 3-8 */
-    transform: rotate(-5deg);
-}
-
-.tile .is-child {
-    background-color: #fff;
-}
-
-
-/* END OF IMG SHOWCASE */
-
-
-/* IMG SHOWCASE 2 */
-
-#imgShowcase2 {
-    width: 50%;
-    position: absolute;
-    top: 230%;
-    left: 55%;
-    -ms-transform: rotate(5deg);
-    /* IE 9 */
-    -webkit-transform: rotate(5deg);
-    /* Safari 3-8 */
-    transform: rotate(5deg);
-}
-
-.airmax-text {
-    position: absolute;
-    bottom: 12%;
-    left: 13%;
-    color: black;
-    z-index: 1;
-    font-family: "Kalam", cursive;
-    font-family: "Bangers", cursive;
-    font-size: 20px;
-}
-
-.airmax {
-    width: 84%;
-    border-radius: 8px;
-    box-shadow: 0 0 16px #333;
-    transition: transform 0.1s;
-}
-
-.airmax:hover {
-    transform: scale();
-    box-shadow: 0 0 32px #333;
-}
-
-
-/* END OF IMG SHOWCASE 2 */
-
-
-/* IMG SHOWCASE 3 */
-
-#imgShowcase3 {
-    width: 50%;
-    position: absolute;
-    top: 332%;
-    left: 57%;
-    -ms-transform: rotate(-5deg);
-    /* IE 9 */
-    -webkit-transform: rotate(-5deg);
-    /* Safari 3-8 */
-    transform: rotate(-5deg);
-}
-
-.kobe-text {
-    position: absolute;
-    bottom: 4%;
-    left: 3%;
-    color: black;
-    z-index: 1;
-    background-color: #e7e7e7;
-    font-family: "Kalam", cursive;
-    font-family: "Bangers", cursive;
-    font-size: 20px;
-}
-
-.kobe {
-    width: 550px;
-    height: 375px;
-    border-radius: 8px;
-    box-shadow: 0 0 16px #333;
-    transition: transform 0.1s;
-}
-
-.kobe:hover {
-    transform: scale();
-    box-shadow: 0 0 32px #333;
-}
-
-
-/* END OF IMG SHOWCASE 3 */
-
-
-/* LATEST FASHION */
-
-#latestTitle {
-    width: 45%;
-    right: 27%;
-    top: 50%;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    font-family: "Luckiest Guy";
-    color: #fff;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-shadow: 0px -6px 0 #212121, 0px -6px 0 #212121, 0px 6px 0 #212121, 0px 6px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px -6px 0 #212121, 6px -6px 0 #212121, -6px 6px 0 #212121, 6px 6px 0 #212121, -6px 18px 0 #212121, 0px 18px 0 #212121, 6px 18px 0 #212121, 0 19px 1px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.1), 0 6px 3px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2), 0 18px 18px rgba(0, 0, 0, 0.25), 0 24px 24px rgba(0, 0, 0, 0.2), 0 36px 36px rgba(0, 0, 0, 0.15);
-}
-
-.notification {
-    text-align: center;
-    -webkit-box-shadow: 2px 5px 16px 0px #0b325e, 20px 5px 32px 2px rgba(0, 0, 0, 0.52);
-    box-shadow: 2px 5px 16px 0px #0b325e, 20px 5px 32px 2px rgba(0, 0, 0, 0.52);
-}
-
-.style {
-    width: 300px;
-    height: 370px;
-}
-
-#latestFashion {
-    width: 45%;
-    margin-left: 10px;
-    margin-top: -20px;
-}
-
-#css3dimagePager {
-    text-align: center;
-    position: relative;
-    z-index: 11;
-    padding: 0 0 10px;
-    margin-top: 260px;
-    right: 10px;
-}
-
-#css3dimagePager li:hover {
-    transform: scale(1.2);
-}
-
-#css3dimagePager li {
-    padding-right: 15px;
-    display: inline-block;
-    cursor: pointer;
-    padding-left: 15px;
-    transition: transform 0.2s;
-    color: #fff;
-    background-color: black;
-    border-radius: 50%;
-}
-
-#css3dimagePager li.active {
-    font-weight: bold;
-}
-
-#css3dimageslider {
-    -webkit-perspective: 1000;
-    -moz-perspective: 1000px;
-    -ms-perspective: 1000;
-    perspective: 1000;
-    -webkit-perspective-origin: 50% 100px;
-    -moz-perspective-origin: 50% 100px;
-    -ms-perspective-origin: 50% 100px;
-    perspective-origin: 50% 100px;
-    margin-top: 50px;
-    width: 100%;
-    height: 200px;
-}
-
-#css3dimageslider ul {
-    position: relative;
-    margin: 0 auto;
-    height: 281px;
-    width: 450px;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transform-origin: 50% 100px 0;
-    -moz-transform-origin: 50% 100px 0;
-    -ms-transform-origin: 50% 100px 0;
-    transform-origin: 50% 100px 0;
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -ms-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-}
-
-#css3dimageslider ul li {
-    position: absolute;
-    height: 281px;
-    width: 450px;
-    padding: 0px;
-}
-
-#css3dimageslider ul li:nth-child(1) {
-    -webkit-transform: translateZ(225px);
-    -moz-transform: translateZ(225px);
-    -ms-transform: translateZ(225px);
-    transform: translateZ(225px);
-}
-
-#css3dimageslider ul li:nth-child(2) {
-    -webkit-transform: rotateY(90deg) translateZ(225px);
-    -moz-transform: rotateY(90deg) translateZ(225px);
-    -ms-transform: rotateY(90deg) translateZ(225px);
-    transform: rotateY(90deg) translateZ(225px);
-}
-
-#css3dimageslider ul li:nth-child(3) {
-    -webkit-transform: rotateY(180deg) translateZ(225px);
-    -moz-transform: rotateY(180deg) translateZ(225px);
-    -ms-transform: rotateY(180deg) translateZ(225px);
-    transform: rotateY(180deg) translateZ(225px);
-}
-
-#css3dimageslider ul li:nth-child(4) {
-    -webkit-transform: rotateY(-90deg) translateZ(225px);
-    -moz-transform: rotateY(-90deg) translateZ(225px);
-    -ms-transform: rotateY(-90deg) translateZ(225px);
-    transform: rotateY(-90deg) translateZ(225px);
-}
-
-
-/* img for latest fashion */
-
-.coming {
-    width: 350px;
-    height: 350px;
-}
-
-
-/* END OF LATEST FASHION */
-
-
-/* CELEBS GALLERY */
-
-#celebsTitle {
-    width: 45%;
-    right: 26%;
-    margin-bottom: 30px;
-    margin-top: 50px;
-    font-family: "Luckiest Guy";
-    color: #fff;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-shadow: 0px -6px 0 #212121, 0px -6px 0 #212121, 0px 6px 0 #212121, 0px 6px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px -6px 0 #212121, 6px -6px 0 #212121, -6px 6px 0 #212121, 6px 6px 0 #212121, -6px 18px 0 #212121, 0px 18px 0 #212121, 6px 18px 0 #212121, 0 19px 1px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.1), 0 6px 3px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2), 0 18px 18px rgba(0, 0, 0, 0.25), 0 24px 24px rgba(0, 0, 0, 0.2), 0 36px 36px rgba(0, 0, 0, 0.15);
-}
-
-#celebsGallery {
-    width: 50%;
-}
-
-.celebs {
-    border-radius: 8px;
-    box-shadow: 0 0 16px #333;
-    transition: transform 0.1s;
-    transition: transform 300ms ease;
-    margin-left: 30px;
-    margin-top: 30px;
-}
-
-.column-celebs {
-    padding: 10px;
-}
-
-
-/* END OF CELEBS GALLERY */
-
-
-/* IMAGE FILTERS */
-
-.column {
-    border: 1px solid black;
-    margin: 30px;
-    margin-left: 35px;
-    padding: 30px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 0 16px #333;
-    transition: transform 0.1s;
-    transition: transform 300ms ease;
-    font-family: "Kalam", cursive;
-    font-family: "Bangers", cursive;
-    font-size: 20px;
-}
-
-.column:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-p {
-    margin-top: -30px;
-    color: black;
-}
-
-
-/* END OF IMAGE FILTERS */
-
-
-/* MODAL */
-
-#img {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    width: 240px;
-    height: 150px;
-    padding: 20px;
-    margin-left: 18px;
-    font-size: 25px;
-    border-radius: 8px;
-    margin-bottom: 18px;
-    /* Enable scroll if needed */
-}
-
-#img:hover {
-    opacity: 0.7;
-    cursor: pointer;
-}
-
-.modalDialog {
-    position: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
-    opacity: 0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-}
-
-.target {
-    width: 800px;
-    position: relative;
-    bottom: 10%;
-    margin: 10% auto;
-    padding: 5px 20px 13px 20px;
-    border-radius: 10px;
-    background: #fff;
-    background: -moz-linear-gradient(#fff, #999);
-    background: -webkit-linear-gradient(#fff, #999);
-    background: -o-linear-gradient(#fff, #999);
-}
-
-.modalDialog:target {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.close {
-    background: #606061;
-    color: #ffffff;
-    line-height: 25px;
-    position: absolute;
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
-    text-decoration: none;
-    font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
-    box-shadow: 1px 1px 3px #000;
-}
-
-.close:hover {
-    background: #00d9ff;
-}
-
-.sport-title {
-    font-size: 25px;
-    color: black;
-    font-family: "Kalam", cursive;
-    font-family: "Bangers", cursive;
-}
-
-#cart {
-    position: absolute;
-    right: 10%;
-    font-size: 25px;
-    font-family: "Kalam", cursive;
-    font-family: "Bangers", cursive;
-    color: black;
-}
-
-#cart:hover {
-    color: red;
-}
-
-.price {
-    position: absolute;
-    right: 45%;
-    top: 1%;
-    font-size: 25px;
-    font-family: "Kalam", cursive;
-    font-family: "Bangers", cursive;
-    color: black;
-}
-
-.sportText {
-    font-family: "Josefin Sans", sans-serif;
-    font-family: "Kalam", cursive;
-    color: black;
-    font-size: 18px;
-}
-
-
-/* PRICE DISCOUNT */
-
-strike {
-    color: red;
-}
-
-
-/* TO HIDE ALL THE DISPLEYED KICKS */
-
-#allKicks {}
-
-
-/* HIDE ALL HR LINES FOR BETTER VISABILITY */
-
-hr {
-    background-color: #ffffff;
-}
+                                                                * {
+                                                                    box-sizing: border-box;
+                                                                }
+                                                                
+                                                                body {
+                                                                    padding: 0px;
+                                                                }
+                                                                /* END OF BACKGROUND */
+                                                                /* TIMER  */
+                                                                
+                                                                #offer {
+                                                                    border: 1px solid black;
+                                                                    padding: 10px;
+                                                                    background-color: black;
+                                                                    color: #ffffff;
+                                                                    border-radius: 10px;
+                                                                    margin-left: 5px;
+                                                                }
+                                                                
+                                                                .exp {
+                                                                    text-align: center;
+                                                                    margin-top: 10px;
+                                                                }
+                                                                
+                                                                .navbar-end {
+                                                                    margin-top: -20px;
+                                                                    height: 200px;
+                                                                    font-family: "Kalam", cursive;
+                                                                    font-family: "Bangers", cursive;
+                                                                }
+                                                                
+                                                                #timer {
+                                                                    display: inline-block;
+                                                                    line-height: 1;
+                                                                    padding: 15px;
+                                                                    font-size: 20px;
+                                                                }
+                                                                
+                                                                #hours {
+                                                                    font-size: 20px;
+                                                                    display: inline-block;
+                                                                    line-height: 1;
+                                                                    padding: 10px;
+                                                                    font-size: 20px;
+                                                                }
+                                                                
+                                                                #minutes {
+                                                                    font-size: 20px;
+                                                                    display: inline-block;
+                                                                    line-height: 1;
+                                                                    padding: 10px;
+                                                                    font-size: 20px;
+                                                                }
+                                                                
+                                                                #seconds {
+                                                                    font-size: 20px;
+                                                                    display: inline-block;
+                                                                    line-height: 1;
+                                                                    padding: 10px;
+                                                                    font-size: 20px;
+                                                                }
+                                                                /* END OF TIMER */
+                                                                
+                                                                #main {
+                                                                    transition: 0.5s;
+                                                                    padding: 16px;
+                                                                }
+                                                                
+                                                                #font {
+                                                                    font-size: 40px;
+                                                                    cursor: pointer;
+                                                                    font-family: "Kalam", cursive;
+                                                                    font-family: "Bangers", cursive;
+                                                                }
+                                                                /* PAGE LOGO */
+                                                                
+                                                                #pageLogo {
+                                                                    position: absolute;
+                                                                    left: 70%;
+                                                                    top: 65%;
+                                                                }
+                                                                
+                                                                .logo {
+                                                                    -ms-transform: rotate(10deg);
+                                                                    /* IE 9 */
+                                                                    -webkit-transform: rotate(10deg);
+                                                                    /* Safari 3-8 */
+                                                                    transform: rotate(10deg);
+                                                                }
+                                                                /* END OF PAGE LOGO */
+                                                                /* NAV BAR */
+                                                                
+                                                                .goat {
+                                                                    font-size: 40px;
+                                                                    border: 1px solid black;
+                                                                    border-radius: 8px;
+                                                                    background-color: #000;
+                                                                    color: #fff;
+                                                                    padding: 10px 20px;
+                                                                }
+                                                                
+                                                                .navbar-menu {
+                                                                    font-size: 25px;
+                                                                    font-family: "Kalam", cursive;
+                                                                    font-family: "Bangers", cursive;
+                                                                }
+                                                                
+                                                                .navbar-menu a {
+                                                                    padding-left: 20px;
+                                                                    text-decoration: none;
+                                                                    transition: 0.3s;
+                                                                    transition: transform 0.2s;
+                                                                }
+                                                                
+                                                                .navbar-menu a:hover {
+                                                                    background-color: #FFF;
+                                                                    color: black;
+                                                                    transform: scale(1.1);
+                                                                }
+                                                                /* END OF NAV BAR */
+                                                                /* SHIPPING */
+                                                                
+                                                                #home-notification {
+                                                                    margin-top: -30px;
+                                                                    background-color: black;
+                                                                    color: #ffff;
+                                                                    font-family: "Kalam", cursive;
+                                                                    font-family: "Bangers", cursive;
+                                                                    font-size: 20px;
+                                                                    -webkit-animation: fadein 3s;
+                                                                    /* Safari, Chrome and Opera > 12.1 */
+                                                                    -moz-animation: fadein 3s;
+                                                                    /* Firefox < 16 */
+                                                                    -ms-animation: fadein 3s;
+                                                                    /* Internet Explorer */
+                                                                    -o-animation: fadein 3s;
+                                                                    /* Opera < 12.1 */
+                                                                    animation: fadein 3s;
+                                                                }
+                                                                
+                                                                @keyframes fadein {
+                                                                    from {
+                                                                        opacity: 0;
+                                                                    }
+                                                                    to {
+                                                                        opacity: 1;
+                                                                    }
+                                                                }
+                                                                /* Firefox < 16 */
+                                                                
+                                                                @-moz-keyframes fadein {
+                                                                    from {
+                                                                        opacity: 0;
+                                                                    }
+                                                                    to {
+                                                                        opacity: 1;
+                                                                    }
+                                                                }
+                                                                /* Safari, Chrome and Opera > 12.1 */
+                                                                
+                                                                @-webkit-keyframes fadein {
+                                                                    from {
+                                                                        opacity: 0;
+                                                                    }
+                                                                    to {
+                                                                        opacity: 1;
+                                                                    }
+                                                                }
+                                                                /* Internet Explorer */
+                                                                
+                                                                @-ms-keyframes fadein {
+                                                                    from {
+                                                                        opacity: 0;
+                                                                    }
+                                                                    to {
+                                                                        opacity: 1;
+                                                                    }
+                                                                }
+                                                                /* Opera < 12.1 */
+                                                                
+                                                                @-o-keyframes fadein {
+                                                                    from {
+                                                                        opacity: 0;
+                                                                    }
+                                                                    to {
+                                                                        opacity: 1;
+                                                                    }
+                                                                }
+                                                                /*END OF SHIPPING */
+                                                                /* SHOP TITLE */
+                                                                
+                                                                #pageTitle {
+                                                                    text-align: center;
+                                                                }
+                                                                
+                                                                .page-title a {
+                                                                    transition: transform 0.2s;
+                                                                    font-size: 55pt;
+                                                                    font-family: "Luckiest Guy";
+                                                                    color: #fff;
+                                                                    -webkit-font-smoothing: antialiased;
+                                                                    -moz-osx-font-smoothing: grayscale;
+                                                                    text-shadow: 0px -6px 0 #212121, 0px -6px 0 #212121, 0px 6px 0 #212121, 0px 6px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px -6px 0 #212121, 6px -6px 0 #212121, -6px 6px 0 #212121, 6px 6px 0 #212121, -6px 18px 0 #212121, 0px 18px 0 #212121, 6px 18px 0 #212121, 0 19px 1px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.1), 0 6px 3px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2), 0 18px 18px rgba(0, 0, 0, 0.25), 0 24px 24px rgba(0, 0, 0, 0.2), 0 36px 36px rgba(0, 0, 0, 0.15);
+                                                                }
+                                                                
+                                                                .page-title:hover {
+                                                                    transform: scale(1.1);
+                                                                }
+                                                                /* END OF SHOP TITLE */
+                                                                /* IMG SHOWCASE */
+                                                                
+                                                                .j11 {
+                                                                    width: 550px;
+                                                                    height: 350px;
+                                                                    border-radius: 8px;
+                                                                    box-shadow: 0 0 16px #333;
+                                                                    transition: transform 0.2s;
+                                                                }
+                                                                
+                                                                .j11-text {
+                                                                    position: absolute;
+                                                                    bottom: 10%;
+                                                                    left: 3%;
+                                                                    color: white;
+                                                                    z-index: 1;
+                                                                    font-family: "Kalam", cursive;
+                                                                    font-family: "Bangers", cursive;
+                                                                    font-size: 20px;
+                                                                }
+                                                                
+                                                                .j11:hover {
+                                                                    box-shadow: 0 0 32px #333;
+                                                                    transform: scale();
+                                                                }
+                                                                
+                                                                #imgShowcase {
+                                                                    width: 50%;
+                                                                    position: absolute;
+                                                                    left: 54%;
+                                                                    top: 140%;
+                                                                    -ms-transform: rotate(-5deg);
+                                                                    /* IE 9 */
+                                                                    -webkit-transform: rotate(-5deg);
+                                                                    /* Safari 3-8 */
+                                                                    transform: rotate(-5deg);
+                                                                }
+                                                                
+                                                                .tile .is-child {
+                                                                    background-color: #fff;
+                                                                }
+                                                                /* END OF IMG SHOWCASE */
+                                                                /* IMG SHOWCASE 2 */
+                                                                
+                                                                #imgShowcase2 {
+                                                                    width: 50%;
+                                                                    position: absolute;
+                                                                    top: 249%;
+                                                                    left: 55%;
+                                                                    -ms-transform: rotate(5deg);
+                                                                    /* IE 9 */
+                                                                    -webkit-transform: rotate(5deg);
+                                                                    /* Safari 3-8 */
+                                                                    transform: rotate(5deg);
+                                                                }
+                                                                
+                                                                .airmax-text {
+                                                                    position: absolute;
+                                                                    bottom: 12%;
+                                                                    left: 13%;
+                                                                    color: black;
+                                                                    z-index: 1;
+                                                                    font-family: "Kalam", cursive;
+                                                                    font-family: "Bangers", cursive;
+                                                                    font-size: 20px;
+                                                                }
+                                                                
+                                                                .airmax {
+                                                                    width: 84%;
+                                                                    border-radius: 8px;
+                                                                    box-shadow: 0 0 16px #333;
+                                                                    transition: transform 0.1s;
+                                                                }
+                                                                
+                                                                .airmax:hover {
+                                                                    transform: scale();
+                                                                    box-shadow: 0 0 32px #333;
+                                                                }
+                                                                /* END OF IMG SHOWCASE 2 */
+                                                                /* IMG SHOWCASE 3 */
+                                                                
+                                                                #imgShowcase3 {
+                                                                    width: 50%;
+                                                                    position: absolute;
+                                                                    top: 347%;
+                                                                    left: 57%;
+                                                                    -ms-transform: rotate(-5deg);
+                                                                    /* IE 9 */
+                                                                    -webkit-transform: rotate(-5deg);
+                                                                    /* Safari 3-8 */
+                                                                    transform: rotate(-5deg);
+                                                                }
+                                                                
+                                                                .kobe-text {
+                                                                    position: absolute;
+                                                                    bottom: 4%;
+                                                                    left: 3%;
+                                                                    color: black;
+                                                                    z-index: 1;
+                                                                    background-color: #e7e7e7;
+                                                                    font-family: "Kalam", cursive;
+                                                                    font-family: "Bangers", cursive;
+                                                                    font-size: 20px;
+                                                                }
+                                                                
+                                                                .kobe {
+                                                                    width: 550px;
+                                                                    height: 375px;
+                                                                    border-radius: 8px;
+                                                                    box-shadow: 0 0 16px #333;
+                                                                    transition: transform 0.1s;
+                                                                }
+                                                                
+                                                                .kobe:hover {
+                                                                    transform: scale();
+                                                                    box-shadow: 0 0 32px #333;
+                                                                }
+                                                                /* END OF IMG SHOWCASE 3 */
+                                                                /* LATEST FASHION */
+                                                                
+                                                                #latestTitle {
+                                                                    width: 45%;
+                                                                    right: 27%;
+                                                                    top: 50%;
+                                                                    margin-bottom: 50px;
+                                                                    margin-top: 50px;
+                                                                    font-family: "Luckiest Guy";
+                                                                    color: #fff;
+                                                                    -webkit-font-smoothing: antialiased;
+                                                                    -moz-osx-font-smoothing: grayscale;
+                                                                    text-shadow: 0px -6px 0 #212121, 0px -6px 0 #212121, 0px 6px 0 #212121, 0px 6px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px -6px 0 #212121, 6px -6px 0 #212121, -6px 6px 0 #212121, 6px 6px 0 #212121, -6px 18px 0 #212121, 0px 18px 0 #212121, 6px 18px 0 #212121, 0 19px 1px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.1), 0 6px 3px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2), 0 18px 18px rgba(0, 0, 0, 0.25), 0 24px 24px rgba(0, 0, 0, 0.2), 0 36px 36px rgba(0, 0, 0, 0.15);
+                                                                }
+                                                                
+                                                                .notification {
+                                                                    text-align: center;
+                                                                    -webkit-box-shadow: 2px 5px 16px 0px #0b325e, 20px 5px 32px 2px rgba(0, 0, 0, 0.52);
+                                                                    box-shadow: 2px 5px 16px 0px #0b325e, 20px 5px 32px 2px rgba(0, 0, 0, 0.52);
+                                                                }
+                                                                
+                                                                .style {
+                                                                    width: 300px;
+                                                                    height: 370px;
+                                                                }
+                                                                
+                                                                #latestFashion {
+                                                                    width: 45%;
+                                                                    margin-left: 10px;
+                                                                    margin-top: -20px;
+                                                                }
+                                                                
+                                                                #css3dimagePager {
+                                                                    text-align: center;
+                                                                    position: relative;
+                                                                    z-index: 11;
+                                                                    padding: 0 0 10px;
+                                                                    margin-top: 260px;
+                                                                    right: 10px;
+                                                                }
+                                                                
+                                                                #css3dimagePager li:hover {
+                                                                    transform: scale(1.2);
+                                                                }
+                                                                
+                                                                #css3dimagePager li {
+                                                                    padding-right: 15px;
+                                                                    display: inline-block;
+                                                                    cursor: pointer;
+                                                                    padding-left: 15px;
+                                                                    transition: transform 0.2s;
+                                                                    color: #fff;
+                                                                    background-color: black;
+                                                                    border-radius: 50%;
+                                                                }
+                                                                
+                                                                #css3dimagePager li.active {
+                                                                    font-weight: bold;
+                                                                }
+                                                                
+                                                                #css3dimageslider {
+                                                                    -webkit-perspective: 1000;
+                                                                    -moz-perspective: 1000px;
+                                                                    -ms-perspective: 1000;
+                                                                    perspective: 1000;
+                                                                    -webkit-perspective-origin: 50% 100px;
+                                                                    -moz-perspective-origin: 50% 100px;
+                                                                    -ms-perspective-origin: 50% 100px;
+                                                                    perspective-origin: 50% 100px;
+                                                                    margin-top: 50px;
+                                                                    width: 100%;
+                                                                    height: 200px;
+                                                                }
+                                                                
+                                                                #css3dimageslider ul {
+                                                                    position: relative;
+                                                                    margin: 0 auto;
+                                                                    height: 281px;
+                                                                    width: 450px;
+                                                                    -webkit-transform-style: preserve-3d;
+                                                                    -moz-transform-style: preserve-3d;
+                                                                    -ms-transform-style: preserve-3d;
+                                                                    transform-style: preserve-3d;
+                                                                    -webkit-transform-origin: 50% 100px 0;
+                                                                    -moz-transform-origin: 50% 100px 0;
+                                                                    -ms-transform-origin: 50% 100px 0;
+                                                                    transform-origin: 50% 100px 0;
+                                                                    -webkit-transition: all 1s ease-in-out;
+                                                                    -moz-transition: all 1s ease-in-out;
+                                                                    -ms-transition: all 1s ease-in-out;
+                                                                    transition: all 1s ease-in-out;
+                                                                }
+                                                                
+                                                                #css3dimageslider ul li {
+                                                                    position: absolute;
+                                                                    height: 281px;
+                                                                    width: 450px;
+                                                                    padding: 0px;
+                                                                }
+                                                                
+                                                                #css3dimageslider ul li:nth-child(1) {
+                                                                    -webkit-transform: translateZ(225px);
+                                                                    -moz-transform: translateZ(225px);
+                                                                    -ms-transform: translateZ(225px);
+                                                                    transform: translateZ(225px);
+                                                                }
+                                                                
+                                                                #css3dimageslider ul li:nth-child(2) {
+                                                                    -webkit-transform: rotateY(90deg) translateZ(225px);
+                                                                    -moz-transform: rotateY(90deg) translateZ(225px);
+                                                                    -ms-transform: rotateY(90deg) translateZ(225px);
+                                                                    transform: rotateY(90deg) translateZ(225px);
+                                                                }
+                                                                
+                                                                #css3dimageslider ul li:nth-child(3) {
+                                                                    -webkit-transform: rotateY(180deg) translateZ(225px);
+                                                                    -moz-transform: rotateY(180deg) translateZ(225px);
+                                                                    -ms-transform: rotateY(180deg) translateZ(225px);
+                                                                    transform: rotateY(180deg) translateZ(225px);
+                                                                }
+                                                                
+                                                                #css3dimageslider ul li:nth-child(4) {
+                                                                    -webkit-transform: rotateY(-90deg) translateZ(225px);
+                                                                    -moz-transform: rotateY(-90deg) translateZ(225px);
+                                                                    -ms-transform: rotateY(-90deg) translateZ(225px);
+                                                                    transform: rotateY(-90deg) translateZ(225px);
+                                                                }
+                                                                /* img for latest fashion */
+                                                                
+                                                                .coming {
+                                                                    width: 350px;
+                                                                    height: 350px;
+                                                                }
+                                                                /* END OF LATEST FASHION */
+                                                                /* CELEBS GALLERY */
+                                                                
+                                                                   #celebsTitle {
+                                                                    width: 45%;
+                                                                    right: 26%;
+                                                                    margin-bottom: 30px;
+                                                                    margin-top: 50px;
+                                                                    font-family: "Luckiest Guy";
+                                                                    color: #fff;
+                                                                    -webkit-font-smoothing: antialiased;
+                                                                    -moz-osx-font-smoothing: grayscale;
+                                                                    text-shadow: 0px -6px 0 #212121, 0px -6px 0 #212121, 0px 6px 0 #212121, 0px 6px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px -6px 0 #212121, 6px -6px 0 #212121, -6px 6px 0 #212121, 6px 6px 0 #212121, -6px 18px 0 #212121, 0px 18px 0 #212121, 6px 18px 0 #212121, 0 19px 1px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.1), 0 6px 3px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2), 0 18px 18px rgba(0, 0, 0, 0.25), 0 24px 24px rgba(0, 0, 0, 0.2), 0 36px 36px rgba(0, 0, 0, 0.15);
+                                                                }
+                                                                
+                                                                #celebsGallery {
+                                                                    width: 50%;
+                                                                }
+                                                                
+                                                                .celebs {
+                                                                    border-radius: 8px;
+                                                                    box-shadow: 0 0 16px #333;
+                                                                    transition: transform 0.1s;
+                                                                    transition: transform 300ms ease;
+                                                                    margin-left: 30px;
+                                                                    margin-top: 30px;
+                                                                }
+                                                                
+                                                                .column-celebs {
+                                                                    padding: 10px;
+                                                                }
+                                                                /* END OF CELEBS GALLERY */
+                                                                /* IMAGE FILTERS */
+                                                                
+                                                                .column {
+                                                                    border: 1px solid black;
+                                                                    margin: 30px;
+                                                                    margin-left: 35px;
+                                                                    padding: 30px;
+                                                                    text-align: center;
+                                                                    border-radius: 8px;
+                                                                    box-shadow: 0 0 16px #333;
+                                                                    transition: transform 0.1s;
+                                                                    transition: transform 300ms ease;
+                                                                    font-family: "Kalam", cursive;
+                                                                    font-family: "Bangers", cursive;
+                                                                    font-size: 20px;
+                                                                }
+                                                                
+                                                                .column:hover {
+                                                                    transform: scale(1.1);
+                                                                    cursor: pointer;
+                                                                }
+                                                                
+                                                                p {
+                                                                    margin-top: -30px;
+                                                                    color: black;
+                                                                }
+                                                                /* END OF IMAGE FILTERS */
+                                                                /* MODAL */
+                                                                
+                                                                #img {
+                                                                    border-top: 1px solid black;
+                                                                    border-bottom: 1px solid black;
+                                                                    border-radius: 5px;
+                                                                    cursor: pointer;
+                                                                    transition: 0.3s;
+                                                                    width: 220px;
+                                                                    height: 130px;
+                                                                    padding: 20px;
+                                                                    margin-left: 25px;
+                                                                    font-size: 25px;
+                                                                    border-radius: 8px;
+                                                                    margin-bottom: 18px;
+                                                                    /* Enable scroll if needed */
+                                                                }
+                                                                
+                                                                #img:hover {
+                                                                    opacity: 0.7;
+                                                                    cursor: pointer;
+                                                                }
+                                                                
+                                                                .modalDialog {
+                                                                    position: fixed;
+                                                                    font-family: Arial, Helvetica, sans-serif;
+                                                                    top: 0;
+                                                                    right: 0;
+                                                                    bottom: 0;
+                                                                    left: 0;
+                                                                    background: rgba(0, 0, 0, 0.8);
+                                                                    z-index: 99999;
+                                                                    opacity: 0;
+                                                                    -webkit-transition: opacity 400ms ease-in;
+                                                                    -moz-transition: opacity 400ms ease-in;
+                                                                    transition: opacity 400ms ease-in;
+                                                                    pointer-events: none;
+                                                                }
+                                                                
+                                                                .target {
+                                                                    width: 800px;
+                                                                    position: relative;
+                                                                    bottom: 10%;
+                                                                    margin: 10% auto;
+                                                                    padding: 5px 20px 13px 20px;
+                                                                    border-radius: 10px;
+                                                                    background: #fff;
+                                                                    background: -moz-linear-gradient(#fff, #999);
+                                                                    background: -webkit-linear-gradient(#fff, #999);
+                                                                    background: -o-linear-gradient(#fff, #999);
+                                                                }
+                                                                
+                                                                .modalDialog:target {
+                                                                    opacity: 1;
+                                                                    pointer-events: auto;
+                                                                }
+                                                                
+                                                                .close {
+                                                                    background: #606061;
+                                                                    color: #ffffff;
+                                                                    line-height: 25px;
+                                                                    position: absolute;
+                                                                    right: -12px;
+                                                                    text-align: center;
+                                                                    top: -10px;
+                                                                    width: 24px;
+                                                                    text-decoration: none;
+                                                                    font-weight: bold;
+                                                                    -webkit-border-radius: 12px;
+                                                                    -moz-border-radius: 12px;
+                                                                    border-radius: 12px;
+                                                                    -moz-box-shadow: 1px 1px 3px #000;
+                                                                    -webkit-box-shadow: 1px 1px 3px #000;
+                                                                    box-shadow: 1px 1px 3px #000;
+                                                                }
+                                                                
+                                                                .close:hover {
+                                                                    background: #00d9ff;
+                                                                }
+                                                                
+                                                                .sport-title {
+                                                                    font-size: 25px;
+                                                                    color: black;
+                                                                    font-family: "Kalam", cursive;
+                                                                    font-family: "Bangers", cursive;
+                                                                }
+                                                                
+                                                                #cart {
+                                                                    position: absolute;
+                                                                    right: 10%;
+                                                                    font-size: 25px;
+                                                                    font-family: "Kalam", cursive;
+                                                                    font-family: "Bangers", cursive;
+                                                                    color: black;
+                                                                }
+                                                                
+                                                                #cart:hover {
+                                                                    color: red;
+                                                                }
+                                                                
+                                                                .price {
+                                                                    position: absolute;
+                                                                    right: 45%;
+                                                                    top: 1%;
+                                                                    font-size: 25px;
+                                                                    font-family: "Kalam", cursive;
+                                                                    font-family: "Bangers", cursive;
+                                                                    color: black;
+                                                                }
+                                                                
+                                                                .sportText {
+                                                                    font-family: "Josefin Sans", sans-serif;
+                                                                    font-family: "Kalam", cursive;
+                                                                    color: black;
+                                                                    font-size: 18px;
+                                                                }
+                                                                /* PRICE DISCOUNT */
+                                                                
+                                                                strike {
+                                                                    color: red;
+                                                                }
+                                                                /* TO HIDE ALL THE DISPLEYED KICKS */
+                                                                
+                                                                #allKicks {
+                                                                    max-width: 100%;
+                                                                    margin-left: 25px;
+                                                                }
+                                                                /* HIDE ALL HR LINES FOR BETTER VISABILITY */
+                                                                
+                                                                hr {
+                                                                    background-color: #ffffff;
+                                                                }
+                                                                /* copyrights */
+                                                                
+                                                                .copy {
+                                                                    margin-top: 10px;
+                                                                    font-family: "Courier Prime", monospace;
+                                                                    margin-left: 10px;
+                                                                }
+                                                                /* button back to top */
+                                                                
+                                                                #top {
+                                                                    left: 43%;
+                                                                    margin-bottom: 50px;
+                                                                    font-family: "Courier Prime", monospace;
+                                                                }
+                                                                
+                                                                #top:hover {
+                                                                    background-color: black;
+                                                                    color: #ffffff;
+                                                                }
+                                                                
+                                                                
+                                                                /* SOCIAL MEDIA */
+                                                                
+                                                                .social {
+                                                                    margin-bottom: 50px;
+                                                                    position: relative;
+                                                                    left: 41%;
+                                                                    color: black;
+                                                                    padding-left: 20px;
+                                                                }
