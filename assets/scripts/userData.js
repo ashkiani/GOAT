@@ -23,14 +23,11 @@ function generateBlankUserDataObject() {
     return userDataObject;
 }
 
-// Siavash - 12/21/2019
-// This object represents the current logged-in user
-var userData = generateBlankUserDataObject()
-
 // Siavash - 12/26/2019
 // returns True if any user is currently logged in, False otherwise.
 function isLoggedIn() {
     var result = false;
+    var userName = getLoggedInUserName();
     if (currentUser != "") {
         result = true;
     }
@@ -38,27 +35,10 @@ function isLoggedIn() {
 }
 
 // Siavash - 12/21/2019
-// use this variable to store the username of the current user.
-var currentUser = "";
-function clearUserData() {
-    userData.email = "";
-    userData.name = "";
-    userData.password = "";
-    userData.shoeSize = "";
-    userData.address = "";
-    userData.creditCard.number = "";
-    userData.creditCard.name = "";
-    userData.creditCard.expiration = "";
-    userData.cart = [];
-    currentUser = "";
-    console.log("Cleared current user");
-}
-
-// Siavash - 12/21/2019
 // This function looks for a goatUsers key in the local storage and returns its value. The value is an array of userData.
 // it will return null if nothing is found.
-function loadLocalStorage() {
-    var goatUsers = [userData];
+function getGoatUsersFromLocalStorage() {
+    var goatUsers = [];
     var value = localStorage.getItem("goatUsers");
     if (value !== null) {
         console.log(value);
@@ -75,10 +55,11 @@ function loadLocalStorage() {
 // This function looks for the input username in the local storage and if found, then it will copy the value into the userData variable
 // at this time it doesn't return any value since I thought userData object will be shared with other pages but we change that if we need an explicit return object.
 function getUserData(userName) {
+    var userData = generateBlankUserDataObject()
     userName = userName.trim();
     if (userName != "") {
         var goatUsers = [userData];
-        goatUsers = loadLocalStorage();
+        goatUsers = getGoatUsersFromLocalStorage();
         if (goatUsers !== null) {
             goatUsers.forEach(user => {
                 if (user !== null) {
@@ -86,13 +67,14 @@ function getUserData(userName) {
                     if (user.email == userName) {
                         userData = user;
                         currentUser = userName;
-                        return;
+                        return userData;
                     }
                 }
             });
 
         }
     }
+    return userData;
 }
 
 // Siavash - 12/26/2019 
@@ -113,7 +95,7 @@ function isUserNameUnique(userName) {
     else {
         result = true;
         var goatUsers = [userData];
-        goatUsers = loadLocalStorage();
+        goatUsers = getGoatUsersFromLocalStorage();
         if (goatUsers !== null) {
             goatUsers.forEach(user => {
                 if (user !== null) {
@@ -160,7 +142,7 @@ function getUserDataObjectErrors(userDataObject) {
         errors.push("Invalid email address. The email format should be string@string.string");
     }
 
-    if (! isPasswordValid(userDataObject.password)){
+    if (!isPasswordValid(userDataObject.password)) {
         errors.push("Invalid Password. Password length should be at least 4 characters.");
     }
     // no more validation checks at this time, but this is the place to add additional validation rules if needed...
@@ -194,7 +176,7 @@ function isUserDataValid() {
 function setUserData(userDataObject) {
     if (isUserDataObjectValid(userDataObject)) {
         var goatUsers = [userData];
-        goatUsers = loadLocalStorage();
+        goatUsers = getGoatUsersFromLocalStorage();
         console.log("users:" + goatUsers);
         if (goatUsers !== null) {
             var userExists = false;
@@ -227,5 +209,19 @@ function setUserData(userDataObject) {
     else {
         console.log("Invalid User data");
     }
+}
+
+function getLoggedInUserName() {
+    var value = localStorage.getItem("goatLoggedInUser");
+    if (value !== null) {
+
+    }
+    else {
+        value = "";
+    }
+    return value;
+}
+function setLoggedInUserName(userName) {
+    localStorage.setItem("goatLoggedInUser", userName);
 }
 
