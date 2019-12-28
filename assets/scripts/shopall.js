@@ -39,36 +39,7 @@ setInterval(function() {
 
 // END OF TIMER FOR COUPON
 
-// nav-bar open/close
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
-
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-}
-
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    document.body.style.backgroundColor = "white";
-}
-
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function mySort() {
-    document.getElementById("sort").classList.toggle("show");
-}
-
-function myFilter() {
-    document.getElementById("filter").classList.toggle("show");
-}
-
-// END OF NAV BAR
-
-//Delete home page notification
+//DELETE HOME PAGE NOTIFICATION
 document.addEventListener("DOMContentLoaded", () => {
     (document.querySelectorAll(".notification .delete") || []).forEach(
         $delete => {
