@@ -14,17 +14,16 @@
                                                                     background-color: black;
                                                                     color: #ffffff;
                                                                     border-radius: 10px;
-                                                                   
+                                                                    margin-left: 5px;
                                                                 }
                                                                 
                                                                 .exp {
                                                                     text-align: center;
                                                                     margin-top: 10px;
-                                                                    
                                                                 }
                                                                 
                                                                 .navbar-end {
-                                                                    margin-top: -130px;
+                                                                    margin-top: -20px;
                                                                     height: 200px;
                                                                     font-family: "Kalam", cursive;
                                                                     font-family: "Bangers", cursive;
@@ -39,7 +38,6 @@
                                                                 
                                                                 #hours {
                                                                     font-size: 20px;
-                                                                    
                                                                     display: inline-block;
                                                                     line-height: 1;
                                                                     padding: 10px;
@@ -48,7 +46,6 @@
                                                                 
                                                                 #minutes {
                                                                     font-size: 20px;
-                                                                    
                                                                     display: inline-block;
                                                                     line-height: 1;
                                                                     padding: 10px;
@@ -57,7 +54,6 @@
                                                                 
                                                                 #seconds {
                                                                     font-size: 20px;
-                                                                    
                                                                     display: inline-block;
                                                                     line-height: 1;
                                                                     padding: 10px;
@@ -81,7 +77,7 @@
                                                                 #pageLogo {
                                                                     position: absolute;
                                                                     left: 70%;
-                                                                    top: 50%;
+                                                                    top: 65%;
                                                                 }
                                                                 
                                                                 .logo {
@@ -93,49 +89,39 @@
                                                                 }
                                                                 /* END OF PAGE LOGO */
                                                                 /* NAV BAR */
+
+                                                                .goat{
+                                                                    font-size:40px;
+                                                                    border:1px solid black;
+                                                                    border-radius: 8px;
+                                                                    background-color: #000;
+                                                                    color:#fff;
+                                                                    padding:10px 20px;
+                                                                }
                                                                 
-                                                                .sidenav {
-                                                                    height: 100%;
-                                                                    width: 0;
-                                                                    position: fixed;
-                                                                    z-index: 1;
-                                                                    top: 0;
-                                                                    left: 0;
-                                                                    background-color: #111;
-                                                                    overflow-x: hidden;
-                                                                    transition: 0.5s;
-                                                                    padding-top: 50px;
+                                                                .navbar-menu {
+                                                                    font-size: 25px;
                                                                     font-family: "Kalam", cursive;
                                                                     font-family: "Bangers", cursive;
                                                                 }
                                                                 
-                                                                .sidenav a {
-                                                                    padding: 8px 8px 8px 32px;
+                                                                .navbar-menu a {
+                                                                    padding-left:20px;
                                                                     text-decoration: none;
-                                                                    font-size: 25px;
-                                                                    color: #818181;
-                                                                    display: block;
                                                                     transition: 0.3s;
                                                                     transition: transform 0.2s;
                                                                 }
                                                                 
-                                                                .sidenav a:hover {
-                                                                    color: #f1f1f1;
+                                                                .navbar-menu a:hover {
+                                                                    background-color: #FFF;
+                                                                    color:black;
                                                                     transform: scale(1.1);
-                                                                }
-                                                                
-                                                                .sidenav .closebtn {
-                                                                    position: absolute;
-                                                                    top: 0;
-                                                                    right: 25px;
-                                                                    font-size: 36px;
-                                                                    margin-left: 50px;
                                                                 }
                                                                 /* END OF NAV BAR */
                                                                 /* SHIPPING */
                                                                 
                                                                 #home-notification {
-                                                                    margin-top: -100px;
+                                                                    margin-top: -30px;
                                                                     background-color: black;
                                                                     color: #ffff;
                                                                     font-family: "Kalam", cursive;
@@ -251,7 +237,7 @@
                                                                     width: 50%;
                                                                     position: absolute;
                                                                     left: 54%;
-                                                                    top: 125%;
+                                                                    top: 140%;
                                                                     -ms-transform: rotate(-5deg);
                                                                     /* IE 9 */
                                                                     -webkit-transform: rotate(-5deg);
@@ -268,7 +254,7 @@
                                                                 #imgShowcase2 {
                                                                     width: 50%;
                                                                     position: absolute;
-                                                                    top: 230%;
+                                                                    top: 249%;
                                                                     left: 55%;
                                                                     -ms-transform: rotate(5deg);
                                                                     /* IE 9 */
@@ -305,7 +291,7 @@
                                                                 #imgShowcase3 {
                                                                     width: 50%;
                                                                     position: absolute;
-                                                                    top: 332%;
+                                                                    top: 347%;
                                                                     left: 57%;
                                                                     -ms-transform: rotate(-5deg);
                                                                     /* IE 9 */
@@ -675,14 +661,23 @@
                                                                 #top {
                                                                     left: 43%;
                                                                     margin-bottom: 50px;
+                                                                    font-family: "Courier Prime", monospace;
                                                                 }
                                                                 
-                                                                #backtotop {}
+                                                                #top:hover {
+                                                                    background-color: black;
+                                                                    color: #ffffff;
+                                                                }
+                                                                
+                                                                #backtotop {
+
+                                                                }
                                                                 /* SOCIAL MEDIA */
                                                                 
                                                                 .social {
-                                                                    float: right;
-                                                                    padding-right: 20px;
+                                                                    margin-bottom: 50px;
                                                                     position: relative;
+                                                                    left: 41%;
                                                                     color: black;
+                                                                    padding-left: 20px;
                                                                 }
