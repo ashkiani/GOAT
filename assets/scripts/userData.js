@@ -55,7 +55,7 @@ function getGoatUsersFromLocalStorage() {
 // This function looks for the input username in the local storage and if found, then it will copy the value into the userData variable
 // at this time it doesn't return any value since I thought userData object will be shared with other pages but we change that if we need an explicit return object.
 function getUserData(userName) {
-    var userData = generateBlankUserDataObject()
+    var userData = generateBlankUserDataObject();
     userName = userName.trim();
     if (userName != "") {
         var goatUsers = [userData];
@@ -94,7 +94,7 @@ function isUserNameUnique(userName) {
     }
     else {
         result = true;
-        var goatUsers = [userData];
+        var goatUsers = [];
         goatUsers = getGoatUsersFromLocalStorage();
         if (goatUsers !== null) {
             goatUsers.forEach(user => {
@@ -227,6 +227,15 @@ function getLoggedInUserName() {
 }
 
 //Siavash 12/28/2019 
+//Returns the userData object related to the currently logged in user. if no user is logged in a blank object is returned.
+function getCurrentUserData() {
+    var currentUser = getLoggedInUserName();
+    console.log("Current User:" + currentUser);
+    var userData = getUserData(currentUser);
+    return userData;
+}
+
+//Siavash 12/28/2019 
 //Sets the goatLoggedInUser variable in the local storage
 function setLoggedInUserName(userName) {
     localStorage.setItem("goatLoggedInUser", userName);
@@ -234,7 +243,7 @@ function setLoggedInUserName(userName) {
 
 //Siavash 12/28/2019 
 //Clears the goatLoggedInUser variable in the local storage
-function userLogOff(){
+function userLogOff() {
     setLoggedInUserName("");
 }
 

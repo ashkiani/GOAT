@@ -26,9 +26,9 @@ $(document).ready(function () {
     var ccNumberEl = $("#ccNumberText");
     var ccNameEl = $("#ccNameText");
     var ccExpEl = $("#ccExpText");
-    var userData = generateBlankUserDataObject();
-
-
+    var userData = getCurrentUserData();
+    console.log("Printing userData:");
+    console.log(userData);
     function updateUserDataObjectFromPage() {
         userData.name = nameEl.val();
         userData.email = emailEl.val();
@@ -83,16 +83,8 @@ $(document).ready(function () {
     // setUserData(userData);
     // getUserData("ashkiani@yahoo.com");
     // $("#emailText").val(userData.email);
-    function loadPage(userName) {
-        userData = getUserData(currentUser);
-        console.log(userData);
-        loadPageFromUserDataObject();
-    }
 
-    var currentUser = getLoggedInUserName();
-    if (currentUser != "") {
-        loadPage(currentUser);
-    }
+    loadPageFromUserDataObject();
 
     function underConstructionAlert() {
         alert("This unit is under construction");
@@ -109,8 +101,8 @@ $(document).ready(function () {
         // underConstructionAlert();
     });
     $("#btnCancel").click(function () {
-        loadPage(currentUser);
+        userData = getCurrentUserData();
+        loadPageFromUserDataObject();
         // underConstructionAlert();
     });
 });
-
