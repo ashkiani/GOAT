@@ -18,9 +18,6 @@ $(document).ready(function () {
     }
     initShoeSizeCombo();
 
-
-    // clearUserData();
-
     var nameEl = $("#nameText");
     var emailEl = $("#emailText");
     var passwordEl = $("#passwordText");
@@ -86,16 +83,16 @@ $(document).ready(function () {
     // setUserData(userData);
     // getUserData("ashkiani@yahoo.com");
     // $("#emailText").val(userData.email);
-    var currentUser = getLoggedInUserName();
-    if (currentUser != "") {
+    function loadPage(userName) {
         userData = getUserData(currentUser);
         console.log(userData);
         loadPageFromUserDataObject();
     }
 
-
-
-
+    var currentUser = getLoggedInUserName();
+    if (currentUser != "") {
+        loadPage(currentUser);
+    }
 
     function underConstructionAlert() {
         alert("This unit is under construction");
@@ -106,15 +103,14 @@ $(document).ready(function () {
         optEl.appendTo(shoeSizeEl);
     }
 
-
-
     $("#btnUpdate").click(function () {
-        // updateUserDataObjectFromPage();
-        // setUserData(userData);
-        underConstructionAlert();
+        updateUserDataObjectFromPage();
+        setUserData(userData);
+        // underConstructionAlert();
     });
     $("#btnCancel").click(function () {
-        underConstructionAlert();
+        loadPage(currentUser);
+        // underConstructionAlert();
     });
 });
 
