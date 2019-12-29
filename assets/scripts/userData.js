@@ -177,7 +177,7 @@ function isUserDataValid() {
 // It will create a new entry in the local storage if the username doesn't exist, otherwise it will update the existing object/user
 function setUserData(userDataObject) {
     if (isUserDataObjectValid(userDataObject)) {
-        var goatUsers = [userData];
+        var goatUsers = [];
         goatUsers = getGoatUsersFromLocalStorage();
         console.log("users:" + goatUsers);
         if (goatUsers !== null) {
