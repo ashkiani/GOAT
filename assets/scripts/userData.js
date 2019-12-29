@@ -115,6 +115,8 @@ function isUserNameUnique(userName) {
     return result;
 }
 
+//Siavash 12/28/2019 
+//Returns True is password requirements are met (at this time we only check the length)
 function isPasswordValid(password) {
     var result = false;
     password = password.trim();
@@ -211,6 +213,8 @@ function setUserData(userDataObject) {
     }
 }
 
+//Siavash 12/28/2019 
+//Returns the goatLoggedInUser variable from the local storage
 function getLoggedInUserName() {
     var value = localStorage.getItem("goatLoggedInUser");
     if (value !== null) {
@@ -221,7 +225,16 @@ function getLoggedInUserName() {
     }
     return value;
 }
+
+//Siavash 12/28/2019 
+//Sets the goatLoggedInUser variable in the local storage
 function setLoggedInUserName(userName) {
     localStorage.setItem("goatLoggedInUser", userName);
+}
+
+//Siavash 12/28/2019 
+//Clears the goatLoggedInUser variable in the local storage
+function userLogOff(){
+    setLoggedInUserName("");
 }
 
