@@ -28,7 +28,7 @@ function generateBlankUserDataObject() {
 function isLoggedIn() {
     var result = false;
     var userName = getLoggedInUserName();
-    if (currentUser != "") {
+    if (userName != "") {
         result = true;
     }
     return result;
@@ -66,7 +66,7 @@ function getUserData(userName) {
                     console.log("checking user:" & user.email);
                     if (user.email == userName) {
                         userData = user;
-                        currentUser = userName;
+                        //currentUser = userName;
                         return userData;
                     }
                 }
@@ -89,6 +89,7 @@ function validateEmail(email) {
 // returns True if the input name is unique, False otherwise.
 function isUserNameUnique(userName) {
     result = false;
+    var currentUser = getLoggedInUserName();
     if (userName == currentUser) {
         result = true;
     }
@@ -126,27 +127,43 @@ function isPasswordValid(password) {
     return result;
 }
 
-// Siavash - 12/26/2019 
-// returns an array that lists the errors for the input object. if the array length is 0 then that means the input object is valid.
-function getUserDataObjectErrors(userDataObject) {
-    errors = [];
-    if (validateEmail(userDataObject.email)) {
+function getEmailErrors(email) {
+    var errors = [];
+    if (validateEmail(email)) {
         //no error so far... next, check if the userName is duplicate
-        if (isUserNameUnique(userDataObject.email)) {
+        if (isUserNameUnique(email)) {
             // email address is valid
         }
         else {
             //duplicate email
             errors.push("The email address already exists!");
         }
-    } else {
+    }
+    else {
         //invalid email format
         errors.push("Invalid email address. The email format should be string@string.string");
     }
+    return errors;
+}
 
-    if (!isPasswordValid(userDataObject.password)) {
+function getPasswordErrors(password) {
+    var errors = [];
+
+    if (!isPasswordValid(password)) {
         errors.push("Invalid Password. Password length should be at least 4 characters.");
     }
+    return errors;
+}
+
+// Siavash - 12/26/2019 
+// returns an array that lists the errors for the input object. if the array length is 0 then that means the input object is valid.
+function getUserDataObjectErrors(userDataObject) {
+    var errors = getEmailErrors(userDataObject.email);
+    var passErrors = getPasswordErrors(userDataObject.password);
+    for (var i=0; i<passErrors.length;i++){
+        errors.push(passErrors[i]);
+    }
+    
     // no more validation checks at this time, but this is the place to add additional validation rules if needed...
 
     return errors;
