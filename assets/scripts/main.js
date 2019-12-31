@@ -135,7 +135,7 @@ $(document).ready(function () {
       var psw = $("#password").val();
       if (psw == userData.password) {
         setLoggedInUserName(userData.email);
-        // window.location = "account.html";
+        window.location = "home.html";
       }
       else {
         loginFailed();
