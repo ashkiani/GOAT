@@ -1,3 +1,14 @@
+//Variable for capturing the user who is logged in
+var loggedInUserName = getLoggedInUserName();
+
+//If user is not logged in HIDE the log out button, else show the log out button
+if(loggedInUserName == ""){
+  $("#btnLogOut").hide();
+}
+else{
+  $("#btnLogOut").show();
+}
+
 //Fade In home page notification
 $("#home-notification").fadeIn(1000);
 
