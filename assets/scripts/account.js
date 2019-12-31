@@ -105,4 +105,9 @@ $(document).ready(function () {
         loadPageFromUserDataObject();
         // underConstructionAlert();
     });
+    $("#signOut").click(function () {
+        userLogOff();
+        window.location = "home.html";
+    });
+    
 });
