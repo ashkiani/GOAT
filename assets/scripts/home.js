@@ -1,14 +1,19 @@
 //Variable for capturing the user who is logged in
 var loggedInUserName = getLoggedInUserName();
 
-//If user is not logged in HIDE the log out button, else show the log out button
+//If user is not logged in:  HIDE the logout and account buttons - SHOW the login and register buttons
 if(loggedInUserName == ""){
   $("#btnLogOut").hide();
   $("#btnAccount").hide();
+  $("#btnLogin").show();
+  $("#btnRegister").show();
 }
+//If user is logged in:  SHOW the logout and account buttons - HIDE the login and register buttons
 else{
   $("#btnLogOut").show();
   $("#btnAccount").show();
+  $("#btnLogin").hide();
+  $("#btnRegister").hide();
 }
 
 //Fade In home page notification
@@ -32,13 +37,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  //Modal for clicking sneaker of the day
+  //Modals section for opening and closing
   $("#sneaker-of-day").click(function() {
     $(".sneakerOfDayModal").addClass("is-active");  
   });
   
-  $(".modal-close").click(function() {
+  $("#btnSneakerOfDayClose").click(function() {
      $(".sneakerOfDayModal").removeClass("is-active");
+  });
+
+  $("#newYeezy750").click(function() {
+    $(".yeezy750Modal").addClass("is-active");  
+  });
+  
+  $("#btnYeezy750Close").click(function() {
+     $(".yeezy750Modal").removeClass("is-active");
+  });
+
+  $("#viotech").click(function() {
+    $(".viotechModal").addClass("is-active");  
+  });
+  
+  $("#btnViotechClose").click(function() {
+     $(".viotechModal").removeClass("is-active");
+  });
+
+  $("#n64Airmax").click(function() {
+    $(".n64AirmaxModal").addClass("is-active");  
+  });
+  
+  $("#btnn64AirmaxClose").click(function() {
+     $(".n64AirmaxModal").removeClass("is-active");
   });
 
 //Function to increase the number of tweets, followers and likes every second
@@ -155,4 +184,10 @@ $("#btnSearch").click(function(){
 
     });
 
+})
+
+//Logout button click event - logs the user out and redirects user to the login page
+$("#btnLogOut").click(function(){
+  localStorage.removeItem("goatLoggedInUser");
+  window.location.href = "login.html";
 })
