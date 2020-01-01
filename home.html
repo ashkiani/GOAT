@@ -12,46 +12,52 @@
 
 <body>
   <!-- Nav bar -->
-   <!-- Nav bar -->
-   <nav class="navbar is-transparent">
+  <!-- Nav bar -->
+  <nav class="navbar is-transparent">
     <div class="navbar-brand">
-        <a class="navbar-item" href="home.html">
-            <img src="./assets/images/goat.PNG" alt="GOAT">
-        </a>
-        <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+      <a class="navbar-item" href="home.html">
+        <img src="./assets/images/goat.PNG" alt="GOAT">
+      </a>
+      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
 
     <div id="navbarExampleTransparentExample" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item" href="home.html">
-                Home
+      <div class="navbar-start">
+        <a class="navbar-item" href="home.html">
+          Home
+        </a>
+        <a class="navbar-item" href="shopall.html">
+          Shop
+        </a>
+
+        <a class="navbar-item" href="account.html" id="btnAccount">
+          Account
+        </a>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="navbar-item" href="cart.html">
+              <i class="fa fa-shopping-cart"></i>
             </a>
-            <a class="navbar-item" href="shopall.html">
-              Shop
-            </a>
-    
-            <a class="navbar-item" href="account.html" id="btnAccount">
-              Account
-            </a>
-        </div>
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="navbar-item" href="cart.html">
-                <i class="fa fa-shopping-cart"></i>
-             </a>
-            </div>
           </div>
-          <a class="navbar-item" id="btnLogOut">
-            Logout
-          </a>
         </div>
+        <a class="navbar-item" id="btnLogOut">
+          Logout
+        </a>
+        <a class="navbar-item" id="btnLogin" href="login.html">
+          Login
+        </a>
+        <a class="navbar-item" id="btnRegister" href="signup.html">
+          Register
+        </a>
+      </div>
     </div>
-</nav>
+  </nav>
   <!-- End Nav Bar -->
 
   <div class="notification has-text-centered" id="home-notification">
@@ -66,9 +72,78 @@
         <div class="tile is-parent is-vertical">
           <article class="tile is-child notification is-primary">
             <p class="title">New Releases <i class="fa fa-grin-tongue-squint"></i></p>
-            <p><a href="#" class="subtitle">Yeezy 750 Pirate Black</a></p>
-            <p> <a href="#" class="subtitle">Viotech Low Dunk</a></p>
-            <p><a href="#" class="subtitle">Jordan Bred 11</a></p>
+            <p id="newYeezy750"><a class="subtitle">Yeezy 750 Pirate Black</a></p>
+            <!-- Yeezy 750 modal -->
+            <div class="modal yeezy750Modal">
+              <div class="modal-background"></div>
+              <div class="modal-content">
+                <div class="card">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="../GOAT/assets/images/black750.jpg" alt="Travis Scott">
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-content">
+                        <p class="title is-4">Yeezy Black 750</p>
+                        <p class="subtitle is-6"><b>Release Date:</b> 3/14/2020</p>
+                      </div>
+                    </div>
+                    <div class="content">
+                      <p><b>Price:</b> $350</p>
+                      <p><b>Colorway:</b> PIRATE BLACK</p>
+                      <p><b>Style:</b> BB1839</p>
+                      <p><b>Description:</b> There has been no word on how Ye and adidas would use the shade of Black
+                        onto the sneaker, but here are detailed photos of how exactly the adidas Yeezy 750 Boost “Black”
+                        colorway will look like. The shoe sports an all-Black suede upper that was originally seen with
+                        a White boost sole, but the release version could be a fully “Blackout” colorway as seen above.
+                      </p>
+                      <br>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="modal-close is-large" id="btnYeezy750Close" aria-label="close"></button>
+            </div>
+            <!-- End Yeezy 750 modal -->
+            <p id="viotech"><a class="subtitle">Viotech Low Dunk</a></p>
+            <!-- Viotech modal -->
+            <div class="modal viotechModal">
+              <div class="modal-background"></div>
+              <div class="modal-content">
+                <div class="card">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="../GOAT/assets/images/viotech.jpg" alt="Viotech Dunk">
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-content">
+                        <p class="title is-4">Viotech Dunk Low</p>
+                        <p class="subtitle is-6"><b>Release Date:</b> 5/09/2020</p>
+                      </div>
+                    </div>
+                    <div class="content">
+                      <p><b>Price:</b> $100</p>
+                      <p><b>Colorway:</b> Viotech/Viotech</p>
+                      <p><b>Style:</b> CT5050-500</p>
+                      <p><b>Description:</b> Originally released in 2001 exclusively in Japan, the shoe became sought
+                        after by collectors for its multi-colored suede upper that incorporated colors like red, orange,
+                        yellow, purple, blue, and green. Expect finishing touches like a black leather tongue tab,
+                        leather liner, and white midsole to also make a return on the upcoming retro.
+                      </p>
+                      <br>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="modal-close is-large" id="btnViotechClose" aria-label="close"></button>
+            </div>
+            <!-- End Viotech modal -->
           </article>
           <article class="tile is-child notification is-warning">
             <p class="title swing">Hot Items <i class="fa fa-fire"></i></p>
@@ -114,7 +189,7 @@
                     <div class="media">
                       <div class="media-content">
                         <p class="title is-4">Travis Scott Jordan 6</p>
-                        <p class="subtitle is-6"><b>Release Date:</b> 3/14/2019</p>
+                        <p class="subtitle is-6"><b>Release Date:</b> 1/24/2020</p>
                       </div>
                     </div>
                     <div class="content">
@@ -138,7 +213,7 @@
                   </div>
                 </div>
               </div>
-              <button class="modal-close is-large" aria-label="close"></button>
+              <button class="modal-close is-large" id="btnSneakerOfDayClose" aria-label="close"></button>
             </div>
             <!-- End Sneaker of day modal -->
           </article>
@@ -151,7 +226,42 @@
           <p class="title">Price Drop <i class="fa fa-bomb"></i></p>
           <p class="subtitle"><i class="fa fa-arrow-down"></i> $30</p>
           <div class="content">
-            <p><a href="#" class="subtitle">SB Dunks</a></p>
+            <p><a id="n64Airmax" class="subtitle">Nintendo 64 Airmax 97</a></p>
+            <!-- N64 modal -->
+            <div class="modal n64AirmaxModal">
+              <div class="modal-background"></div>
+              <div class="modal-content">
+                <div class="card">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="../GOAT/assets/images/n64Airmax.jpg" alt="Nintendo 64 Airmax 97">
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-content">
+                        <p class="title is-4">Nintendo 64 Airmax 97</p>
+                        <p class="subtitle is-6"><b>Release Date:</b> 11/29/2019</p>
+                      </div>
+                    </div>
+                    <div class="content">
+                      <p><b>Price:</b> $75</p>
+                      <p><b>Colorway:</b> Atmosphere Grey/Habanero Red-Thunder Grey-Amarillo-Racer Blue-Lucky Green</p>
+                      <p><b>Style:</b> CI5012-001</p>
+                      <p><b>Description:</b>
+                        This nostalgic offering of the Nike Air Max 97 features a Light Grey mesh upper with matching
+                        leather overlays as as a nod to the system’s controller. Its colorful Green, Blue, Red, and
+                        Yellow, buttons are used as accents throughout the shoe.
+                      </p>
+                      <br>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="modal-close is-large" id="btnn64AirmaxClose" aria-label="close"></button>
+            </div>
+            <!-- End N64 modal -->
           </div>
         </article>
       </div>
