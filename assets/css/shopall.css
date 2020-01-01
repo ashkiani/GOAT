@@ -612,13 +612,43 @@
                                                                     font-family: "Bangers", cursive;
                                                                     color: black;
                                                                     outline: none;
-                                                                    border:none;
+                                                                    border: none;
+                                                                    background: #fff;
+                                                                    background: -moz-linear-gradient(#fff, #999);
+                                                                    background: -webkit-linear-gradient(#fff, #999);
+                                                                    background: -o-linear-gradient(#fff, #999);
+                                                                    transition: 0.3s;
+                                                                    transition: transform 0.2s;
                                                                 }
                                                                 
                                                                 .cart:hover {
                                                                     color: red;
                                                                     cursor: pointer;
                                                                     outline: none;
+                                                                    transform: scale(1.1);
+                                                                }
+                                                                
+                                                                .checkOut {
+                                                                    margin-left: 75px;
+                                                                    font-size: 25px;
+                                                                    font-family: "Kalam", cursive;
+                                                                    font-family: "Bangers", cursive;
+                                                                    color: black;
+                                                                    outline: none;
+                                                                    border: none;
+                                                                    background: #fff;
+                                                                    background: -moz-linear-gradient(#fff, #999);
+                                                                    background: -webkit-linear-gradient(#fff, #999);
+                                                                    background: -o-linear-gradient(#fff, #999);
+                                                                    transition: 0.3s;
+                                                                    transition: transform 0.2s;
+                                                                }
+                                                                
+                                                                .checkOut:hover {
+                                                                    color: red;
+                                                                    cursor: pointer;
+                                                                    outline: none;
+                                                                    transform: scale(1.1);
                                                                 }
                                                                 
                                                                 .price {
