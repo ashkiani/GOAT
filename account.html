@@ -43,7 +43,7 @@
                 <a class="navbar-item" id="signOut" href="#">
                     Sign Out
                 </a>
-                
+
             </div>
         </div>
     </nav>
@@ -62,30 +62,27 @@
                             <span class="icon is-small is-left">
                                 <i class="fas fa-user"></i>
                             </span>
-                            <!-- <span class="icon is-small is-right">
-                                <i class="fas fa-check"></i>
-                            </span> -->
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">Email</label>
                         <div class="control has-icons-left has-icons-right" id="emailDiv">
-                            <input class="input is-danger" id="emailText" type="email" placeholder="Enter Email"
+                            <input class="input is-success" id="emailText" type="email" placeholder="Enter Email"
                                 value="">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-envelope"></i>
                             </span>
-                            <!-- <span class="icon is-small is-right">
-                                <i class="fas fa-exclamation-triangle"></i>
-                            </span> -->
+                            <span class="icon is-small is-right" id="emailValIcon">
+
+                            </span>
                         </div>
-                        <!-- <p class="help is-danger">This email is invalid</p> -->
+                        <p class="help is-danger" id="emailError"></p>
                     </div>
                     <div class="field">
                         <label class="label">Password</label>
                         <div class="control has-icons-left has-icons-right" id="passwordDiv">
-                            <input class="input is-danger" id="passwordText" type="password" placeholder="Enter Password"
-                                value="">
+                            <input class="input is-danger" id="passwordText" type="password"
+                                placeholder="Enter Password" value="">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-unlock-alt"></i>
                             </span>

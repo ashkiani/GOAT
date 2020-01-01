@@ -20,6 +20,8 @@ $(document).ready(function () {
 
     var nameEl = $("#nameText");
     var emailEl = $("#emailText");
+    var emailIconEl = $("#emailValIcon");
+    var emailErrorEl = $("#emailError");
     var passwordEl = $("#passwordText");
     //shoeSizeEl
     var addressEl = $("#addressText");
@@ -50,40 +52,6 @@ $(document).ready(function () {
         ccExpEl.val(userData.creditCard.expiration);
     }
 
-    //ccExpDiv
-    //ccNameDiv
-    //ccNumberDiv
-    //addressDiv
-    //passwordDiv
-    //emailDiv
-    //nameDiv
-    //id="nameText"
-    //id="emailText"
-    //id="passwordText"
-    //shoeSize
-    //id="addressText" html
-    //id="ccNumberText"
-    //id="ccNameText"
-    //id="ccExpText"
-
-
-    //test data
-    // userData.email = "abcd@yahoo.com";
-    // userData.name = "Siavash";
-
-    // userData.password = "SomePassword";
-    // userData.shoeSize = 10.5;
-    // userData.address = "some text for address";
-    // userData.creditCard.number = "123456"
-    // userData.creditCard.name = "someone elses cc"
-    // userData.creditCard.expiration = "1111"
-    // loadPageFromUserDataObject();
-
-
-    // setUserData(userData);
-    // getUserData("ashkiani@yahoo.com");
-    // $("#emailText").val(userData.email);
-
     loadPageFromUserDataObject();
 
     function underConstructionAlert() {
@@ -96,6 +64,27 @@ $(document).ready(function () {
     }
 
     $("#btnUpdate").click(function () {
+        var errors = getEmailErrors(emailEl.val());
+        emailIconEl.html("");
+        emailErrorEl.text("");
+        var icon = $("<i>");
+        var iconClass = "fas fa-";
+        var txtClass = "input is-";
+        if (errors.length > 0) {
+            //show errors
+            iconClass += "exclamation-triangle";
+            emailErrorEl.text(errors[0]);
+            txtClass += "danger";
+        }
+        else {
+            iconClass += "check";
+            txtClass += "success";
+        }
+
+        icon.addClass(iconClass);
+        emailIconEl.append(icon);
+        emailEl.attr('class', txtClass);
+              
         updateUserDataObjectFromPage();
         setUserData(userData);
         // underConstructionAlert();
@@ -109,5 +98,5 @@ $(document).ready(function () {
         userLogOff();
         window.location = "home.html";
     });
-    
+
 });
