@@ -228,10 +228,6 @@ $(document).ready(function() {
         $("#womenKicksHR").remove();
     });
 
-    $(".cart").click(function() {
-        alert("hi");
-    });
-
     //Variable for capturing the user who is logged in
     var loggedInUserName = getLoggedInUserName();
 
