@@ -65,19 +65,19 @@ $(document).ready(function () {
         optEl.appendTo(shoeSizeEl);
     }
 
-    function isValid() {
+    // Siavash 1/1/2020
+    // Shows error input messages for the selected elements
+    function showErrors(errors, iconEl, errorEl, txtEl){
         var result = false;
-
-        var errors = getEmailErrors(emailEl.val());
-        emailIconEl.html("");
-        emailErrorEl.text("");
+        iconEl.html("");
+        errorEl.text("");
         var icon = $("<i>");
         var iconClass = "fas fa-";
         var txtClass = "input is-";
         if (errors.length > 0) {
             //show errors
             iconClass += "exclamation-triangle";
-            emailErrorEl.text(errors[0]);
+            errorEl.text(errors[0]);
             txtClass += "danger";
         }
         else {
@@ -87,35 +87,19 @@ $(document).ready(function () {
         }
 
         icon.addClass(iconClass);
-        emailIconEl.append(icon);
-        emailEl.attr('class', txtClass);
-
-        errors = getPasswordErrors(passwordEl.val());
-        var passValIconEl = $("#passValIcon");
-        var passErrorEl = $("#passError");
-        passValIconEl.html("");
-        passErrorEl.text("");
-        icon = $("<i>");
-        iconClass = "fas fa-";
-        txtClass = "input is-";
-        if (errors.length > 0) {
-            //show errors
-            iconClass += "exclamation-triangle";
-            passErrorEl.text(errors[0]);
-            txtClass += "danger";
-            result = false;
-        }
-        else {
-            result = true;
-            iconClass += "check";
-            txtClass += "success";
-        }
-
-        icon.addClass(iconClass);
-        passValIconEl.append(icon);
-        passwordEl.attr('class', txtClass);
-
+        iconEl.append(icon);
+        txtEl.attr('class', txtClass);
         return result;
+    }
+
+    //Siavash 1/1/2020
+    //Updates the UI per validation result and returns True if the inputs are valid, False otherwise.
+    function isValid() {
+        var errors = getEmailErrors(emailEl.val());
+        var emailResult = showErrors(errors,emailIconEl,emailErrorEl,emailEl);
+        errors = getPasswordErrors(passwordEl.val());
+        var passResult = showErrors(errors,passValIconEl,passErrorEl,passwordEl);
+        return (emailResult && passResult);
     }
 
     $("#btnUpdate").click(function () {
