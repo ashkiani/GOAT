@@ -160,10 +160,10 @@ function getPasswordErrors(password) {
 function getUserDataObjectErrors(userDataObject) {
     var errors = getEmailErrors(userDataObject.email);
     var passErrors = getPasswordErrors(userDataObject.password);
-    for (var i=0; i<passErrors.length;i++){
+    for (var i = 0; i < passErrors.length; i++) {
         errors.push(passErrors[i]);
     }
-    
+
     // no more validation checks at this time, but this is the place to add additional validation rules if needed...
 
     return errors;
@@ -262,5 +262,38 @@ function setLoggedInUserName(userName) {
 //Clears the goatLoggedInUser variable in the local storage
 function userLogOff() {
     setLoggedInUserName("");
+}
+
+const goatTempCartKey = "goatTempCart";
+//Siavash 1/1/2020
+//Returns the cart array (either from user account or from the temp variable in local storage)
+function getCart() {
+    var cart = [];
+    if (isLoggedIn()) {
+        var userData = getCurrentUserData();
+        if (userData.cart !== null) {
+            cart = userData.cart;
+        }
+    }
+    else {
+        var value = localStorage.getItem(goatTempCartKey);
+        if (value !== null) {
+            cart = JSON.parse(value);
+        }
+    }
+    return cart;
+}
+
+//Siavash 1/1/2020
+//Saves the cart array (either in the user account or in the temp variable in local storage)
+function setCart(cart) {
+    if (isLoggedIn()) {
+        var userData = getCurrentUserData();
+        userData.cart = cart;
+        setUserData(userData);
+    }
+    else {
+        localStorage.setItem(goatTempCartKey, JSON.stringify(cart));
+    }
 }
 
