@@ -23,6 +23,8 @@ $(document).ready(function () {
     var emailIconEl = $("#emailValIcon");
     var emailErrorEl = $("#emailError");
     var passwordEl = $("#passwordText");
+    var passValIconEl = $("#passValIcon");
+    var passErrorEl = $("#passError");
     //shoeSizeEl
     var addressEl = $("#addressText");
     var ccNumberEl = $("#ccNumberText");
@@ -63,7 +65,9 @@ $(document).ready(function () {
         optEl.appendTo(shoeSizeEl);
     }
 
-    $("#btnUpdate").click(function () {
+    function isValid() {
+        var result = false;
+
         var errors = getEmailErrors(emailEl.val());
         emailIconEl.html("");
         emailErrorEl.text("");
@@ -77,6 +81,7 @@ $(document).ready(function () {
             txtClass += "danger";
         }
         else {
+            result = true;
             iconClass += "check";
             txtClass += "success";
         }
@@ -84,10 +89,42 @@ $(document).ready(function () {
         icon.addClass(iconClass);
         emailIconEl.append(icon);
         emailEl.attr('class', txtClass);
-              
-        updateUserDataObjectFromPage();
-        setUserData(userData);
-        // underConstructionAlert();
+
+        errors = getPasswordErrors(passwordEl.val());
+        var passValIconEl = $("#passValIcon");
+        var passErrorEl = $("#passError");
+        passValIconEl.html("");
+        passErrorEl.text("");
+        icon = $("<i>");
+        iconClass = "fas fa-";
+        txtClass = "input is-";
+        if (errors.length > 0) {
+            //show errors
+            iconClass += "exclamation-triangle";
+            passErrorEl.text(errors[0]);
+            txtClass += "danger";
+            result = false;
+        }
+        else {
+            result = true;
+            iconClass += "check";
+            txtClass += "success";
+        }
+
+        icon.addClass(iconClass);
+        passValIconEl.append(icon);
+        passwordEl.attr('class', txtClass);
+
+        return result;
+    }
+
+    $("#btnUpdate").click(function () {
+        if (isValid()) {
+            updateUserDataObjectFromPage();
+            setUserData(userData);
+            // underConstructionAlert();
+        }
+
     });
     $("#btnCancel").click(function () {
         userData = getCurrentUserData();

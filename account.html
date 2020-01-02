@@ -81,12 +81,16 @@
                     <div class="field">
                         <label class="label">Password</label>
                         <div class="control has-icons-left has-icons-right" id="passwordDiv">
-                            <input class="input is-danger" id="passwordText" type="password"
+                            <input class="input is-success" id="passwordText" type="password"
                                 placeholder="Enter Password" value="">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-unlock-alt"></i>
                             </span>
+                            <span class="icon is-small is-right" id="passValIcon">
+
+                            </span>
                         </div>
+                        <p class="help is-danger" id="passError"></p>
                     </div>
                     <div class="field">
                         <label class="label">Shoe Size</label>
@@ -114,7 +118,7 @@
                         <div class="field">
                             <label class="label">Credit Card Number</label>
                             <div class="control has-icons-left has-icons-right" id="ccNumberDiv">
-                                <input class="input is-success" id="ccNumberText" type="text"
+                                <input class="input" id="ccNumberText" type="text"
                                     placeholder="Enter Credit Card Number" value="">
                                 <span class="icon is-small is-left">
                                     <i class="far fa-credit-card"></i>
@@ -124,7 +128,7 @@
                         <div class="field">
                             <label class="label">Name On The Card</label>
                             <div class="control has-icons-left has-icons-right" id="ccNameDiv">
-                                <input class="input is-danger" id="ccNameText" type="email"
+                                <input class="input" id="ccNameText" type="email"
                                     placeholder="Enter Name On The Card" value="">
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-file-signature"></i>
@@ -134,7 +138,7 @@
                         <div class="field column is-6">
                             <label class="label">Expiration Date (MMYY)</label>
                             <div class="control has-icons-left has-icons-right" id="ccExpDiv">
-                                <input class="input is-danger" id="ccExpText" type="text"
+                                <input class="input" id="ccExpText" type="text"
                                     placeholder="Enter Expiration Date" value="">
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-table"></i>
