@@ -89,14 +89,14 @@
                                                                 }
                                                                 /* END OF PAGE LOGO */
                                                                 /* NAV BAR */
-
-                                                                .goat{
-                                                                    font-size:40px;
-                                                                    border:1px solid black;
+                                                                
+                                                                .goat {
+                                                                    font-size: 40px;
+                                                                    border: 1px solid black;
                                                                     border-radius: 8px;
                                                                     background-color: #000;
-                                                                    color:#fff;
-                                                                    padding:10px 20px;
+                                                                    color: #fff;
+                                                                    padding: 10px 20px;
                                                                 }
                                                                 
                                                                 .navbar-menu {
@@ -106,7 +106,7 @@
                                                                 }
                                                                 
                                                                 .navbar-menu a {
-                                                                    padding-left:20px;
+                                                                    padding-left: 20px;
                                                                     text-decoration: none;
                                                                     transition: 0.3s;
                                                                     transition: transform 0.2s;
@@ -114,7 +114,7 @@
                                                                 
                                                                 .navbar-menu a:hover {
                                                                     background-color: #FFF;
-                                                                    color:black;
+                                                                    color: black;
                                                                     transform: scale(1.1);
                                                                 }
                                                                 /* END OF NAV BAR */
@@ -559,7 +559,7 @@
                                                                 .target {
                                                                     width: 800px;
                                                                     position: relative;
-                                                                    bottom: 10%;
+                                                                    bottom: 14%;
                                                                     margin: 10% auto;
                                                                     padding: 5px 20px 13px 20px;
                                                                     border-radius: 10px;
@@ -604,17 +604,51 @@
                                                                     font-family: "Bangers", cursive;
                                                                 }
                                                                 
-                                                                #cart {
+                                                                .cart {
                                                                     position: absolute;
                                                                     right: 10%;
                                                                     font-size: 25px;
                                                                     font-family: "Kalam", cursive;
                                                                     font-family: "Bangers", cursive;
                                                                     color: black;
+                                                                    outline: none;
+                                                                    border: none;
+                                                                    background: #fff;
+                                                                    background: -moz-linear-gradient(#fff, #999);
+                                                                    background: -webkit-linear-gradient(#fff, #999);
+                                                                    background: -o-linear-gradient(#fff, #999);
+                                                                    transition: 0.3s;
+                                                                    transition: transform 0.2s;
                                                                 }
                                                                 
-                                                                #cart:hover {
+                                                                .cart:hover {
                                                                     color: red;
+                                                                    cursor: pointer;
+                                                                    outline: none;
+                                                                    transform: scale(1.1);
+                                                                }
+                                                                
+                                                                .checkOut {
+                                                                    margin-left: 75px;
+                                                                    font-size: 25px;
+                                                                    font-family: "Kalam", cursive;
+                                                                    font-family: "Bangers", cursive;
+                                                                    color: black;
+                                                                    outline: none;
+                                                                    border: none;
+                                                                    background: #fff;
+                                                                    background: -moz-linear-gradient(#fff, #999);
+                                                                    background: -webkit-linear-gradient(#fff, #999);
+                                                                    background: -o-linear-gradient(#fff, #999);
+                                                                    transition: 0.3s;
+                                                                    transition: transform 0.2s;
+                                                                }
+                                                                
+                                                                .checkOut:hover {
+                                                                    color: red;
+                                                                    cursor: pointer;
+                                                                    outline: none;
+                                                                    transform: scale(1.1);
                                                                 }
                                                                 
                                                                 .price {
@@ -669,9 +703,7 @@
                                                                     color: #ffffff;
                                                                 }
                                                                 
-                                                                #backtotop {
-
-                                                                }
+                                                                #backtotop {}
                                                                 /* SOCIAL MEDIA */
                                                                 
                                                                 .social {

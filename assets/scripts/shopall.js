@@ -1,4 +1,4 @@
-// TIMER FOR COUPON
+// TIMER
 
 function makeTimer() {
     //		var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");
@@ -27,17 +27,17 @@ function makeTimer() {
         seconds = "0" + seconds;
     }
 
-    $("#days").html(days + "<span>Days</span>");
-    $("#hours").html(hours + "<span>Hours</span>");
-    $("#minutes").html(minutes + "<span>Minutes</span>");
-    $("#seconds").html(seconds + "<span>Seconds</span>");
+    $("#days").html(days + " <span>Days</span>");
+    $("#hours").html(hours + " <span>Hours</span>");
+    $("#minutes").html(minutes + " <span>Minute</span>");
+    $("#seconds").html(seconds + " <span>Seconds</span>");
 }
 
 setInterval(function() {
     makeTimer();
 }, 1000);
 
-// END OF TIMER FOR COUPON
+// END OF TIMER
 
 //DELETE HOME PAGE NOTIFICATION
 document.addEventListener("DOMContentLoaded", () => {
@@ -72,6 +72,8 @@ function sort() {
         y.style.display = "none";
     }
 }
+
+// JQUERY BEGGINS
 
 $(document).ready(function() {
     // LATEST FASHION
@@ -225,6 +227,24 @@ $(document).ready(function() {
         $("#menKicksHR").remove();
         $("#womenKicksHR").remove();
     });
+
+    //Variable for capturing the user who is logged in
+    var loggedInUserName = getLoggedInUserName();
+
+    //If user is not logged in:  HIDE the logout and account buttons - SHOW the login and register buttons
+    if (loggedInUserName == "") {
+        $("#btnLogOut").hide();
+        $("#btnAccount").hide();
+        $("#btnLogin").show();
+        $("#btnRegister").show();
+    }
+    //If user is logged in:  SHOW the logout and account buttons - HIDE the login and register buttons
+    else {
+        $("#btnLogOut").show();
+        $("#btnAccount").show();
+        $("#btnLogin").hide();
+        $("#btnRegister").hide();
+    }
 
     // END OF DOCUMENT READY
 });

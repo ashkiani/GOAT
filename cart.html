@@ -1,75 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <title>Carts Page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link rel="stylesheet" href="assets/css/cart.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./assets/scripts/userData.js"></script>
-  </head>
+</head>
 
 <body>
     <!-- Start : NavBar -->
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
-            <img src="assets/images/goat.PNG" width="112" height="28">
-          </a>
-      
-          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="assets/images/goat.PNG" width="112" height="28" />
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
-      
+
         <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item">Home</a>
-            <a class="navbar-item">Shop</a>
-            <a class="navbar-item">Cart</a>
-            <a class="navbar-item">Sign In</a>
-          </div>
-      
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-primary">
-                  <strong>Sign up</strong>
-                </a>
-                <a class="button is-light">
-                  Log in
-                </a>
-              </div>
+            <div class="navbar-start">
+                <a class="navbar-item">Home</a>
+                <a class="navbar-item">Shop</a>
+                <a class="navbar-item">Cart</a>
+                <a class="navbar-item">Sign In</a>
             </div>
-          </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light">
+                Log in
+              </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </nav>
-      <!-- End : NavBar -->
+    </nav>
+    <!-- End : NavBar -->
     <!-- Start : My Cart and Total Price Display -->
-    <div class="my-cart-price">  
-    <h1 class= "my-cart">My Cart</h1>
-    <p> Your Cart is Empty </p>
-    <h5 class="price" style="display: none">$150(total of all merchandise) </h5>
+    <div class="my-cart-price">
+        <h1 class="my-cart">My Cart</h1>
+        <p>Your Cart is Empty</p>
+        <h5 class="price" style="display: none">
+            $150(total of all merchandise)
+        </h5>
     </div>
     <!-- End : My Cart and Total Price Display-->
     <!-- Start : Main Content: Shoe and Price Display -->
     <div class="columns">
         <!-- Shoe Display Div -->
-        <div class="column notification is-info" >
+        <div class="column notification is-info">
             <div class="columns ">
                 <div class=" column notification is-dark is-one-third shoe-pic-div" style="display: none">
                     (Shoe Picture)
-                    <img src="assets/images/travisScott6.jpg" width="300">  
+                    <img src="assets/images/travisScott6.jpg" width="300" />
                 </div>
-                <div class = " column notification is-dark shoe-desc-div "style="display: none">
+                <div class=" column notification is-dark shoe-desc-div " style="display: none">
                     (Shoe Description)
-                    <p class="shoe-name"> NAME OF SHOE</p>
+                    <p class="shoe-name">NAME OF SHOE</p>
                     <p class="shoe-color">SHOE COLOR</p>
                     <p class="shoe-size">Size: 9.5</p>
                     <p class="shoe-quantity">QTY: 1</p>
@@ -81,17 +84,17 @@
         </div>
         <!-- End : Shoe Display Div -->
         <!-- Start : Price Display Div -->
-        <div class="column notification is-info is-one-third"> 
+        <div class="column notification is-info is-one-third">
             <div class="notification is-dark price-display" style="display: none">
                 (Price display)
                 <h1 class="order-summary-title">Order Summary</h1>
                 <p class="price-subtotal">SUBTOTAL: $150</p>
                 <p class="price-items">1 item</p>
-                <hr>
+                <hr />
                 <p class="price-discount">DISCOUNT: 0.00</p>
                 promo codes
-                <HR>
-                <p class="estimated-total">ESTIMATED TOTAL: 0.00</p> 
+                <hr />
+                <p class="estimated-total">ESTIMATED TOTAL: 0.00</p>
             </div>
         </div>
         <!-- End : Price Display Div -->
@@ -101,12 +104,14 @@
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-                <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-            </p>
-        </div>
+                <strong>Bulma</strong> by
+                <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed
+                <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a
+          >.
+        </p>
+      </div>
     </footer>
-</body>
-<script src="./assets/scripts/cart.js"></script>
+  </body>
+  <script src="./assets/scripts/cart.js"></script>
 </html>
