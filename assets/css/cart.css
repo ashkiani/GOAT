@@ -1,7 +1,23 @@
+/* *{
+    border: 1px black solid;
+} */
 .my-cart{
     font-size: 40px;
 }
 
 .my-cart-price{
     margin-bottom: 20px;
+}
+
+.firstDiv{
+    border: 1px lightgray solid;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.price-display{
+    border: 1px lightgray solid;
+    margin-top: 10px;
+    margin-right: 5px;
 }
