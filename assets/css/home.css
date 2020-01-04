@@ -46,3 +46,8 @@ display: none;
 #card-space{
     margin-bottom: 5px;
 }
+
+#is-black{
+    background-color: black;
+    color: white;
+}
