@@ -18,7 +18,8 @@ function generateBlankUserDataObject() {
         "shoeSize": "",
         "address": "",
         "creditCard": creditCardData,
-        "cart": cartData
+        "cart": cartData,
+        "lastLogIn":""
     };
     return userDataObject;
 }
@@ -210,6 +211,7 @@ function setUserData(userDataObject) {
                         user.shoeSize = userDataObject.shoeSize;
                         user.creditCard = userDataObject.creditCard;
                         user.cart = userDataObject.cart;
+                        user.lastLogIn = userDataObject.lastLogIn;
                         userExists = true;
                         return;
                     }

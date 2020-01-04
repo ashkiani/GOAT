@@ -30,6 +30,7 @@ $(document).ready(function () {
     var ccNumberEl = $("#ccNumberText");
     var ccNameEl = $("#ccNameText");
     var ccExpEl = $("#ccExpText");
+    var lastLoginEl = $("#lastLogin");
     var userData = getCurrentUserData();
     console.log("Printing userData:");
     console.log(userData);
@@ -52,6 +53,7 @@ $(document).ready(function () {
         ccNumberEl.val(userData.creditCard.number);
         ccNameEl.val(userData.creditCard.name);
         ccExpEl.val(userData.creditCard.expiration);
+        lastLoginEl.html("Last Login: " + userData.lastLogIn);
     }
 
     loadPageFromUserDataObject();

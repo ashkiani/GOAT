@@ -135,6 +135,9 @@ $(document).ready(function () {
       var psw = $("#password").val();
       if (psw == userData.password) {
         setLoggedInUserName(userData.email);
+        //Siavash 1/3/2020 Added the following code to store the Login time.
+        userData.lastLogIn = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+        setUserData(userData);
         window.location = "home.html";
       }
       else {
