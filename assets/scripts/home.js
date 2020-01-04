@@ -1,6 +1,19 @@
 //Variable for capturing the user who is logged in
 var loggedInUserName = getLoggedInUserName();
 
+//Navbar burger
+$(document).ready(function() {
+
+  // Check for click events on the navbar burger icon
+  $(".navbar-burger").click(function() {
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      $(".navbar-burger").toggleClass("is-active");
+      $(".navbar-menu").toggleClass("is-active");
+
+  });
+});
+
 //If user is not logged in:  HIDE the logout and account buttons - SHOW the login and register buttons
 if(loggedInUserName == ""){
   $("#btnLogOut").hide();
