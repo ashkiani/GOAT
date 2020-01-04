@@ -1,5 +1,14 @@
 $(document).ready(function () {
     console.log("Document Ready!");
+
+    //Navbar burger
+    // Check for click events on the navbar burger icon
+    $(".navbar-burger").click(function () {
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        $(".navbar-burger").toggleClass("is-active");
+        $(".navbar-menu").toggleClass("is-active");
+    });
+
     var shoeSizeEl = $("#shoeSize");
     var defaultShoeSize = 10;
     function clearShoeSizeCombo() {
@@ -69,7 +78,7 @@ $(document).ready(function () {
 
     // Siavash 1/1/2020
     // Shows error input messages for the selected elements
-    function showErrors(errors, iconEl, errorEl, txtEl){
+    function showErrors(errors, iconEl, errorEl, txtEl) {
         var result = false;
         iconEl.html("");
         errorEl.text("");
@@ -98,9 +107,9 @@ $(document).ready(function () {
     //Updates the UI per validation result and returns True if the inputs are valid, False otherwise.
     function isValid() {
         var errors = getEmailErrors(emailEl.val());
-        var emailResult = showErrors(errors,emailIconEl,emailErrorEl,emailEl);
+        var emailResult = showErrors(errors, emailIconEl, emailErrorEl, emailEl);
         errors = getPasswordErrors(passwordEl.val());
-        var passResult = showErrors(errors,passValIconEl,passErrorEl,passwordEl);
+        var passResult = showErrors(errors, passValIconEl, passErrorEl, passwordEl);
         return (emailResult && passResult);
     }
 
