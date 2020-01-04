@@ -19,7 +19,7 @@ function generateBlankUserDataObject() {
         "address": "",
         "creditCard": creditCardData,
         "cart": cartData,
-        "lastLogIn":""
+        "lastLogIn": ""
     };
     return userDataObject;
 }
@@ -264,6 +264,14 @@ function setLoggedInUserName(userName) {
 //Clears the goatLoggedInUser variable in the local storage
 function userLogOff() {
     setLoggedInUserName("");
+}
+
+//Siavash 1/3/2020 Sets the current LoggedIn user in the local storage and timestamps the object. Finally redirects to the home page.
+function userLogIn(userDataObject) {
+    setLoggedInUserName(userDataObject.email);
+    userDataObject.lastLogIn = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+    setUserData(userDataObject);
+    window.location = "home.html";
 }
 
 const goatTempCartKey = "goatTempCart";
