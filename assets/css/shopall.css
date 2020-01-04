@@ -254,7 +254,7 @@
                                                                 #imgShowcase2 {
                                                                     width: 50%;
                                                                     position: absolute;
-                                                                    top: 249%;
+                                                                    top: 233%;
                                                                     left: 55%;
                                                                     -ms-transform: rotate(5deg);
                                                                     /* IE 9 */
@@ -291,7 +291,7 @@
                                                                 #imgShowcase3 {
                                                                     width: 50%;
                                                                     position: absolute;
-                                                                    top: 347%;
+                                                                    top: 320%;
                                                                     left: 57%;
                                                                     -ms-transform: rotate(-5deg);
                                                                     /* IE 9 */
@@ -712,4 +712,11 @@
                                                                     left: 41%;
                                                                     color: black;
                                                                     padding-left: 20px;
+                                                                }
+
+                                                                /* change last modal img height and width */
+
+                                                                #img29{
+                                                                    width:500px;
+                                                                    height:300px;
                                                                 }

@@ -33,7 +33,7 @@ function makeTimer() {
     $("#seconds").html(seconds + " <span>Seconds</span>");
 }
 
-setInterval(function () {
+setInterval(function() {
     makeTimer();
 }, 1000);
 
@@ -75,9 +75,9 @@ function sort() {
 
 // JQUERY BEGGINS
 
-$(document).ready(function () {
+$(document).ready(function() {
     // LATEST FASHION
-    $("#css3dimagePager li").click(function () {
+    $("#css3dimagePager li").click(function() {
         var rotateY = $(this).index() * -90;
         $("#css3dimageslider ul").css({
             "-webkit-transform": "rotateY(" + rotateY + "deg)",
@@ -92,7 +92,7 @@ $(document).ready(function () {
 
     // MODAL FOR SHOP ALL
 
-    $(".page-title").click(function () {
+    $(".page-title").click(function() {
         $("#arrivalsKicks").show(1000);
         $("#manKicks").show(1000);
         $("#sportKicks").show(1000);
@@ -111,7 +111,7 @@ $(document).ready(function () {
 
     // MENS FILTER
 
-    $("#men").click(function () {
+    $("#men").click(function() {
         $("#manKicks").show(1000);
         $("#sportKicks").hide();
         $("#casualKicks").hide();
@@ -128,7 +128,7 @@ $(document).ready(function () {
 
     // WOMENS FILTER
 
-    $("#women").click(function () {
+    $("#women").click(function() {
         $("#womenKicks").show(1000);
         $("#sportKicks").hide();
         $("#casualKicks").hide();
@@ -145,7 +145,7 @@ $(document).ready(function () {
 
     // SPORT KICKS FILTER
 
-    $("#sportKick").click(function () {
+    $("#sportKick").click(function() {
         $("#sportKicks").show(1000);
         $("#manKicks").hide();
         $("#casualKicks").hide();
@@ -162,7 +162,7 @@ $(document).ready(function () {
 
     // CASUAL FILTER
 
-    $("#casual").click(function () {
+    $("#casual").click(function() {
         $("#casualKicks").show(1000);
         $("#manKicks").hide();
         $("#sportKicks").hide();
@@ -180,7 +180,7 @@ $(document).ready(function () {
     //  FILTER TROUGH UPCOMING,POPULAR,ARRIVALS
 
     // UPCOMING FILTER
-    $("#upcoming").click(function () {
+    $("#upcoming").click(function() {
         $("#upcomingKicks").show(1000);
         $("#manKicks").hide();
         $("#sportKicks").hide();
@@ -197,7 +197,7 @@ $(document).ready(function () {
 
     // POPULAR FILTER
 
-    $("#popular").click(function () {
+    $("#popular").click(function() {
         $("#popularKicks").show(1000);
         $("#manKicks").hide();
         $("#sportKicks").hide();
@@ -213,7 +213,7 @@ $(document).ready(function () {
     });
 
     // ARRIVALS FILTER
-    $("#arrivals").click(function () {
+    $("#arrivals").click(function() {
         $("#arrivalsKicks").show(1000);
         $("#manKicks").hide();
         $("#sportKicks").hide();
@@ -251,9 +251,9 @@ $(document).ready(function () {
     function addToCart(title, price, image) {
         var currentCart = getCart();
         var item = {
-            "title": title,
-            "price": price,
-            "image": image
+            title: title,
+            price: price,
+            image: image
         };
         //Siavash: we could check for duplicates before adding items to the cart but I thought we want to allow
         //multiple orders of the same shoe.
@@ -262,15 +262,15 @@ $(document).ready(function () {
     }
 
     //Siavash 1/1/2020
-    $(".cart").click(function () {
+    $(".cart").click(function() {
         var parentEl = $(this).parent();
-        //Siavash: I noticed some of the price (h2) elements include two numbers. 
+        //Siavash: I noticed some of the price (h2) elements include two numbers.
         //First one is the original price and the second one is the lowered price.
         //I could add code here to only include the final price but I thought the Cart page may want to show the discounts.
         //So I included both prices in the cart object but the cart page will have to parse its required data.
         //All of this would have been much easier if shopall.html was using an array of objects as its source of data,
         //but I don't recommend making changes at this time since we are running out of time.
-        
+
         var priceEl = parentEl.find(".price").eq(0);
         var imgEl = parentEl.find("img").eq(0);
         var titleEl = parentEl.find(".sport-title").eq(0);
