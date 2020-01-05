@@ -1,10 +1,6 @@
                                                                 * {
                                                                     box-sizing: border-box;
                                                                 }
-                                                                
-                                                                body {
-                                                                    padding: 0px;
-                                                                }
                                                                 /* END OF BACKGROUND */
                                                                 /* TIMER  */
                                                                 
@@ -22,18 +18,14 @@
                                                                     margin-top: 10px;
                                                                 }
                                                                 
-                                                                .navbar-end {
-                                                                    margin-top: -20px;
-                                                                    height: 200px;
-                                                                    font-family: "Kalam", cursive;
-                                                                    font-family: "Bangers", cursive;
-                                                                }
-                                                                
                                                                 #timer {
                                                                     display: inline-block;
                                                                     line-height: 1;
-                                                                    padding: 15px;
                                                                     font-size: 20px;
+                                                                    font-family: "Kalam", cursive;
+                                                                    font-family: "Bangers", cursive;
+                                                                    position: relative;
+                                                                    left: 36%;
                                                                 }
                                                                 
                                                                 #hours {
@@ -61,33 +53,12 @@
                                                                 }
                                                                 /* END OF TIMER */
                                                                 
-                                                                #main {
-                                                                    transition: 0.5s;
-                                                                    padding: 16px;
-                                                                }
-                                                                
                                                                 #font {
                                                                     font-size: 40px;
                                                                     cursor: pointer;
                                                                     font-family: "Kalam", cursive;
                                                                     font-family: "Bangers", cursive;
                                                                 }
-                                                                /* PAGE LOGO */
-                                                                
-                                                                #pageLogo {
-                                                                    position: absolute;
-                                                                    left: 70%;
-                                                                    top: 65%;
-                                                                }
-                                                                
-                                                                .logo {
-                                                                    -ms-transform: rotate(10deg);
-                                                                    /* IE 9 */
-                                                                    -webkit-transform: rotate(10deg);
-                                                                    /* Safari 3-8 */
-                                                                    transform: rotate(10deg);
-                                                                }
-                                                                /* END OF PAGE LOGO */
                                                                 /* NAV BAR */
                                                                 
                                                                 .goat {
@@ -100,9 +71,7 @@
                                                                 }
                                                                 
                                                                 .navbar-menu {
-                                                                    font-size: 25px;
-                                                                    font-family: "Kalam", cursive;
-                                                                    font-family: "Bangers", cursive;
+                                                                    font-size: 20px;
                                                                 }
                                                                 
                                                                 .navbar-menu a {
@@ -191,6 +160,7 @@
                                                                 
                                                                 #pageTitle {
                                                                     text-align: center;
+                                                                    letter-spacing: 1.5rem;
                                                                 }
                                                                 
                                                                 .page-title a {
@@ -209,6 +179,50 @@
                                                                 /* END OF SHOP TITLE */
                                                                 /* IMG SHOWCASE */
                                                                 
+                                                                #pageLogo {
+                                                                    position: absolute;
+                                                                    left: 52%;
+                                                                    top: 45%;
+                                                                }
+                                                                
+                                                                .logo {
+                                                                    -ms-transform: rotate(5deg);
+                                                                    /* IE 9 */
+                                                                    -webkit-transform: rotate(5deg);
+                                                                    /* Safari 3-8 */
+                                                                    transform: rotate(5deg);
+                                                                    width: 550px;
+                                                                    height: 360px;
+                                                                    border-radius: 8px;
+                                                                    box-shadow: 0 0 16px #333;
+                                                                    transition: transform 0.2s;
+                                                                }
+                                                                
+                                                                .logo:hover {
+                                                                    cursor: pointer;
+                                                                    box-shadow: 0 0 32px #333;
+                                                                    transform: scale();
+                                                                }
+                                                                
+                                                                .lbj-text {
+                                                                    position: absolute;
+                                                                    bottom: 14%;
+                                                                    left: -2%;
+                                                                    -ms-transform: rotate(30deg);
+                                                                    /* IE 9 */
+                                                                    -webkit-transform: rotate(30deg);
+                                                                    /* Safari 3-8 */
+                                                                    transform: rotate(20deg);
+                                                                    color: black;
+                                                                    z-index: 1;
+                                                                    font-family: "Kalam", cursive;
+                                                                    font-family: "Bangers", cursive;
+                                                                    font-size: 23px;
+                                                                    background-color: #e7e7e7;
+                                                                    border-radius: 5px;
+                                                                    padding: 3px;
+                                                                }
+                                                                
                                                                 .j11 {
                                                                     width: 550px;
                                                                     height: 350px;
@@ -219,7 +233,7 @@
                                                                 
                                                                 .j11-text {
                                                                     position: absolute;
-                                                                    bottom: 10%;
+                                                                    bottom: 5%;
                                                                     left: 3%;
                                                                     color: white;
                                                                     z-index: 1;
@@ -254,7 +268,7 @@
                                                                 #imgShowcase2 {
                                                                     width: 50%;
                                                                     position: absolute;
-                                                                    top: 233%;
+                                                                    top: 223%;
                                                                     left: 55%;
                                                                     -ms-transform: rotate(5deg);
                                                                     /* IE 9 */
@@ -291,7 +305,7 @@
                                                                 #imgShowcase3 {
                                                                     width: 50%;
                                                                     position: absolute;
-                                                                    top: 320%;
+                                                                    top: 300%;
                                                                     left: 57%;
                                                                     -ms-transform: rotate(-5deg);
                                                                     /* IE 9 */
@@ -310,6 +324,8 @@
                                                                     font-family: "Kalam", cursive;
                                                                     font-family: "Bangers", cursive;
                                                                     font-size: 20px;
+                                                                    border-radius: 5px;
+                                                                    padding: 3px;
                                                                 }
                                                                 
                                                                 .kobe {
@@ -341,9 +357,13 @@
                                                                 }
                                                                 
                                                                 .notification {
+                                                                    background-color: #FFF;
                                                                     text-align: center;
-                                                                    -webkit-box-shadow: 2px 5px 16px 0px #0b325e, 20px 5px 32px 2px rgba(0, 0, 0, 0.52);
-                                                                    box-shadow: 2px 5px 16px 0px #0b325e, 20px 5px 32px 2px rgba(0, 0, 0, 0.52);
+                                                                }
+                                                                
+                                                                .title,
+                                                                .is-2 {
+                                                                    letter-spacing: 0.5rem;
                                                                 }
                                                                 
                                                                 .style {
@@ -353,11 +373,16 @@
                                                                 
                                                                 #latestFashion {
                                                                     width: 45%;
-                                                                    margin-left: 10px;
+                                                                    margin-left: 20px;
                                                                     margin-top: -20px;
+                                                                    box-shadow: 0 0 32px #333;
+                                                                    border-radius: 8px;
                                                                 }
                                                                 
                                                                 #css3dimagePager {
+                                                                                                                                        border-radius: 8px;
+                                                                    border-radius: 8px;
+
                                                                     text-align: center;
                                                                     position: relative;
                                                                     z-index: 11;
@@ -378,7 +403,7 @@
                                                                     transition: transform 0.2s;
                                                                     color: #fff;
                                                                     background-color: black;
-                                                                    border-radius: 50%;
+                                                                    border-radius: 20%;
                                                                 }
                                                                 
                                                                 #css3dimagePager li.active {
@@ -461,6 +486,11 @@
                                                                 /* END OF LATEST FASHION */
                                                                 /* CELEBS GALLERY */
                                                                 
+                                                                #celebsDisplay {
+                                                                    width: 50%;
+                                                                    right: 25%;
+                                                                }
+                                                                
                                                                 #celebsTitle {
                                                                     width: 45%;
                                                                     right: 26%;
@@ -471,10 +501,6 @@
                                                                     -webkit-font-smoothing: antialiased;
                                                                     -moz-osx-font-smoothing: grayscale;
                                                                     text-shadow: 0px -6px 0 #212121, 0px -6px 0 #212121, 0px 6px 0 #212121, 0px 6px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px 0px 0 #212121, 6px 0px 0 #212121, -6px -6px 0 #212121, 6px -6px 0 #212121, -6px 6px 0 #212121, 6px 6px 0 #212121, -6px 18px 0 #212121, 0px 18px 0 #212121, 6px 18px 0 #212121, 0 19px 1px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.1), 0 6px 3px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2), 0 18px 18px rgba(0, 0, 0, 0.25), 0 24px 24px rgba(0, 0, 0, 0.2), 0 36px 36px rgba(0, 0, 0, 0.15);
-                                                                }
-                                                                
-                                                                #celebsGallery {
-                                                                    width: 50%;
                                                                 }
                                                                 
                                                                 .celebs {
@@ -713,10 +739,269 @@
                                                                     color: black;
                                                                     padding-left: 20px;
                                                                 }
-
                                                                 /* change last modal img height and width */
-
-                                                                #img29{
-                                                                    width:500px;
-                                                                    height:300px;
+                                                                
+                                                                #img29 {
+                                                                    width: 500px;
+                                                                    height: 300px;
                                                                 }
+                                                                /* MEDIA QUERY */
+                                                                
+                                                                @media only screen and (min-width: 320px) and (max-width: 479px) {
+                                                                    #latestTitle {
+                                                                        width: 100%;
+                                                                        text-align: center;
+                                                                        margin-left: 125px;
+                                                                    }
+                                                                    #pageLogo {
+                                                                        margin-left: -245px;
+                                                                        margin-top: 100px;
+                                                                        position: absolute;
+                                                                        top: 425%;
+                                                                    }
+                                                                    #latestFashion {
+                                                                        width: 100%;
+                                                                        margin-left: 5px;
+                                                                    }
+                                                                    .style {
+                                                                        margin-left: -70px;
+                                                                    }
+                                                                    #imgShowcase {
+                                                                        position: absolute;
+                                                                        top: 380%;
+                                                                        left: 5%;
+                                                                        width: 100%;
+                                                                    }
+                                                                    .j11 {
+                                                                        width: 400px;
+                                                                    }
+                                                                    #imgShowcase2 {
+                                                                        position: absolute;
+                                                                        top: 590%;
+                                                                        width: 100%;
+                                                                        left: 30px;
+                                                                    }
+                                                                    #imgShowcase3 {
+                                                                        position: absolute;
+                                                                        top: 515%;
+                                                                        width: 100%;
+                                                                        left: 30px;
+                                                                    }
+                                                                    .kobe {
+                                                                        width: 400px;
+                                                                    }
+                                                                    #celebsTitle {
+                                                                        position: absolute;
+                                                                        top: 160%;
+                                                                        left: 3%;
+                                                                        width: 100%;
+                                                                    }
+                                                                    #pageTitle {
+                                                                        margin-top: 1650px;
+                                                                    }
+                                                                    .column-celebs {
+                                                                        padding: 3px;
+                                                                    }
+                                                                    #celebsDisplay {
+                                                                        width: 100%;
+                                                                        margin-left: 90px;
+                                                                        margin-top: 300px;
+                                                                    }
+                                                                    #timer {
+                                                                        margin-left: -100px;
+                                                                    }
+                                                                    .column {
+                                                                        margin: 0px;
+                                                                    }
+                                                                    #allKicks {
+                                                                        padding-left: 100px;
+                                                                    }
+                                                                    #top {
+                                                                        margin-left: -90px;
+                                                                    }
+                                                                    #social {
+                                                                        padding-right: 100px;
+                                                                    }
+                                                                    .target {
+                                                                        width: 450px;
+                                                                        margin-top: 110px;
+                                                                        margin-left: 2px;
+                                                                    }
+                                                                    .price {
+                                                                        position: absolute;
+                                                                        left: 70%;
+                                                                    }
+                                                                    .sport-title {
+                                                                        margin-top: 20px;
+                                                                    }
+                                                                }
+                                                                
+                                                                @media only screen and (min-width: 480px) and (max-width: 767px) {
+                                                                    #latestTitle {
+                                                                        width: 100%;
+                                                                        text-align: center;
+                                                                        margin-left: 220px;
+                                                                    }
+                                                                    #pageLogo {
+                                                                        margin-left: -245px;
+                                                                        margin-top: 100px;
+                                                                        position: absolute;
+                                                                        top: 480%;
+                                                                    }
+                                                                    #latestFashion {
+                                                                        width: 100%;
+                                                                        margin-left: 5px;
+                                                                    }
+                                                                    #imgShowcase {
+                                                                        position: absolute;
+                                                                        top: 440%;
+                                                                        left: 5%;
+                                                                        width: 100%;
+                                                                    }
+                                                                    .j11 {
+                                                                        width: 500px;
+                                                                    }
+                                                                    #imgShowcase2 {
+                                                                        position: absolute;
+                                                                        top: 640%;
+                                                                        width: 100%;
+                                                                        left: 30px;
+                                                                    }
+                                                                    #imgShowcase3 {
+                                                                        position: absolute;
+                                                                        top: 565%;
+                                                                        width: 100%;
+                                                                        left: 30px;
+                                                                    }
+                                                                    .kobe {
+                                                                        width: 500px;
+                                                                    }
+                                                                    #celebsTitle {
+                                                                        position: absolute;
+                                                                        top: 160%;
+                                                                        left: 3%;
+                                                                        width: 100%;
+                                                                    }
+                                                                    #pageTitle {
+                                                                        margin-top: 1650px;
+                                                                    }
+                                                                    .column-celebs {
+                                                                        padding: 3px;
+                                                                    }
+                                                                    #celebsDisplay {
+                                                                        width: 100%;
+                                                                        margin-left: 165px;
+                                                                        margin-top: 300px;
+                                                                    }
+                                                                    #timer {
+                                                                        margin-left: -100px;
+                                                                    }
+                                                                    .column {
+                                                                        margin: 0px;
+                                                                    }
+                                                                    #allKicks {
+                                                                        padding-left: 100px;
+                                                                    }
+                                                                    #top {
+                                                                        margin-left: -90px;
+                                                                    }
+                                                                    #social {
+                                                                        padding-right: 100px;
+                                                                    }
+                                                                    .target {
+                                                                        width: 720px;
+                                                                        margin-top: 110px;
+                                                                        margin-left: 10px;
+                                                                    }
+                                                                    .price {
+                                                                        position: absolute;
+                                                                    }
+                                                                    .sport-title {
+                                                                        margin-top: 20px;
+                                                                    }
+                                                                    .checkOut {
+                                                                        position: relative;
+                                                                        left: 65%;
+                                                                    }
+                                                                }
+                                                                
+                                                                @media only screen and (min-width: 768px) and (max-width: 991px) {
+                                                                    #latestTitle {
+                                                                        width: 100%;
+                                                                        text-align: center;
+                                                                        margin-left: 290px;
+                                                                    }
+                                                                    #pageLogo {
+                                                                        margin-left: -245px;
+                                                                        margin-top: 100px;
+                                                                        position: absolute;
+                                                                        top: 565%;
+                                                                    }
+                                                                    #latestFashion {
+                                                                        width: 100%;
+                                                                       margin-left:-1px;
+                                                                    }
+                                                                    #imgShowcase {
+                                                                        position: absolute;
+                                                                        top: 510%;
+                                                                        left: 5%;
+                                                                        width: 100%;
+                                                                    }
+                                                                    .j11 {
+                                                                        width: 500px;
+                                                                    }
+                                                                    #imgShowcase2 {
+                                                                        position: absolute;
+                                                                        top:750%;
+                                                                        width: 70%;
+                                                                        left: 30%;
+                                                                    }
+                                                                    #imgShowcase3 {
+                                                                        position: absolute;
+                                                                        top: 665%;
+                                                                        width: 100%;
+                                                                        left: 30px;
+                                                                    }
+                                                                    .kobe {
+                                                                        width: 500px;
+                                                                    }
+                                                                    #celebsTitle {
+                                                                        position: absolute;
+                                                                        top: 160%;
+                                                                        left: 3%;
+                                                                        width: 100%;
+                                                                    }
+                                                                    #pageTitle {
+                                                                        margin-top: 1950px;
+                                                                    }
+                                                                    .column-celebs {
+                                                                        padding: 3px;
+                                                                    }
+                                                                    #celebsDisplay {
+                                                                        width: 100%;
+                                                                        margin-left: 165px;
+                                                                        margin-top: 300px;
+                                                                    }
+                                                                    #timer {
+                                                                        margin-left: -65px;
+                                                                    }
+                                                                   
+                                                                    #allKicks {
+                                                                       
+                                                                        
+                                                                    }
+
+                                                                 
+                                                                    #top {
+                                                                        margin-left: -35px;
+                                                                    }
+                                                                    #social {
+                                                                        padding-right: 100px;
+                                                                    }
+                                                                   .target{
+                                                                       margin-top:120px;
+                                                                   }
+                                                                }
+                                                                
+                                                                @media only screen and (min-width: 992px) {}
+                                                                /* END OF MEDIA QUERY */
