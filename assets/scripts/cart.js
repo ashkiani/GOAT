@@ -42,7 +42,13 @@ $(document).ready(function () {
                 // add shoe size <p>
                 // add shoe QTY <p>
                 var shoePrice = $("<p>");
-                shoePrice.text("Price " + cart[i].price);
+                var price = cart[i].price;
+                if (price.indexOf(' ') >= 0) {
+                    var prices = price.split(" ");
+                    price = prices[0] + "(Original) - Reduced to: " + prices[1];
+                }
+
+                shoePrice.text("Price " + price);
                 divThree.append(shoePrice);
                 var removeButton = $('<button>');
                 removeButton.text('Remove');
