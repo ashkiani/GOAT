@@ -2,17 +2,17 @@
 ​
 #### GOAT Repo, 1/4/20
 ​
-#### By Siavash Ashkiani, {add your name}
+#### By Siavash Ashkiani, Eugene Edwards
 ​
 ## Description
 This project 
 
-##Features
+## Features
 ​
 * Users can sign up and create new accounts.
 * Users can edit their account's information including: Name, Username, Password, Show Size, Address, Payment information
 * The Account page shows the "Last Login Time"
-* ... {add features}
+* The Home page uses the iTunes API which allows users to search for albums
 ​
 ## Setup/Installation Requirements
 ​
@@ -26,15 +26,15 @@ None - at this time​.
 ​
 ## Support and contact details
 ​
-Please email us for further questions at ashkiani@yahoo.com, {add your email}
+Please email us for further questions at ashkiani@yahoo.com, eedwards@su.edu, {add your email}
 ​
 ## Technologies and Libraries Used
 ​
-HTML
+* HTML
 ​
-CSS, Bulma
+* CSS, Bulma
 ​
-JavaScript, jQuery, moment, particle
+* JavaScript, jQuery, moment, particle
 
 ## APIs Used
 
@@ -48,4 +48,4 @@ Direct link to site: https://ashkiani.github.io/GOAT/home.html
 ​
 Copyright(c) 2019 
 ​
-This software is licensed under MIT license.
+### This software is licensed under MIT license.
