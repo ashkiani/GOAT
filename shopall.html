@@ -20,63 +20,57 @@
 </head>
 
 <body>
-    <!--MAIN CONTAINER, KEEP EVERYTHING INSIDE-->
-    <div id="main">
 
-        <!--NAV BAR STARTS-->
-        <div class="navbar-menu">
+
+    <!--NAV BAR STARTS-->
+
+    <nav class="navbar is-transparent" id="btt">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="home.html">
+                <img src="./assets/images/goat.PNG" alt="GOAT">
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
             <div class="navbar-start">
+                <a class="navbar-item" href="home.html">
+                Home
+            </a>
+                <a class="navbar-item" href="shopall.html">
+                Shop
+            </a>
 
-                <a class="navbar-item" href="./home.html">
-                    <h1 class="goat">G.O.A.T</h1>
-                </a>
-
-                <a class="navbar-item" href="./shopall.html">
-        Shop 
-    </a>
-
-                <a class="navbar-item" href="./account.html" id="btnAccount">
-       Account
-    </a>
-
-                <a class="navbar-item" id="btnLogin" href="login.html">
-            Login
-        </a>
-
-                <a class="navbar-item" id="btnLogOut">
-            Logout
-        </a>
-
-
-                <a class="navbar-item" id="btnRegister" href="./signup.html">
-            Register
-         </a>
-
-
-                <a class="navbar-item" href="./cart.html">
-                    <i class="fas fa-shopping-cart"></i>
-                </a>
-
+                <a class="navbar-item" href="account.html" id="btnAccount">
+                Account
+            </a>
             </div>
-
-            <!--TIMER FOR SALE-->
             <div class="navbar-end">
                 <div class="navbar-item">
-                    <div id="timer">
-
-                        <h4 class="sale">Extra 20% Off - With Coupon <span id="offer">GoAt2019NiKe</span>
-                        </h4>
-                        <h5 class="exp">Offer expires:</h5>
-                        <div id="hours"></div>
-                        <div id="minutes"></div>
-                        <div id="seconds"></div>
-
+                    <div class="buttons">
+                        <a class="navbar-item" href="cart.html">
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
                     </div>
                 </div>
+                <a class="navbar-item" id="btnLogOut">
+                Logout
+            </a>
+                <a class="navbar-item" id="btnLogin" href="login.html">
+                Login
+            </a>
+                <a class="navbar-item" id="btnRegister" href="signup.html">
+                Register
+            </a>
             </div>
         </div>
-        <!--END OF TIMER ON SALE-->
-    </div>
+    </nav>
+
+
     <!--END OF NAV BAR-->
 
 
@@ -96,7 +90,8 @@
     <section class="hero" id="pageLogo">
         <div class="hero-body">
             <div class="container">
-                <img src="./assets/images/goat logo.jpg" width="230px" height="230px" class="logo" alt="" />
+                <p class="lbj-text">Nike LeBron 16 SB "Superman"</p>
+                <img src="https://nikelebron.net/wp-content/uploads/2018/12/nike-lebron-16-gr-superbron-4-01.jpg" class="logo" alt="" />
             </div>
         </div>
     </section>
@@ -111,7 +106,7 @@
 
     <!-- LATEST STYLE TITLE-->
     <div class="container is-fluid" id="latestTitle">
-        <div class="notification">
+        <div class="notification" class="latesTitle">
             <h2 class="title is-2">Latest Fashion</h2>
         </div>
     </div>
@@ -183,32 +178,34 @@
     <!--END OF IMG SHOWCASE 3-->
 
     <!--CELEBS GALLERY-->
-    <div class="columns is-mobile" id="celebsGallery">
-        <div class="column-celebs">
-            <img src="https://s3.amazonaws.com/nicekickswpoffloads3/files/2019/01/18202501/travis-scott-jordan-1-rolling-stone-e1547485773989.jpg" class="celebs" alt="" />
-        </div>
-        <div class="column-celebs">
-            <img src="https://nssdata.s3.amazonaws.com/images/galleries/12954/thumbs/cortez-x-bella-hadid-nss-mag-1.jpg" class="celebs" alt="" />
-        </div>
-    </div>
-
-    <div class="columns is-mobile" id="celebsGallery">
-        <div class="column-celebs">
-            <img src="http://www.sneakersdog.com/wp-content/uploads/2014/07/drake_2.jpg" class="celebs" alt="" />
+    <div class="container" id="celebsDisplay">
+        <div class="columns is-mobile" id="celebsGallery">
+            <div class="column-celebs">
+                <img src="https://s3.amazonaws.com/nicekickswpoffloads3/files/2019/01/18202501/travis-scott-jordan-1-rolling-stone-e1547485773989.jpg" class="celebs" alt="" />
+            </div>
+            <div class="column-celebs">
+                <img src="https://nssdata.s3.amazonaws.com/images/galleries/12954/thumbs/cortez-x-bella-hadid-nss-mag-1.jpg" class="celebs" alt="" />
+            </div>
         </div>
 
-        <div class="column-celebs">
-            <img src="https://c4.wallpaperflare.com/wallpaper/945/123/783/bella-hadid-celebrities-girls-4k-wallpaper-preview.jpg" class="celebs" alt="" />
-        </div>
-    </div>
+        <div class="columns is-mobile" id="celebsGallery">
+            <div class="column-celebs">
+                <img src="http://www.sneakersdog.com/wp-content/uploads/2014/07/drake_2.jpg" class="celebs" alt="" />
+            </div>
 
-    <div class="columns is-mobile" id="celebsGallery">
-        <div class="column-celebs">
-            <img src="https://sneakers-magazine.com/wp-content/uploads/2015/12/wale.jpg" class="celebs" alt="" />
+            <div class="column-celebs">
+                <img src="https://c4.wallpaperflare.com/wallpaper/945/123/783/bella-hadid-celebrities-girls-4k-wallpaper-preview.jpg" class="celebs" alt="" />
+            </div>
         </div>
 
-        <div class="column-celebs">
-            <img src="https://shilpaahuja.com/wp-content/uploads/2017/07/shilpa-ahuja-nike-cortez-shoe-photoshoot-athleisure-street-style-pondicherry-outfit.jpg" class="celebs" alt="" />
+        <div class="columns is-mobile" id="celebsGallery">
+            <div class="column-celebs">
+                <img src="https://sneakers-magazine.com/wp-content/uploads/2015/12/wale.jpg" class="celebs" alt="" />
+            </div>
+
+            <div class="column-celebs">
+                <img src="https://shilpaahuja.com/wp-content/uploads/2017/07/shilpa-ahuja-nike-cortez-shoe-photoshoot-athleisure-street-style-pondicherry-outfit.jpg" class="celebs" alt="" />
+            </div>
         </div>
     </div>
 
@@ -223,7 +220,24 @@
             </div>
         </div>
     </section>
+
     <!--END OF TITLE PAGE SHOP-->
+
+
+    <!--TIMER FOR SALE-->
+    <section class="hero" id="timer">
+        <div class="hero-body">
+            <h4 class="sale">Extra 20% Off - With Coupon <span id="offer">GoAt2019NiKe</span>
+            </h4>
+            <h5 class="exp">Offer expires:</h5>
+            <div id="hours"></div>
+            <div id="minutes"></div>
+            <div id="seconds"></div>
+        </div>
+    </section>
+
+
+    <!--END OF TIMER ON SALE-->
 
     <!--SHOW FILTER-->
     <!--mens,womens,sport kicks,casual-->
@@ -1271,7 +1285,7 @@
             </div>
             <!--end of modal 5-->
             <hr id="arrivalsKicksHR">
-            <a href="#main"><button class="button is-rounded" id="top">Back to Top</button></a>
+            <a href="#btt"><button class="button is-rounded" id="top">Back to Top</button></a>
         </div>
 
         <!--END MODAL FOR ARRIVALS-->
@@ -1280,16 +1294,17 @@
     <!--END FOR ALL KICKS DISPLAY-->
 
     <!--SOCIAL MEDIA-->
-    <a class="social" href="https://www.facebook.com/goatapp/" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a>
-    <a class="social" href="https://twitter.com/goatapp?lang=en" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
-    <a class="social" href="https://www.instagram.com/goat/?hl=en"><i class="fab fa-instagram fa-3x"></i></a>
+    <div id="social">
+        <a class="social" href="https://www.facebook.com/goatapp/" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a>
+        <a class="social" href="https://twitter.com/goatapp?lang=en" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
+        <a class="social" href="https://www.instagram.com/goat/?hl=en"><i class="fab fa-instagram fa-3x"></i></a>
+    </div>
 
     <!--END OF SOCIAL MEDIA-->
 
 
     <p class="copy">&copy;Nikola Jovanovic Project-1 Team-GOAT Shop page</p>
-    </div>
-    <!--END OF MAIN CONTAINER, KEEP EVERYTHING INSIDE-->
+
 
     <!--jQuery CDN-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js " integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=" anonymous "></script>
