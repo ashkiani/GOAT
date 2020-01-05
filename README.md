@@ -5,7 +5,7 @@
 #### By Siavash Ashkiani, Eugene Edwards
 ​
 ## Description
-This project 
+This project mimics the original GOAT app (https://www.goat.com/) which is a marketplace where sneaker enthusiasts can discover the latest sneakers, music and gain access to exclusive drops.
 
 ## Features
 ​
@@ -38,6 +38,7 @@ Please email us for further questions at ashkiani@yahoo.com, eedwards@su.edu, {a
 
 ## APIs Used
 
+iTunes API - Home page
 ​
 ## Contribution Guidlines 
 ​
