@@ -18,6 +18,8 @@ $(document).ready(function () {
         //Siavash 1/4/2020 Added the following line to clear the page first.
         mainDivEL.html("");
         cart = getCart();
+        priceItems.text(cart.length);
+        
         // Dynamic Shoe display dive 
         if (cart.length > 0) {
             for (var i = 0; i < cart.length; i++) {
@@ -81,20 +83,23 @@ $(document).ready(function () {
     }
     );
 
+    // Totals Div 
+    for (i = 0; i < cart.length; i++){
+        var sum = cart[i].price ;
+        sum = parseInt(sum.substr(1));
+        console.log(sum);
+    }    
+    subtotalEl.text(sum);
 
-    // todoList.addEventListener("click", function(event) {
-    //     var element = event.target;
-
-    //     // If that element is a button...
-    //     if (element.matches("button") === true) {
-    //       // Get its data-index value and remove the todo element from the list
-    //       var index = element.parentElement.getAttribute("data-index");
-    //       todos.splice(index, 1);
-
-    //       // Re-render the list
-    //       renderTodos();
-    //     }
-    //   }
+    $("form").submit(function(event){
+        event.preventDefault();  
+        var promoText = promoCode.value;
+        if (promoText == "GOAT2019NIKE"){
+            var discount = sum * .20
+            $('.price-discount').text(discount);
+        } else 
+        return;
+    });
 
     // Price Display Div 
     // priceItems.text(cart.length);
