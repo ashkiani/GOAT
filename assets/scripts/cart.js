@@ -12,14 +12,14 @@ $(document).ready(function () {
     var priceItems = $('.price-items');
     var estimatedTotal = $('.estimated-total');
     var cart = []; //Siavash 1/4/2020 Defined cart as a global variable so we don't have to load it again in the click event
+    var sum = 0;
 
-    //Siavash 1/4/2020 Added the following function to load the page.
-    function loadPage() {
+    //Siavash 1/8/2020 Add this function to load the Cart items
+    function loadCart() {
         //Siavash 1/4/2020 Added the following line to clear the page first.
         mainDivEL.html("");
         cart = getCart();
         priceItems.text(cart.length);
-        
         // Dynamic Shoe display dive 
         if (cart.length > 0) {
             for (var i = 0; i < cart.length; i++) {
@@ -65,6 +65,29 @@ $(document).ready(function () {
         }
     }
 
+    //Siavash 1/8/2020 Add this function to load the Total div
+    function loadTotal() {
+        sum = 0;
+        for (i = 0; i < cart.length; i++) {
+            var price = cart[i].price;
+            if (price.indexOf(' ') >= 0) {
+                var prices = price.split(" ");
+                price = prices[1];
+            }
+            console.log("price:" + price);
+            sum += parseInt(price.substr(1));
+            console.log("sum:" + sum);
+        }
+        subtotalEl.text(sum);
+        estimatedTotal.text(sum);
+    }
+
+    //Siavash 1/4/2020 Added the following function to load the page.
+    function loadPage() {
+        loadCart();
+        loadTotal();
+    }
+
     //Siavash 1/4/2020 Added the following line to load the page when it is first opened.
     loadPage();
 
@@ -83,29 +106,17 @@ $(document).ready(function () {
     }
     );
 
-    // Totals Div 
-    for (i = 0; i < cart.length; i++){
-        var sum = cart[i].price ;
-        sum = parseInt(sum.substr(1));
-        console.log(sum);
-    }    
-    subtotalEl.text(sum);
-
-    $("form").submit(function(event){
-        event.preventDefault();  
-        var promoText = promoCode.value;
-        if (promoText == "GOAT2019NIKE"){
-            var discount = sum * .20
-            $('.price-discount').text(discount);
-        } else 
-        return;
+    $("form").submit(function (event) {
+        event.preventDefault();
+        var promoText = $(".promo-code").val();
+        if (promoText == "GOAT2019NIKE") {
+            var discount = sum * 0.20;
+            $('.price-discount').text("$" + discount);
+            //Siavash 1/8/2020 Added to populate the estimated total
+            if (discount > 0) {
+                estimatedTotal.text("$" + (sum - discount));
+            }
+        }
     });
 
-    // Price Display Div 
-    // priceItems.text(cart.length);
-    // Test
-    // console.log(cart);
-    // userData.email==""
-    // if user email is empty no one is logged in if string is full some is 
-    // is logged in 
 });
