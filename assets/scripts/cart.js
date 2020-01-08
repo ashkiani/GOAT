@@ -10,6 +10,7 @@ $(document).ready(function () {
     // Price Display Div
     var subtotalEl = $('.price-subtotal');
     var priceItems = $('.price-items');
+    var promoCode = $('.promo-code');
     var estimatedTotal = $('.estimated-total');
     var cart = []; //Siavash 1/4/2020 Defined cart as a global variable so we don't have to load it again in the click event
 
@@ -18,6 +19,8 @@ $(document).ready(function () {
         //Siavash 1/4/2020 Added the following line to clear the page first.
         mainDivEL.html("");
         cart = getCart();
+        priceItems.text(cart.length);
+
         // Dynamic Shoe display dive 
         if (cart.length > 0) {
             for (var i = 0; i < cart.length; i++) {
@@ -58,14 +61,16 @@ $(document).ready(function () {
             priceDisplayEl.css("display", "block");
             priceEl.css("display", "block");
             console.log(cart.length);
+            console.log(cart);
         } else {
             empty.css("display", "block");
+            priceDisplayEl.css('display','none');
         }
     }
-
+    
     //Siavash 1/4/2020 Added the following line to load the page when it is first opened.
     loadPage();
-
+    
     // remove button function 
     mainDivEL.on('click', function (event) {
         var element = event.target;
@@ -81,23 +86,26 @@ $(document).ready(function () {
     }
     );
 
+    // Totals Div 
+    for (i = 0; i < cart.length; i++){
+        var sum = cart[i].price ;
+        sum = parseInt(sum.substr(1));
+        console.log(sum);
+    }    
+    subtotalEl.text(sum);
 
-    // todoList.addEventListener("click", function(event) {
-    //     var element = event.target;
+    $("form").submit(function(event){
+        event.preventDefault();  
+        var promoText = promoCode.value;
+        if (promoText == "GOAT2019NIKE"){
+            var discount = sum * .20
+            $('.price-discount').text(discount);
+        } else 
+        return;
+    });
 
-    //     // If that element is a button...
-    //     if (element.matches("button") === true) {
-    //       // Get its data-index value and remove the todo element from the list
-    //       var index = element.parentElement.getAttribute("data-index");
-    //       todos.splice(index, 1);
+    
 
-    //       // Re-render the list
-    //       renderTodos();
-    //     }
-    //   }
-
-    // Price Display Div 
-    // priceItems.text(cart.length);
     // Test
     // console.log(cart);
     // userData.email==""
