@@ -181,7 +181,7 @@
                                                                 
                                                                 #pageLogo {
                                                                     position: absolute;
-                                                                    left: 52%;
+                                                                    left: 59%;
                                                                     top: 45%;
                                                                 }
                                                                 
@@ -191,7 +191,7 @@
                                                                     -webkit-transform: rotate(5deg);
                                                                     /* Safari 3-8 */
                                                                     transform: rotate(5deg);
-                                                                    width: 550px;
+                                                                    width: 500px;
                                                                     height: 360px;
                                                                     border-radius: 8px;
                                                                     box-shadow: 0 0 16px #333;
@@ -224,7 +224,7 @@
                                                                 }
                                                                 
                                                                 .j11 {
-                                                                    width: 550px;
+                                                                    width: 500px;
                                                                     height: 350px;
                                                                     border-radius: 8px;
                                                                     box-shadow: 0 0 16px #333;
@@ -250,7 +250,7 @@
                                                                 #imgShowcase {
                                                                     width: 50%;
                                                                     position: absolute;
-                                                                    left: 54%;
+                                                                    left: 61%;
                                                                     top: 140%;
                                                                     -ms-transform: rotate(-5deg);
                                                                     /* IE 9 */
@@ -268,8 +268,8 @@
                                                                 #imgShowcase2 {
                                                                     width: 50%;
                                                                     position: absolute;
-                                                                    top: 223%;
-                                                                    left: 55%;
+                                                                    top: 230%;
+                                                                    left: 61%;
                                                                     -ms-transform: rotate(5deg);
                                                                     /* IE 9 */
                                                                     -webkit-transform: rotate(5deg);
@@ -289,7 +289,7 @@
                                                                 }
                                                                 
                                                                 .airmax {
-                                                                    width: 84%;
+                                                                    width: 74%;
                                                                     border-radius: 8px;
                                                                     box-shadow: 0 0 16px #333;
                                                                     transition: transform 0.1s;
@@ -305,8 +305,8 @@
                                                                 #imgShowcase3 {
                                                                     width: 50%;
                                                                     position: absolute;
-                                                                    top: 300%;
-                                                                    left: 57%;
+                                                                    top: 310%;
+                                                                    left: 61%;
                                                                     -ms-transform: rotate(-5deg);
                                                                     /* IE 9 */
                                                                     -webkit-transform: rotate(-5deg);
@@ -329,7 +329,7 @@
                                                                 }
                                                                 
                                                                 .kobe {
-                                                                    width: 550px;
+                                                                    width: 500px;
                                                                     height: 375px;
                                                                     border-radius: 8px;
                                                                     box-shadow: 0 0 16px #333;
@@ -369,6 +369,7 @@
                                                                 .style {
                                                                     width: 300px;
                                                                     height: 370px;
+                                                                    border-radius: 8px;
                                                                 }
                                                                 
                                                                 #latestFashion {
@@ -514,6 +515,7 @@
                                                                 
                                                                 .column-celebs {
                                                                     padding: 10px;
+                                                                    width: 100%;
                                                                 }
                                                                 /* END OF CELEBS GALLERY */
                                                                 /* IMAGE FILTERS */
