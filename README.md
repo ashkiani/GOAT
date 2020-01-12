@@ -2,7 +2,8 @@
 ​
 #### GOAT Repo, 1/4/20
 ​
-#### By Siavash Ashkiani, Eugene Edwards, Nikola Jovanovic
+#### By Siavash Ashkiani, Eugene Edwards, Nikola Jovanovic, Marvin Castro
+
 ​
 ## Description
 This project mimics the original GOAT app (https://www.goat.com/) which is a marketplace where sneaker enthusiasts can discover the latest sneakers, music and gain access to exclusive drops.
