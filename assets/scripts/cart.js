@@ -1,7 +1,34 @@
+var loggedInUserName = getLoggedInUserName();
+
 //Siavash 1/4/2020 Added the following line to make sure the page is ready.
 $(document).ready(function () {
+    
+// Check for click events on the navbar burger icon
+    $(".navbar-burger").click(function() {
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        $(".navbar-burger").toggleClass("is-active");
+        $(".navbar-menu").toggleClass("is-active");
+
+    });
+
+    //If user is not logged in:  HIDE the logout and account buttons - SHOW the login and register buttons
+    if(loggedInUserName == ""){
+        $("#btnLogOut").hide();
+        $("#btnAccount").hide();
+        $("#btnLogin").show();
+        $("#btnRegister").show();
+    }
+    //If user is logged in:  SHOW the logout and account buttons - HIDE the login and register buttons
+    else{
+        $("#btnLogOut").show();
+        $("#btnAccount").show();
+        $("#btnLogin").hide();
+        $("#btnRegister").hide();
+    }
+
     // My Cart/Empty/ Total Price Display 
-    var priceEl = $('.price');
+    // var priceEl = $('.price');
     var empty = $(".empty");
     // Shoe Display Div 
     var mainDivEL = $('.mainDiv');
@@ -41,8 +68,7 @@ $(document).ready(function () {
                 var shoeName = $('<p>');
                 shoeName.text(cart[i].title);
                 divThree.append(shoeName);
-                // add shoe size <p>
-                // add shoe QTY <p>
+
                 var shoePrice = $("<p>");
                 var price = cart[i].price;
                 if (price.indexOf(' ') >= 0) {
@@ -58,7 +84,7 @@ $(document).ready(function () {
                 divThree.append(removeButton);
             }
             priceDisplayEl.css("display", "block");
-            priceEl.css("display", "block");
+            // priceEl.css("display", "block");
             console.log(cart.length);
         } else {
             empty.css("display", "block");
@@ -74,6 +100,8 @@ $(document).ready(function () {
                 var prices = price.split(" ");
                 price = prices[1];
             }
+
+            price=price.replace(",","");
             console.log("price:" + price);
             sum += parseInt(price.substr(1));
             console.log("sum:" + sum);
@@ -102,21 +130,38 @@ $(document).ready(function () {
             cart.splice(index, 1);
             setCart(cart);
             loadPage();
-        }
-    }
-    );
-
-    $("form").submit(function (event) {
-        event.preventDefault();
-        var promoText = $(".promo-code").val();
-        if (promoText == "GOAT2019NIKE") {
-            var discount = sum * 0.20;
-            $('.price-discount').text("$" + discount);
-            //Siavash 1/8/2020 Added to populate the estimated total
-            if (discount > 0) {
-                estimatedTotal.text("$" + (sum - discount));
+            if(promoText == "GOAT2019NIKE"){
+                var discount = sum * 0.20;
+                $('.price-discount').text("$" + discount);
+                //Siavash 1/8/2020 Added to populate the estimated total
+                if (discount > 0) {
+                    estimatedTotal.text("$" + (sum - discount));
+                }
+            }
+            if(cart.length == 0){
+                priceDisplayEl.css("display", "none");
             }
         }
     });
+    
+        var promoText = $(".promo-code").val();
+        $("form").submit(function (event) {
+            event.preventDefault();
+            promoText = $(".promo-code").val();
+            if (promoText == "GOAT2019NIKE") {
+                var discount = sum * 0.20;
+                $('.price-discount').text("$" + discount);
+                //Siavash 1/8/2020 Added to populate the estimated total
+                if (discount > 0) {
+                    estimatedTotal.text("$" + (sum - discount));
+                }
+            }
+        });
 
+// Marvin out function 
+    //Logout button click event - logs the user out and redirects user to the login page
+$("#btnLogOut").click(function(){
+    localStorage.removeItem("goatLoggedInUser");
+    window.location.href = "home.html";
+})
 });
