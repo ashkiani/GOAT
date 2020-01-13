@@ -38,7 +38,7 @@ None - at this time​.
 ​
 ## Support and contact details
 ​
-Please email us for further questions at ashkiani@yahoo.com, eedwards@su.edu, nikola4work@gmail.com
+Please email us for further questions at ashkiani@yahoo.com, eedwards@su.edu, nikola4work@gmail.com, bbmarvin2003@yahoo.com
 ​
 ## Technologies and Libraries Used
 ​
