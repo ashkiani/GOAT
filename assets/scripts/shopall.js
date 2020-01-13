@@ -1,20 +1,16 @@
 //Navbar burger
 $(document).ready(function() {
-
     // Check for click events on the navbar burger icon
     $(".navbar-burger").click(function() {
-  
         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
         $(".navbar-burger").toggleClass("is-active");
         $(".navbar-menu").toggleClass("is-active");
-  
     });
-  });
+});
 
 // TIMER
 
 function makeTimer() {
-    //		var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");
     var endTime = new Date("29 April 2020 9:56:00 GMT+01:00");
     endTime = Date.parse(endTime) / 1000;
 
@@ -63,28 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     );
 });
-
-// SHOW FILTER
-
-function filter() {
-    var div = document.getElementById("filterDIV");
-    if (div.style.display === "none") {
-        div.style.display = "block";
-    } else {
-        div.style.display = "none";
-    }
-}
-
-// SORT BY
-
-function sort() {
-    var y = document.getElementById("sortDIV");
-    if (y.style.display === "none") {
-        y.style.display = "block";
-    } else {
-        y.style.display = "none";
-    }
-}
 
 // JQUERY BEGGINS
 
@@ -260,7 +234,7 @@ $(document).ready(function() {
     }
 
     //====================Adding items to the cart
-    //Siavash 1/1/2020
+
     function addToCart(title, price, image) {
         var currentCart = getCart();
         var item = {
@@ -268,22 +242,13 @@ $(document).ready(function() {
             price: price,
             image: image
         };
-        //Siavash: we could check for duplicates before adding items to the cart but I thought we want to allow
-        //multiple orders of the same shoe.
+
         currentCart.push(item);
         setCart(currentCart);
     }
 
-    //Siavash 1/1/2020
     $(".cart").click(function() {
         var parentEl = $(this).parent();
-        //Siavash: I noticed some of the price (h2) elements include two numbers.
-        //First one is the original price and the second one is the lowered price.
-        //I could add code here to only include the final price but I thought the Cart page may want to show the discounts.
-        //So I included both prices in the cart object but the cart page will have to parse its required data.
-        //All of this would have been much easier if shopall.html was using an array of objects as its source of data,
-        //but I don't recommend making changes at this time since we are running out of time.
-
         var priceEl = parentEl.find(".price").eq(0);
         var imgEl = parentEl.find("img").eq(0);
         var titleEl = parentEl.find(".sport-title").eq(0);

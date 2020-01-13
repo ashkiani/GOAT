@@ -70,9 +70,7 @@
                                                                     padding: 10px 20px;
                                                                 }
                                                                 
-                                                                .navbar-menu {
-                                                                    font-size: 20px;
-                                                                }
+                                                                
                                                                 
                                                                 .navbar-menu a {
                                                                     padding-left: 20px;
@@ -305,7 +303,7 @@
                                                                 #imgShowcase3 {
                                                                     width: 50%;
                                                                     position: absolute;
-                                                                    top: 310%;
+                                                                    top: 300%;
                                                                     left: 61%;
                                                                     -ms-transform: rotate(-5deg);
                                                                     /* IE 9 */
@@ -381,9 +379,8 @@
                                                                 }
                                                                 
                                                                 #css3dimagePager {
-                                                                                                                                        border-radius: 8px;
                                                                     border-radius: 8px;
-
+                                                                    border-radius: 8px;
                                                                     text-align: center;
                                                                     position: relative;
                                                                     z-index: 11;
@@ -941,7 +938,7 @@
                                                                     }
                                                                     #latestFashion {
                                                                         width: 100%;
-                                                                       margin-left:-1px;
+                                                                        margin-left: -1px;
                                                                     }
                                                                     #imgShowcase {
                                                                         position: absolute;
@@ -954,7 +951,7 @@
                                                                     }
                                                                     #imgShowcase2 {
                                                                         position: absolute;
-                                                                        top:750%;
+                                                                        top: 750%;
                                                                         width: 70%;
                                                                         left: 30%;
                                                                     }
@@ -987,22 +984,16 @@
                                                                     #timer {
                                                                         margin-left: -65px;
                                                                     }
-                                                                   
-                                                                    #allKicks {
-                                                                       
-                                                                        
-                                                                    }
-
-                                                                 
+                                                                    #allKicks {}
                                                                     #top {
                                                                         margin-left: -35px;
                                                                     }
                                                                     #social {
                                                                         padding-right: 100px;
                                                                     }
-                                                                   .target{
-                                                                       margin-top:120px;
-                                                                   }
+                                                                    .target {
+                                                                        margin-top: 120px;
+                                                                    }
                                                                 }
                                                                 
                                                                 @media only screen and (min-width: 992px) {}
