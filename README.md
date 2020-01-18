@@ -1,8 +1,8 @@
-# GOAT Project
+# GOAT Project See App Here: https://github.com/ashkiani/GOAT
 ​
 #### GOAT Repo, 1/4/20
 ​
-#### By Siavash Ashkiani, Eugene Edwards, Nikola Jovanovic, Marvin Castro
+#### By Siavash Ashkiani, Eugene Edwards, Nikola Jovanovic, Marvin Castro, Lusio Filiba
 
 ​
 ## Description
@@ -38,7 +38,7 @@ None - at this time​.
 ​
 ## Support and contact details
 ​
-Please email us for further questions at ashkiani@yahoo.com, eedwards@su.edu, nikola4work@gmail.com, bbmarvin2003@yahoo.com
+​Please email us for further questions at ashkiani@yahoo.com, eedwards@su.edu, nikola4work@gmail.com, bbmarvin2003@yahoo.com, lusiof@gmail.com
 ​
 ## Technologies and Libraries Used
 ​
