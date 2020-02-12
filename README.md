@@ -1,4 +1,4 @@
-# GOAT Project See App Here: https://github.com/ashkiani/GOAT
+# GOAT Project See App Here: https://ashkiani.github.io/GOAT/home.html
 ​
 #### GOAT Repo, 1/4/20
 ​
